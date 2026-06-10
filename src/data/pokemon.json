@@ -1,0 +1,9119 @@
+[
+  {
+    "id": 1,
+    "nome": "Bulbasaur",
+    "geracao": 1,
+    "tipo1": "Planta",
+    "tipo2": "Veneno",
+    "estagio": 1,
+    "status_total": 318
+  },
+  {
+    "id": 2,
+    "nome": "Ivysaur",
+    "geracao": 1,
+    "tipo1": "Planta",
+    "tipo2": "Veneno",
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 3,
+    "nome": "Venusaur",
+    "geracao": 1,
+    "tipo1": "Planta",
+    "tipo2": "Veneno",
+    "estagio": 3,
+    "status_total": 525
+  },
+  {
+    "id": 4,
+    "nome": "Charmander",
+    "geracao": 1,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 309
+  },
+  {
+    "id": 5,
+    "nome": "Charmeleon",
+    "geracao": 1,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 6,
+    "nome": "Charizard",
+    "geracao": 1,
+    "tipo1": "Fogo",
+    "tipo2": "Voador",
+    "estagio": 3,
+    "status_total": 534
+  },
+  {
+    "id": 7,
+    "nome": "Squirtle",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 314
+  },
+  {
+    "id": 8,
+    "nome": "Wartortle",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 9,
+    "nome": "Blastoise",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 530
+  },
+  {
+    "id": 10,
+    "nome": "Caterpie",
+    "geracao": 1,
+    "tipo1": "Inseto",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 195
+  },
+  {
+    "id": 11,
+    "nome": "Metapod",
+    "geracao": 1,
+    "tipo1": "Inseto",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 205
+  },
+  {
+    "id": 12,
+    "nome": "Butterfree",
+    "geracao": 1,
+    "tipo1": "Inseto",
+    "tipo2": "Voador",
+    "estagio": 3,
+    "status_total": 395
+  },
+  {
+    "id": 13,
+    "nome": "Weedle",
+    "geracao": 1,
+    "tipo1": "Inseto",
+    "tipo2": "Veneno",
+    "estagio": 1,
+    "status_total": 195
+  },
+  {
+    "id": 14,
+    "nome": "Kakuna",
+    "geracao": 1,
+    "tipo1": "Inseto",
+    "tipo2": "Veneno",
+    "estagio": 2,
+    "status_total": 205
+  },
+  {
+    "id": 15,
+    "nome": "Beedrill",
+    "geracao": 1,
+    "tipo1": "Inseto",
+    "tipo2": "Veneno",
+    "estagio": 3,
+    "status_total": 395
+  },
+  {
+    "id": 16,
+    "nome": "Pidgey",
+    "geracao": 1,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 251
+  },
+  {
+    "id": 17,
+    "nome": "Pidgeotto",
+    "geracao": 1,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 349
+  },
+  {
+    "id": 18,
+    "nome": "Pidgeot",
+    "geracao": 1,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 3,
+    "status_total": 479
+  },
+  {
+    "id": 19,
+    "nome": "Rattata",
+    "geracao": 1,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 253
+  },
+  {
+    "id": 20,
+    "nome": "Raticate",
+    "geracao": 1,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 413
+  },
+  {
+    "id": 21,
+    "nome": "Spearow",
+    "geracao": 1,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 262
+  },
+  {
+    "id": 22,
+    "nome": "Fearow",
+    "geracao": 1,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 442
+  },
+  {
+    "id": 23,
+    "nome": "Ekans",
+    "geracao": 1,
+    "tipo1": "Veneno",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 288
+  },
+  {
+    "id": 24,
+    "nome": "Arbok",
+    "geracao": 1,
+    "tipo1": "Veneno",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 448
+  },
+  {
+    "id": 25,
+    "nome": "Pikachu",
+    "geracao": 1,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 320
+  },
+  {
+    "id": 26,
+    "nome": "Raichu",
+    "geracao": 1,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 485
+  },
+  {
+    "id": 27,
+    "nome": "Sandshrew",
+    "geracao": 1,
+    "tipo1": "Terra",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 300
+  },
+  {
+    "id": 28,
+    "nome": "Sandslash",
+    "geracao": 1,
+    "tipo1": "Terra",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 450
+  },
+  {
+    "id": 29,
+    "nome": "Nidoran♀",
+    "geracao": 1,
+    "tipo1": "Veneno",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 275
+  },
+  {
+    "id": 30,
+    "nome": "Nidorina",
+    "geracao": 1,
+    "tipo1": "Veneno",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 365
+  },
+  {
+    "id": 31,
+    "nome": "Nidoqueen",
+    "geracao": 1,
+    "tipo1": "Veneno",
+    "tipo2": "Terra",
+    "estagio": 3,
+    "status_total": 505
+  },
+  {
+    "id": 32,
+    "nome": "Nidoran♂",
+    "geracao": 1,
+    "tipo1": "Veneno",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 273
+  },
+  {
+    "id": 33,
+    "nome": "Nidorino",
+    "geracao": 1,
+    "tipo1": "Veneno",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 365
+  },
+  {
+    "id": 34,
+    "nome": "Nidoking",
+    "geracao": 1,
+    "tipo1": "Veneno",
+    "tipo2": "Terra",
+    "estagio": 3,
+    "status_total": 505
+  },
+  {
+    "id": 35,
+    "nome": "Clefairy",
+    "geracao": 1,
+    "tipo1": "Fada",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 323
+  },
+  {
+    "id": 36,
+    "nome": "Clefable",
+    "geracao": 1,
+    "tipo1": "Fada",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 483
+  },
+  {
+    "id": 37,
+    "nome": "Vulpix",
+    "geracao": 1,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 299
+  },
+  {
+    "id": 38,
+    "nome": "Ninetales",
+    "geracao": 1,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 505
+  },
+  {
+    "id": 39,
+    "nome": "Jigglypuff",
+    "geracao": 1,
+    "tipo1": "Normal",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 270
+  },
+  {
+    "id": 40,
+    "nome": "Wigglytuff",
+    "geracao": 1,
+    "tipo1": "Normal",
+    "tipo2": "Fada",
+    "estagio": 2,
+    "status_total": 435
+  },
+  {
+    "id": 41,
+    "nome": "Zubat",
+    "geracao": 1,
+    "tipo1": "Veneno",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 245
+  },
+  {
+    "id": 42,
+    "nome": "Golbat",
+    "geracao": 1,
+    "tipo1": "Veneno",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 455
+  },
+  {
+    "id": 43,
+    "nome": "Oddish",
+    "geracao": 1,
+    "tipo1": "Planta",
+    "tipo2": "Veneno",
+    "estagio": 1,
+    "status_total": 320
+  },
+  {
+    "id": 44,
+    "nome": "Gloom",
+    "geracao": 1,
+    "tipo1": "Planta",
+    "tipo2": "Veneno",
+    "estagio": 2,
+    "status_total": 395
+  },
+  {
+    "id": 45,
+    "nome": "Vileplume",
+    "geracao": 1,
+    "tipo1": "Planta",
+    "tipo2": "Veneno",
+    "estagio": 3,
+    "status_total": 490
+  },
+  {
+    "id": 46,
+    "nome": "Paras",
+    "geracao": 1,
+    "tipo1": "Inseto",
+    "tipo2": "Planta",
+    "estagio": 1,
+    "status_total": 285
+  },
+  {
+    "id": 47,
+    "nome": "Parasect",
+    "geracao": 1,
+    "tipo1": "Inseto",
+    "tipo2": "Planta",
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 48,
+    "nome": "Venonat",
+    "geracao": 1,
+    "tipo1": "Inseto",
+    "tipo2": "Veneno",
+    "estagio": 1,
+    "status_total": 305
+  },
+  {
+    "id": 49,
+    "nome": "Venomoth",
+    "geracao": 1,
+    "tipo1": "Inseto",
+    "tipo2": "Veneno",
+    "estagio": 2,
+    "status_total": 450
+  },
+  {
+    "id": 50,
+    "nome": "Diglett",
+    "geracao": 1,
+    "tipo1": "Terra",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 265
+  },
+  {
+    "id": 51,
+    "nome": "Dugtrio",
+    "geracao": 1,
+    "tipo1": "Terra",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 425
+  },
+  {
+    "id": 52,
+    "nome": "Meowth",
+    "geracao": 1,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 290
+  },
+  {
+    "id": 53,
+    "nome": "Persian",
+    "geracao": 1,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 440
+  },
+  {
+    "id": 54,
+    "nome": "Psyduck",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 320
+  },
+  {
+    "id": 55,
+    "nome": "Golduck",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 500
+  },
+  {
+    "id": 56,
+    "nome": "Mankey",
+    "geracao": 1,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 305
+  },
+  {
+    "id": 57,
+    "nome": "Primeape",
+    "geracao": 1,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 455
+  },
+  {
+    "id": 58,
+    "nome": "Growlithe",
+    "geracao": 1,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 350
+  },
+  {
+    "id": 59,
+    "nome": "Arcanine",
+    "geracao": 1,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 555
+  },
+  {
+    "id": 60,
+    "nome": "Poliwag",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 300
+  },
+  {
+    "id": 61,
+    "nome": "Poliwhirl",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 385
+  },
+  {
+    "id": 62,
+    "nome": "Poliwrath",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": "Lutador",
+    "estagio": 3,
+    "status_total": 510
+  },
+  {
+    "id": 63,
+    "nome": "Abra",
+    "geracao": 1,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 310
+  },
+  {
+    "id": 64,
+    "nome": "Kadabra",
+    "geracao": 1,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 400
+  },
+  {
+    "id": 65,
+    "nome": "Alakazam",
+    "geracao": 1,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 500
+  },
+  {
+    "id": 66,
+    "nome": "Machop",
+    "geracao": 1,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 305
+  },
+  {
+    "id": 67,
+    "nome": "Machoke",
+    "geracao": 1,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 68,
+    "nome": "Machamp",
+    "geracao": 1,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 505
+  },
+  {
+    "id": 69,
+    "nome": "Bellsprout",
+    "geracao": 1,
+    "tipo1": "Planta",
+    "tipo2": "Veneno",
+    "estagio": 1,
+    "status_total": 300
+  },
+  {
+    "id": 70,
+    "nome": "Weepinbell",
+    "geracao": 1,
+    "tipo1": "Planta",
+    "tipo2": "Veneno",
+    "estagio": 2,
+    "status_total": 390
+  },
+  {
+    "id": 71,
+    "nome": "Victreebel",
+    "geracao": 1,
+    "tipo1": "Planta",
+    "tipo2": "Veneno",
+    "estagio": 3,
+    "status_total": 490
+  },
+  {
+    "id": 72,
+    "nome": "Tentacool",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": "Veneno",
+    "estagio": 1,
+    "status_total": 335
+  },
+  {
+    "id": 73,
+    "nome": "Tentacruel",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": "Veneno",
+    "estagio": 2,
+    "status_total": 515
+  },
+  {
+    "id": 74,
+    "nome": "Geodude",
+    "geracao": 1,
+    "tipo1": "Pedra",
+    "tipo2": "Terra",
+    "estagio": 1,
+    "status_total": 300
+  },
+  {
+    "id": 75,
+    "nome": "Graveler",
+    "geracao": 1,
+    "tipo1": "Pedra",
+    "tipo2": "Terra",
+    "estagio": 2,
+    "status_total": 390
+  },
+  {
+    "id": 76,
+    "nome": "Golem",
+    "geracao": 1,
+    "tipo1": "Pedra",
+    "tipo2": "Terra",
+    "estagio": 3,
+    "status_total": 495
+  },
+  {
+    "id": 77,
+    "nome": "Ponyta",
+    "geracao": 1,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 410
+  },
+  {
+    "id": 78,
+    "nome": "Rapidash",
+    "geracao": 1,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 500
+  },
+  {
+    "id": 79,
+    "nome": "Slowpoke",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 315
+  },
+  {
+    "id": 80,
+    "nome": "Slowbro",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": "Psíquico",
+    "estagio": 2,
+    "status_total": 490
+  },
+  {
+    "id": 81,
+    "nome": "Magnemite",
+    "geracao": 1,
+    "tipo1": "Elétrico",
+    "tipo2": "Aço",
+    "estagio": 1,
+    "status_total": 325
+  },
+  {
+    "id": 82,
+    "nome": "Magneton",
+    "geracao": 1,
+    "tipo1": "Elétrico",
+    "tipo2": "Aço",
+    "estagio": 2,
+    "status_total": 465
+  },
+  {
+    "id": 83,
+    "nome": "Farfetch'd",
+    "geracao": 1,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 377
+  },
+  {
+    "id": 84,
+    "nome": "Doduo",
+    "geracao": 1,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 310
+  },
+  {
+    "id": 85,
+    "nome": "Dodrio",
+    "geracao": 1,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 470
+  },
+  {
+    "id": 86,
+    "nome": "Seel",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 325
+  },
+  {
+    "id": 87,
+    "nome": "Dewgong",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": "Gelo",
+    "estagio": 2,
+    "status_total": 475
+  },
+  {
+    "id": 88,
+    "nome": "Grimer",
+    "geracao": 1,
+    "tipo1": "Veneno",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 325
+  },
+  {
+    "id": 89,
+    "nome": "Muk",
+    "geracao": 1,
+    "tipo1": "Veneno",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 500
+  },
+  {
+    "id": 90,
+    "nome": "Shellder",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 305
+  },
+  {
+    "id": 91,
+    "nome": "Cloyster",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": "Gelo",
+    "estagio": 2,
+    "status_total": 525
+  },
+  {
+    "id": 92,
+    "nome": "Gastly",
+    "geracao": 1,
+    "tipo1": "Fantasma",
+    "tipo2": "Veneno",
+    "estagio": 1,
+    "status_total": 310
+  },
+  {
+    "id": 93,
+    "nome": "Haunter",
+    "geracao": 1,
+    "tipo1": "Fantasma",
+    "tipo2": "Veneno",
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 94,
+    "nome": "Gengar",
+    "geracao": 1,
+    "tipo1": "Fantasma",
+    "tipo2": "Veneno",
+    "estagio": 3,
+    "status_total": 500
+  },
+  {
+    "id": 95,
+    "nome": "Onix",
+    "geracao": 1,
+    "tipo1": "Pedra",
+    "tipo2": "Terra",
+    "estagio": 1,
+    "status_total": 385
+  },
+  {
+    "id": 96,
+    "nome": "Drowzee",
+    "geracao": 1,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 328
+  },
+  {
+    "id": 97,
+    "nome": "Hypno",
+    "geracao": 1,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 483
+  },
+  {
+    "id": 98,
+    "nome": "Krabby",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 325
+  },
+  {
+    "id": 99,
+    "nome": "Kingler",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 475
+  },
+  {
+    "id": 100,
+    "nome": "Voltorb",
+    "geracao": 1,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 330
+  },
+  {
+    "id": 101,
+    "nome": "Electrode",
+    "geracao": 1,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 490
+  },
+  {
+    "id": 102,
+    "nome": "Exeggcute",
+    "geracao": 1,
+    "tipo1": "Planta",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 325
+  },
+  {
+    "id": 103,
+    "nome": "Exeggutor",
+    "geracao": 1,
+    "tipo1": "Planta",
+    "tipo2": "Psíquico",
+    "estagio": 2,
+    "status_total": 530
+  },
+  {
+    "id": 104,
+    "nome": "Cubone",
+    "geracao": 1,
+    "tipo1": "Terra",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 320
+  },
+  {
+    "id": 105,
+    "nome": "Marowak",
+    "geracao": 1,
+    "tipo1": "Terra",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 425
+  },
+  {
+    "id": 106,
+    "nome": "Hitmonlee",
+    "geracao": 1,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 455
+  },
+  {
+    "id": 107,
+    "nome": "Hitmonchan",
+    "geracao": 1,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 448
+  },
+  {
+    "id": 108,
+    "nome": "Lickitung",
+    "geracao": 1,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 385
+  },
+  {
+    "id": 109,
+    "nome": "Koffing",
+    "geracao": 1,
+    "tipo1": "Veneno",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 340
+  },
+  {
+    "id": 110,
+    "nome": "Weezing",
+    "geracao": 1,
+    "tipo1": "Veneno",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 490
+  },
+  {
+    "id": 111,
+    "nome": "Rhyhorn",
+    "geracao": 1,
+    "tipo1": "Terra",
+    "tipo2": "Pedra",
+    "estagio": 1,
+    "status_total": 345
+  },
+  {
+    "id": 112,
+    "nome": "Rhydon",
+    "geracao": 1,
+    "tipo1": "Terra",
+    "tipo2": "Pedra",
+    "estagio": 2,
+    "status_total": 485
+  },
+  {
+    "id": 113,
+    "nome": "Chansey",
+    "geracao": 1,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 450
+  },
+  {
+    "id": 114,
+    "nome": "Tangela",
+    "geracao": 1,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 435
+  },
+  {
+    "id": 115,
+    "nome": "Kangaskhan",
+    "geracao": 1,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 490
+  },
+  {
+    "id": 116,
+    "nome": "Horsea",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 295
+  },
+  {
+    "id": 117,
+    "nome": "Seadra",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 440
+  },
+  {
+    "id": 118,
+    "nome": "Goldeen",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 320
+  },
+  {
+    "id": 119,
+    "nome": "Seaking",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 450
+  },
+  {
+    "id": 120,
+    "nome": "Staryu",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 340
+  },
+  {
+    "id": 121,
+    "nome": "Starmie",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": "Psíquico",
+    "estagio": 2,
+    "status_total": 520
+  },
+  {
+    "id": 122,
+    "nome": "Mr. Mime",
+    "geracao": 1,
+    "tipo1": "Psíquico",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 460
+  },
+  {
+    "id": 123,
+    "nome": "Scyther",
+    "geracao": 1,
+    "tipo1": "Inseto",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 500
+  },
+  {
+    "id": 124,
+    "nome": "Jynx",
+    "geracao": 1,
+    "tipo1": "Gelo",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 455
+  },
+  {
+    "id": 125,
+    "nome": "Electabuzz",
+    "geracao": 1,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 490
+  },
+  {
+    "id": 126,
+    "nome": "Magmar",
+    "geracao": 1,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 495
+  },
+  {
+    "id": 127,
+    "nome": "Pinsir",
+    "geracao": 1,
+    "tipo1": "Inseto",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 500
+  },
+  {
+    "id": 128,
+    "nome": "Tauros",
+    "geracao": 1,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 490
+  },
+  {
+    "id": 129,
+    "nome": "Magikarp",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 200
+  },
+  {
+    "id": 130,
+    "nome": "Gyarados",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 540
+  },
+  {
+    "id": 131,
+    "nome": "Lapras",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": "Gelo",
+    "estagio": 1,
+    "status_total": 535
+  },
+  {
+    "id": 132,
+    "nome": "Ditto",
+    "geracao": 1,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 288
+  },
+  {
+    "id": 133,
+    "nome": "Eevee",
+    "geracao": 1,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 325
+  },
+  {
+    "id": 134,
+    "nome": "Vaporeon",
+    "geracao": 1,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 525
+  },
+  {
+    "id": 135,
+    "nome": "Jolteon",
+    "geracao": 1,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 525
+  },
+  {
+    "id": 136,
+    "nome": "Flareon",
+    "geracao": 1,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 525
+  },
+  {
+    "id": 137,
+    "nome": "Porygon",
+    "geracao": 1,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 395
+  },
+  {
+    "id": 138,
+    "nome": "Omanyte",
+    "geracao": 1,
+    "tipo1": "Pedra",
+    "tipo2": "Água",
+    "estagio": 1,
+    "status_total": 355
+  },
+  {
+    "id": 139,
+    "nome": "Omastar",
+    "geracao": 1,
+    "tipo1": "Pedra",
+    "tipo2": "Água",
+    "estagio": 2,
+    "status_total": 495
+  },
+  {
+    "id": 140,
+    "nome": "Kabuto",
+    "geracao": 1,
+    "tipo1": "Pedra",
+    "tipo2": "Água",
+    "estagio": 1,
+    "status_total": 355
+  },
+  {
+    "id": 141,
+    "nome": "Kabutops",
+    "geracao": 1,
+    "tipo1": "Pedra",
+    "tipo2": "Água",
+    "estagio": 2,
+    "status_total": 495
+  },
+  {
+    "id": 142,
+    "nome": "Aerodactyl",
+    "geracao": 1,
+    "tipo1": "Pedra",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 515
+  },
+  {
+    "id": 143,
+    "nome": "Snorlax",
+    "geracao": 1,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 540
+  },
+  {
+    "id": 144,
+    "nome": "Articuno",
+    "geracao": 1,
+    "tipo1": "Gelo",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 580
+  },
+  {
+    "id": 145,
+    "nome": "Zapdos",
+    "geracao": 1,
+    "tipo1": "Elétrico",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 580
+  },
+  {
+    "id": 146,
+    "nome": "Moltres",
+    "geracao": 1,
+    "tipo1": "Fogo",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 580
+  },
+  {
+    "id": 147,
+    "nome": "Dratini",
+    "geracao": 1,
+    "tipo1": "Dragão",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 300
+  },
+  {
+    "id": 148,
+    "nome": "Dragonair",
+    "geracao": 1,
+    "tipo1": "Dragão",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 420
+  },
+  {
+    "id": 149,
+    "nome": "Dragonite",
+    "geracao": 1,
+    "tipo1": "Dragão",
+    "tipo2": "Voador",
+    "estagio": 3,
+    "status_total": 600
+  },
+  {
+    "id": 150,
+    "nome": "Mewtwo",
+    "geracao": 1,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 680
+  },
+  {
+    "id": 151,
+    "nome": "Mew",
+    "geracao": 1,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 152,
+    "nome": "Chikorita",
+    "geracao": 2,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 318
+  },
+  {
+    "id": 153,
+    "nome": "Bayleef",
+    "geracao": 2,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 154,
+    "nome": "Meganium",
+    "geracao": 2,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 525
+  },
+  {
+    "id": 155,
+    "nome": "Cyndaquil",
+    "geracao": 2,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 309
+  },
+  {
+    "id": 156,
+    "nome": "Quilava",
+    "geracao": 2,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 157,
+    "nome": "Typhlosion",
+    "geracao": 2,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 534
+  },
+  {
+    "id": 158,
+    "nome": "Totodile",
+    "geracao": 2,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 314
+  },
+  {
+    "id": 159,
+    "nome": "Croconaw",
+    "geracao": 2,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 160,
+    "nome": "Feraligatr",
+    "geracao": 2,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 530
+  },
+  {
+    "id": 161,
+    "nome": "Sentret",
+    "geracao": 2,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 215
+  },
+  {
+    "id": 162,
+    "nome": "Furret",
+    "geracao": 2,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 415
+  },
+  {
+    "id": 163,
+    "nome": "Hoothoot",
+    "geracao": 2,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 262
+  },
+  {
+    "id": 164,
+    "nome": "Noctowl",
+    "geracao": 2,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 452
+  },
+  {
+    "id": 165,
+    "nome": "Ledyba",
+    "geracao": 2,
+    "tipo1": "Inseto",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 265
+  },
+  {
+    "id": 166,
+    "nome": "Ledian",
+    "geracao": 2,
+    "tipo1": "Inseto",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 390
+  },
+  {
+    "id": 167,
+    "nome": "Spinarak",
+    "geracao": 2,
+    "tipo1": "Inseto",
+    "tipo2": "Veneno",
+    "estagio": 1,
+    "status_total": 250
+  },
+  {
+    "id": 168,
+    "nome": "Ariados",
+    "geracao": 2,
+    "tipo1": "Inseto",
+    "tipo2": "Veneno",
+    "estagio": 2,
+    "status_total": 390
+  },
+  {
+    "id": 169,
+    "nome": "Crobat",
+    "geracao": 2,
+    "tipo1": "Veneno",
+    "tipo2": "Voador",
+    "estagio": 3,
+    "status_total": 535
+  },
+  {
+    "id": 170,
+    "nome": "Chinchou",
+    "geracao": 2,
+    "tipo1": "Água",
+    "tipo2": "Elétrico",
+    "estagio": 1,
+    "status_total": 330
+  },
+  {
+    "id": 171,
+    "nome": "Lanturn",
+    "geracao": 2,
+    "tipo1": "Água",
+    "tipo2": "Elétrico",
+    "estagio": 2,
+    "status_total": 460
+  },
+  {
+    "id": 172,
+    "nome": "Pichu",
+    "geracao": 2,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 205
+  },
+  {
+    "id": 173,
+    "nome": "Cleffa",
+    "geracao": 2,
+    "tipo1": "Fada",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 218
+  },
+  {
+    "id": 174,
+    "nome": "Igglybuff",
+    "geracao": 2,
+    "tipo1": "Normal",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 210
+  },
+  {
+    "id": 175,
+    "nome": "Togepi",
+    "geracao": 2,
+    "tipo1": "Fada",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 245
+  },
+  {
+    "id": 176,
+    "nome": "Togetic",
+    "geracao": 2,
+    "tipo1": "Fada",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 177,
+    "nome": "Natu",
+    "geracao": 2,
+    "tipo1": "Psíquico",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 320
+  },
+  {
+    "id": 178,
+    "nome": "Xatu",
+    "geracao": 2,
+    "tipo1": "Psíquico",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 470
+  },
+  {
+    "id": 179,
+    "nome": "Mareep",
+    "geracao": 2,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 280
+  },
+  {
+    "id": 180,
+    "nome": "Flaaffy",
+    "geracao": 2,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 365
+  },
+  {
+    "id": 181,
+    "nome": "Ampharos",
+    "geracao": 2,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 510
+  },
+  {
+    "id": 182,
+    "nome": "Bellossom",
+    "geracao": 2,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 490
+  },
+  {
+    "id": 183,
+    "nome": "Marill",
+    "geracao": 2,
+    "tipo1": "Água",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 250
+  },
+  {
+    "id": 184,
+    "nome": "Azumarill",
+    "geracao": 2,
+    "tipo1": "Água",
+    "tipo2": "Fada",
+    "estagio": 2,
+    "status_total": 420
+  },
+  {
+    "id": 185,
+    "nome": "Sudowoodo",
+    "geracao": 2,
+    "tipo1": "Pedra",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 410
+  },
+  {
+    "id": 186,
+    "nome": "Politoed",
+    "geracao": 2,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 500
+  },
+  {
+    "id": 187,
+    "nome": "Hoppip",
+    "geracao": 2,
+    "tipo1": "Planta",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 250
+  },
+  {
+    "id": 188,
+    "nome": "Skiploom",
+    "geracao": 2,
+    "tipo1": "Planta",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 340
+  },
+  {
+    "id": 189,
+    "nome": "Jumpluff",
+    "geracao": 2,
+    "tipo1": "Planta",
+    "tipo2": "Voador",
+    "estagio": 3,
+    "status_total": 460
+  },
+  {
+    "id": 190,
+    "nome": "Aipom",
+    "geracao": 2,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 360
+  },
+  {
+    "id": 191,
+    "nome": "Sunkern",
+    "geracao": 2,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 180
+  },
+  {
+    "id": 192,
+    "nome": "Sunflora",
+    "geracao": 2,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 425
+  },
+  {
+    "id": 193,
+    "nome": "Yanma",
+    "geracao": 2,
+    "tipo1": "Inseto",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 390
+  },
+  {
+    "id": 194,
+    "nome": "Wooper",
+    "geracao": 2,
+    "tipo1": "Água",
+    "tipo2": "Terra",
+    "estagio": 1,
+    "status_total": 210
+  },
+  {
+    "id": 195,
+    "nome": "Quagsire",
+    "geracao": 2,
+    "tipo1": "Água",
+    "tipo2": "Terra",
+    "estagio": 2,
+    "status_total": 430
+  },
+  {
+    "id": 196,
+    "nome": "Espeon",
+    "geracao": 2,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 525
+  },
+  {
+    "id": 197,
+    "nome": "Umbreon",
+    "geracao": 2,
+    "tipo1": "Sombrio",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 525
+  },
+  {
+    "id": 198,
+    "nome": "Murkrow",
+    "geracao": 2,
+    "tipo1": "Sombrio",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 405
+  },
+  {
+    "id": 199,
+    "nome": "Slowking",
+    "geracao": 2,
+    "tipo1": "Água",
+    "tipo2": "Psíquico",
+    "estagio": 2,
+    "status_total": 490
+  },
+  {
+    "id": 200,
+    "nome": "Misdreavus",
+    "geracao": 2,
+    "tipo1": "Fantasma",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 435
+  },
+  {
+    "id": 201,
+    "nome": "Unown",
+    "geracao": 2,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 336
+  },
+  {
+    "id": 202,
+    "nome": "Wobbuffet",
+    "geracao": 2,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 405
+  },
+  {
+    "id": 203,
+    "nome": "Girafarig",
+    "geracao": 2,
+    "tipo1": "Normal",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 455
+  },
+  {
+    "id": 204,
+    "nome": "Pineco",
+    "geracao": 2,
+    "tipo1": "Inseto",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 290
+  },
+  {
+    "id": 205,
+    "nome": "Forretress",
+    "geracao": 2,
+    "tipo1": "Inseto",
+    "tipo2": "Aço",
+    "estagio": 2,
+    "status_total": 465
+  },
+  {
+    "id": 206,
+    "nome": "Dunsparce",
+    "geracao": 2,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 415
+  },
+  {
+    "id": 207,
+    "nome": "Gligar",
+    "geracao": 2,
+    "tipo1": "Terra",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 430
+  },
+  {
+    "id": 208,
+    "nome": "Steelix",
+    "geracao": 2,
+    "tipo1": "Aço",
+    "tipo2": "Terra",
+    "estagio": 2,
+    "status_total": 510
+  },
+  {
+    "id": 209,
+    "nome": "Snubbull",
+    "geracao": 2,
+    "tipo1": "Fada",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 300
+  },
+  {
+    "id": 210,
+    "nome": "Granbull",
+    "geracao": 2,
+    "tipo1": "Fada",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 450
+  },
+  {
+    "id": 211,
+    "nome": "Qwilfish",
+    "geracao": 2,
+    "tipo1": "Água",
+    "tipo2": "Veneno",
+    "estagio": 1,
+    "status_total": 440
+  },
+  {
+    "id": 212,
+    "nome": "Scizor",
+    "geracao": 2,
+    "tipo1": "Inseto",
+    "tipo2": "Aço",
+    "estagio": 2,
+    "status_total": 500
+  },
+  {
+    "id": 213,
+    "nome": "Shuckle",
+    "geracao": 2,
+    "tipo1": "Inseto",
+    "tipo2": "Pedra",
+    "estagio": 1,
+    "status_total": 505
+  },
+  {
+    "id": 214,
+    "nome": "Heracross",
+    "geracao": 2,
+    "tipo1": "Inseto",
+    "tipo2": "Lutador",
+    "estagio": 1,
+    "status_total": 500
+  },
+  {
+    "id": 215,
+    "nome": "Sneasel",
+    "geracao": 2,
+    "tipo1": "Sombrio",
+    "tipo2": "Gelo",
+    "estagio": 1,
+    "status_total": 430
+  },
+  {
+    "id": 216,
+    "nome": "Teddiursa",
+    "geracao": 2,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 330
+  },
+  {
+    "id": 217,
+    "nome": "Ursaring",
+    "geracao": 2,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 500
+  },
+  {
+    "id": 218,
+    "nome": "Slugma",
+    "geracao": 2,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 250
+  },
+  {
+    "id": 219,
+    "nome": "Magcargo",
+    "geracao": 2,
+    "tipo1": "Fogo",
+    "tipo2": "Pedra",
+    "estagio": 2,
+    "status_total": 410
+  },
+  {
+    "id": 220,
+    "nome": "Swinub",
+    "geracao": 2,
+    "tipo1": "Gelo",
+    "tipo2": "Terra",
+    "estagio": 1,
+    "status_total": 250
+  },
+  {
+    "id": 221,
+    "nome": "Piloswine",
+    "geracao": 2,
+    "tipo1": "Gelo",
+    "tipo2": "Terra",
+    "estagio": 2,
+    "status_total": 450
+  },
+  {
+    "id": 222,
+    "nome": "Corsola",
+    "geracao": 2,
+    "tipo1": "Água",
+    "tipo2": "Pedra",
+    "estagio": 1,
+    "status_total": 380
+  },
+  {
+    "id": 223,
+    "nome": "Remoraid",
+    "geracao": 2,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 300
+  },
+  {
+    "id": 224,
+    "nome": "Octillery",
+    "geracao": 2,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 480
+  },
+  {
+    "id": 225,
+    "nome": "Delibird",
+    "geracao": 2,
+    "tipo1": "Gelo",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 330
+  },
+  {
+    "id": 226,
+    "nome": "Mantine",
+    "geracao": 2,
+    "tipo1": "Água",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 465
+  },
+  {
+    "id": 227,
+    "nome": "Skarmory",
+    "geracao": 2,
+    "tipo1": "Aço",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 465
+  },
+  {
+    "id": 228,
+    "nome": "Houndour",
+    "geracao": 2,
+    "tipo1": "Sombrio",
+    "tipo2": "Fogo",
+    "estagio": 1,
+    "status_total": 330
+  },
+  {
+    "id": 229,
+    "nome": "Houndoom",
+    "geracao": 2,
+    "tipo1": "Sombrio",
+    "tipo2": "Fogo",
+    "estagio": 2,
+    "status_total": 500
+  },
+  {
+    "id": 230,
+    "nome": "Kingdra",
+    "geracao": 2,
+    "tipo1": "Água",
+    "tipo2": "Dragão",
+    "estagio": 3,
+    "status_total": 540
+  },
+  {
+    "id": 231,
+    "nome": "Phanpy",
+    "geracao": 2,
+    "tipo1": "Terra",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 330
+  },
+  {
+    "id": 232,
+    "nome": "Donphan",
+    "geracao": 2,
+    "tipo1": "Terra",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 500
+  },
+  {
+    "id": 233,
+    "nome": "Porygon2",
+    "geracao": 2,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 515
+  },
+  {
+    "id": 234,
+    "nome": "Stantler",
+    "geracao": 2,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 465
+  },
+  {
+    "id": 235,
+    "nome": "Smeargle",
+    "geracao": 2,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 250
+  },
+  {
+    "id": 236,
+    "nome": "Tyrogue",
+    "geracao": 2,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 210
+  },
+  {
+    "id": 237,
+    "nome": "Hitmontop",
+    "geracao": 2,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 455
+  },
+  {
+    "id": 238,
+    "nome": "Smoochum",
+    "geracao": 2,
+    "tipo1": "Gelo",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 305
+  },
+  {
+    "id": 239,
+    "nome": "Elekid",
+    "geracao": 2,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 360
+  },
+  {
+    "id": 240,
+    "nome": "Magby",
+    "geracao": 2,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 365
+  },
+  {
+    "id": 241,
+    "nome": "Miltank",
+    "geracao": 2,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 490
+  },
+  {
+    "id": 242,
+    "nome": "Blissey",
+    "geracao": 2,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 540
+  },
+  {
+    "id": 243,
+    "nome": "Raikou",
+    "geracao": 2,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 580
+  },
+  {
+    "id": 244,
+    "nome": "Entei",
+    "geracao": 2,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 580
+  },
+  {
+    "id": 245,
+    "nome": "Suicune",
+    "geracao": 2,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 580
+  },
+  {
+    "id": 246,
+    "nome": "Larvitar",
+    "geracao": 2,
+    "tipo1": "Pedra",
+    "tipo2": "Terra",
+    "estagio": 1,
+    "status_total": 300
+  },
+  {
+    "id": 247,
+    "nome": "Pupitar",
+    "geracao": 2,
+    "tipo1": "Pedra",
+    "tipo2": "Terra",
+    "estagio": 2,
+    "status_total": 410
+  },
+  {
+    "id": 248,
+    "nome": "Tyranitar",
+    "geracao": 2,
+    "tipo1": "Pedra",
+    "tipo2": "Sombrio",
+    "estagio": 3,
+    "status_total": 600
+  },
+  {
+    "id": 249,
+    "nome": "Lugia",
+    "geracao": 2,
+    "tipo1": "Psíquico",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 680
+  },
+  {
+    "id": 250,
+    "nome": "Ho-Oh",
+    "geracao": 2,
+    "tipo1": "Fogo",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 680
+  },
+  {
+    "id": 251,
+    "nome": "Celebi",
+    "geracao": 2,
+    "tipo1": "Psíquico",
+    "tipo2": "Planta",
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 252,
+    "nome": "Treecko",
+    "geracao": 3,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 310
+  },
+  {
+    "id": 253,
+    "nome": "Grovyle",
+    "geracao": 3,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 254,
+    "nome": "Sceptile",
+    "geracao": 3,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 530
+  },
+  {
+    "id": 255,
+    "nome": "Torchic",
+    "geracao": 3,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 310
+  },
+  {
+    "id": 256,
+    "nome": "Combusken",
+    "geracao": 3,
+    "tipo1": "Fogo",
+    "tipo2": "Lutador",
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 257,
+    "nome": "Blaziken",
+    "geracao": 3,
+    "tipo1": "Fogo",
+    "tipo2": "Lutador",
+    "estagio": 3,
+    "status_total": 530
+  },
+  {
+    "id": 258,
+    "nome": "Mudkip",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 310
+  },
+  {
+    "id": 259,
+    "nome": "Marshtomp",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": "Terra",
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 260,
+    "nome": "Swampert",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": "Terra",
+    "estagio": 3,
+    "status_total": 535
+  },
+  {
+    "id": 261,
+    "nome": "Poochyena",
+    "geracao": 3,
+    "tipo1": "Sombrio",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 220
+  },
+  {
+    "id": 262,
+    "nome": "Mightyena",
+    "geracao": 3,
+    "tipo1": "Sombrio",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 420
+  },
+  {
+    "id": 263,
+    "nome": "Zigzagoon",
+    "geracao": 3,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 240
+  },
+  {
+    "id": 264,
+    "nome": "Linoone",
+    "geracao": 3,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 420
+  },
+  {
+    "id": 265,
+    "nome": "Wurmple",
+    "geracao": 3,
+    "tipo1": "Inseto",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 195
+  },
+  {
+    "id": 266,
+    "nome": "Silcoon",
+    "geracao": 3,
+    "tipo1": "Inseto",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 205
+  },
+  {
+    "id": 267,
+    "nome": "Beautifly",
+    "geracao": 3,
+    "tipo1": "Inseto",
+    "tipo2": "Voador",
+    "estagio": 3,
+    "status_total": 395
+  },
+  {
+    "id": 268,
+    "nome": "Cascoon",
+    "geracao": 3,
+    "tipo1": "Inseto",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 205
+  },
+  {
+    "id": 269,
+    "nome": "Dustox",
+    "geracao": 3,
+    "tipo1": "Inseto",
+    "tipo2": "Veneno",
+    "estagio": 3,
+    "status_total": 385
+  },
+  {
+    "id": 270,
+    "nome": "Lotad",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": "Planta",
+    "estagio": 1,
+    "status_total": 220
+  },
+  {
+    "id": 271,
+    "nome": "Lombre",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": "Planta",
+    "estagio": 2,
+    "status_total": 340
+  },
+  {
+    "id": 272,
+    "nome": "Ludicolo",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": "Planta",
+    "estagio": 3,
+    "status_total": 480
+  },
+  {
+    "id": 273,
+    "nome": "Seedot",
+    "geracao": 3,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 220
+  },
+  {
+    "id": 274,
+    "nome": "Nuzleaf",
+    "geracao": 3,
+    "tipo1": "Planta",
+    "tipo2": "Sombrio",
+    "estagio": 2,
+    "status_total": 340
+  },
+  {
+    "id": 275,
+    "nome": "Shiftry",
+    "geracao": 3,
+    "tipo1": "Planta",
+    "tipo2": "Sombrio",
+    "estagio": 3,
+    "status_total": 480
+  },
+  {
+    "id": 276,
+    "nome": "Taillow",
+    "geracao": 3,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 270
+  },
+  {
+    "id": 277,
+    "nome": "Swellow",
+    "geracao": 3,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 455
+  },
+  {
+    "id": 278,
+    "nome": "Wingull",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 270
+  },
+  {
+    "id": 279,
+    "nome": "Pelipper",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 430
+  },
+  {
+    "id": 280,
+    "nome": "Ralts",
+    "geracao": 3,
+    "tipo1": "Psíquico",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 198
+  },
+  {
+    "id": 281,
+    "nome": "Kirlia",
+    "geracao": 3,
+    "tipo1": "Psíquico",
+    "tipo2": "Fada",
+    "estagio": 2,
+    "status_total": 278
+  },
+  {
+    "id": 282,
+    "nome": "Gardevoir",
+    "geracao": 3,
+    "tipo1": "Psíquico",
+    "tipo2": "Fada",
+    "estagio": 3,
+    "status_total": 518
+  },
+  {
+    "id": 283,
+    "nome": "Surskit",
+    "geracao": 3,
+    "tipo1": "Inseto",
+    "tipo2": "Água",
+    "estagio": 1,
+    "status_total": 269
+  },
+  {
+    "id": 284,
+    "nome": "Masquerain",
+    "geracao": 3,
+    "tipo1": "Inseto",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 454
+  },
+  {
+    "id": 285,
+    "nome": "Shroomish",
+    "geracao": 3,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 295
+  },
+  {
+    "id": 286,
+    "nome": "Breloom",
+    "geracao": 3,
+    "tipo1": "Planta",
+    "tipo2": "Lutador",
+    "estagio": 2,
+    "status_total": 460
+  },
+  {
+    "id": 287,
+    "nome": "Slakoth",
+    "geracao": 3,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 280
+  },
+  {
+    "id": 288,
+    "nome": "Vigoroth",
+    "geracao": 3,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 440
+  },
+  {
+    "id": 289,
+    "nome": "Slaking",
+    "geracao": 3,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 670
+  },
+  {
+    "id": 290,
+    "nome": "Nincada",
+    "geracao": 3,
+    "tipo1": "Inseto",
+    "tipo2": "Terra",
+    "estagio": 1,
+    "status_total": 266
+  },
+  {
+    "id": 291,
+    "nome": "Ninjask",
+    "geracao": 3,
+    "tipo1": "Inseto",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 456
+  },
+  {
+    "id": 292,
+    "nome": "Shedinja",
+    "geracao": 3,
+    "tipo1": "Inseto",
+    "tipo2": "Fantasma",
+    "estagio": 2,
+    "status_total": 236
+  },
+  {
+    "id": 293,
+    "nome": "Whismur",
+    "geracao": 3,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 240
+  },
+  {
+    "id": 294,
+    "nome": "Loudred",
+    "geracao": 3,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 360
+  },
+  {
+    "id": 295,
+    "nome": "Exploud",
+    "geracao": 3,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 490
+  },
+  {
+    "id": 296,
+    "nome": "Makuhita",
+    "geracao": 3,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 237
+  },
+  {
+    "id": 297,
+    "nome": "Hariyama",
+    "geracao": 3,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 474
+  },
+  {
+    "id": 298,
+    "nome": "Azurill",
+    "geracao": 3,
+    "tipo1": "Normal",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 190
+  },
+  {
+    "id": 299,
+    "nome": "Nosepass",
+    "geracao": 3,
+    "tipo1": "Pedra",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 375
+  },
+  {
+    "id": 300,
+    "nome": "Skitty",
+    "geracao": 3,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 260
+  },
+  {
+    "id": 301,
+    "nome": "Delcatty",
+    "geracao": 3,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 400
+  },
+  {
+    "id": 302,
+    "nome": "Sableye",
+    "geracao": 3,
+    "tipo1": "Sombrio",
+    "tipo2": "Fantasma",
+    "estagio": 1,
+    "status_total": 380
+  },
+  {
+    "id": 303,
+    "nome": "Mawile",
+    "geracao": 3,
+    "tipo1": "Aço",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 380
+  },
+  {
+    "id": 304,
+    "nome": "Aron",
+    "geracao": 3,
+    "tipo1": "Aço",
+    "tipo2": "Pedra",
+    "estagio": 1,
+    "status_total": 330
+  },
+  {
+    "id": 305,
+    "nome": "Lairon",
+    "geracao": 3,
+    "tipo1": "Aço",
+    "tipo2": "Pedra",
+    "estagio": 2,
+    "status_total": 430
+  },
+  {
+    "id": 306,
+    "nome": "Aggron",
+    "geracao": 3,
+    "tipo1": "Aço",
+    "tipo2": "Pedra",
+    "estagio": 3,
+    "status_total": 530
+  },
+  {
+    "id": 307,
+    "nome": "Meditite",
+    "geracao": 3,
+    "tipo1": "Lutador",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 280
+  },
+  {
+    "id": 308,
+    "nome": "Medicham",
+    "geracao": 3,
+    "tipo1": "Lutador",
+    "tipo2": "Psíquico",
+    "estagio": 2,
+    "status_total": 410
+  },
+  {
+    "id": 309,
+    "nome": "Electrike",
+    "geracao": 3,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 295
+  },
+  {
+    "id": 310,
+    "nome": "Manectric",
+    "geracao": 3,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 475
+  },
+  {
+    "id": 311,
+    "nome": "Plusle",
+    "geracao": 3,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 405
+  },
+  {
+    "id": 312,
+    "nome": "Minun",
+    "geracao": 3,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 405
+  },
+  {
+    "id": 313,
+    "nome": "Volbeat",
+    "geracao": 3,
+    "tipo1": "Inseto",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 430
+  },
+  {
+    "id": 314,
+    "nome": "Illumise",
+    "geracao": 3,
+    "tipo1": "Inseto",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 430
+  },
+  {
+    "id": 315,
+    "nome": "Roselia",
+    "geracao": 3,
+    "tipo1": "Planta",
+    "tipo2": "Veneno",
+    "estagio": 1,
+    "status_total": 400
+  },
+  {
+    "id": 316,
+    "nome": "Gulpin",
+    "geracao": 3,
+    "tipo1": "Veneno",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 302
+  },
+  {
+    "id": 317,
+    "nome": "Swalot",
+    "geracao": 3,
+    "tipo1": "Veneno",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 467
+  },
+  {
+    "id": 318,
+    "nome": "Carvanha",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": "Sombrio",
+    "estagio": 1,
+    "status_total": 305
+  },
+  {
+    "id": 319,
+    "nome": "Sharpedo",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": "Sombrio",
+    "estagio": 2,
+    "status_total": 460
+  },
+  {
+    "id": 320,
+    "nome": "Wailmer",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 400
+  },
+  {
+    "id": 321,
+    "nome": "Wailord",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 500
+  },
+  {
+    "id": 322,
+    "nome": "Numel",
+    "geracao": 3,
+    "tipo1": "Fogo",
+    "tipo2": "Terra",
+    "estagio": 1,
+    "status_total": 305
+  },
+  {
+    "id": 323,
+    "nome": "Camerupt",
+    "geracao": 3,
+    "tipo1": "Fogo",
+    "tipo2": "Terra",
+    "estagio": 2,
+    "status_total": 460
+  },
+  {
+    "id": 324,
+    "nome": "Torkoal",
+    "geracao": 3,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 470
+  },
+  {
+    "id": 325,
+    "nome": "Spoink",
+    "geracao": 3,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 330
+  },
+  {
+    "id": 326,
+    "nome": "Grumpig",
+    "geracao": 3,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 470
+  },
+  {
+    "id": 327,
+    "nome": "Spinda",
+    "geracao": 3,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 360
+  },
+  {
+    "id": 328,
+    "nome": "Trapinch",
+    "geracao": 3,
+    "tipo1": "Terra",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 290
+  },
+  {
+    "id": 329,
+    "nome": "Vibrava",
+    "geracao": 3,
+    "tipo1": "Terra",
+    "tipo2": "Dragão",
+    "estagio": 2,
+    "status_total": 340
+  },
+  {
+    "id": 330,
+    "nome": "Flygon",
+    "geracao": 3,
+    "tipo1": "Terra",
+    "tipo2": "Dragão",
+    "estagio": 3,
+    "status_total": 520
+  },
+  {
+    "id": 331,
+    "nome": "Cacnea",
+    "geracao": 3,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 335
+  },
+  {
+    "id": 332,
+    "nome": "Cacturne",
+    "geracao": 3,
+    "tipo1": "Planta",
+    "tipo2": "Sombrio",
+    "estagio": 2,
+    "status_total": 475
+  },
+  {
+    "id": 333,
+    "nome": "Swablu",
+    "geracao": 3,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 310
+  },
+  {
+    "id": 334,
+    "nome": "Altaria",
+    "geracao": 3,
+    "tipo1": "Dragão",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 490
+  },
+  {
+    "id": 335,
+    "nome": "Zangoose",
+    "geracao": 3,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 458
+  },
+  {
+    "id": 336,
+    "nome": "Seviper",
+    "geracao": 3,
+    "tipo1": "Veneno",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 458
+  },
+  {
+    "id": 337,
+    "nome": "Lunatone",
+    "geracao": 3,
+    "tipo1": "Pedra",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 460
+  },
+  {
+    "id": 338,
+    "nome": "Solrock",
+    "geracao": 3,
+    "tipo1": "Pedra",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 460
+  },
+  {
+    "id": 339,
+    "nome": "Barboach",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": "Terra",
+    "estagio": 1,
+    "status_total": 288
+  },
+  {
+    "id": 340,
+    "nome": "Whiscash",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": "Terra",
+    "estagio": 2,
+    "status_total": 468
+  },
+  {
+    "id": 341,
+    "nome": "Corphish",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 308
+  },
+  {
+    "id": 342,
+    "nome": "Crawdaunt",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": "Sombrio",
+    "estagio": 2,
+    "status_total": 468
+  },
+  {
+    "id": 343,
+    "nome": "Baltoy",
+    "geracao": 3,
+    "tipo1": "Terra",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 300
+  },
+  {
+    "id": 344,
+    "nome": "Claydol",
+    "geracao": 3,
+    "tipo1": "Terra",
+    "tipo2": "Psíquico",
+    "estagio": 2,
+    "status_total": 500
+  },
+  {
+    "id": 345,
+    "nome": "Lileep",
+    "geracao": 3,
+    "tipo1": "Pedra",
+    "tipo2": "Planta",
+    "estagio": 1,
+    "status_total": 355
+  },
+  {
+    "id": 346,
+    "nome": "Cradily",
+    "geracao": 3,
+    "tipo1": "Pedra",
+    "tipo2": "Planta",
+    "estagio": 2,
+    "status_total": 495
+  },
+  {
+    "id": 347,
+    "nome": "Anorith",
+    "geracao": 3,
+    "tipo1": "Pedra",
+    "tipo2": "Inseto",
+    "estagio": 1,
+    "status_total": 355
+  },
+  {
+    "id": 348,
+    "nome": "Armaldo",
+    "geracao": 3,
+    "tipo1": "Pedra",
+    "tipo2": "Inseto",
+    "estagio": 2,
+    "status_total": 495
+  },
+  {
+    "id": 349,
+    "nome": "Feebas",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 200
+  },
+  {
+    "id": 350,
+    "nome": "Milotic",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 540
+  },
+  {
+    "id": 351,
+    "nome": "Castform",
+    "geracao": 3,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 420
+  },
+  {
+    "id": 352,
+    "nome": "Kecleon",
+    "geracao": 3,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 440
+  },
+  {
+    "id": 353,
+    "nome": "Shuppet",
+    "geracao": 3,
+    "tipo1": "Fantasma",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 295
+  },
+  {
+    "id": 354,
+    "nome": "Banette",
+    "geracao": 3,
+    "tipo1": "Fantasma",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 455
+  },
+  {
+    "id": 355,
+    "nome": "Duskull",
+    "geracao": 3,
+    "tipo1": "Fantasma",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 295
+  },
+  {
+    "id": 356,
+    "nome": "Dusclops",
+    "geracao": 3,
+    "tipo1": "Fantasma",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 455
+  },
+  {
+    "id": 357,
+    "nome": "Tropius",
+    "geracao": 3,
+    "tipo1": "Planta",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 460
+  },
+  {
+    "id": 358,
+    "nome": "Chimecho",
+    "geracao": 3,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 425
+  },
+  {
+    "id": 359,
+    "nome": "Absol",
+    "geracao": 3,
+    "tipo1": "Sombrio",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 465
+  },
+  {
+    "id": 360,
+    "nome": "Wynaut",
+    "geracao": 3,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 260
+  },
+  {
+    "id": 361,
+    "nome": "Snorunt",
+    "geracao": 3,
+    "tipo1": "Gelo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 300
+  },
+  {
+    "id": 362,
+    "nome": "Glalie",
+    "geracao": 3,
+    "tipo1": "Gelo",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 480
+  },
+  {
+    "id": 363,
+    "nome": "Spheal",
+    "geracao": 3,
+    "tipo1": "Gelo",
+    "tipo2": "Água",
+    "estagio": 1,
+    "status_total": 290
+  },
+  {
+    "id": 364,
+    "nome": "Sealeo",
+    "geracao": 3,
+    "tipo1": "Gelo",
+    "tipo2": "Água",
+    "estagio": 2,
+    "status_total": 410
+  },
+  {
+    "id": 365,
+    "nome": "Walrein",
+    "geracao": 3,
+    "tipo1": "Gelo",
+    "tipo2": "Água",
+    "estagio": 3,
+    "status_total": 530
+  },
+  {
+    "id": 366,
+    "nome": "Clamperl",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 345
+  },
+  {
+    "id": 367,
+    "nome": "Huntail",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 485
+  },
+  {
+    "id": 368,
+    "nome": "Gorebyss",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 485
+  },
+  {
+    "id": 369,
+    "nome": "Relicanth",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": "Pedra",
+    "estagio": 1,
+    "status_total": 485
+  },
+  {
+    "id": 370,
+    "nome": "Luvdisc",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 330
+  },
+  {
+    "id": 371,
+    "nome": "Bagon",
+    "geracao": 3,
+    "tipo1": "Dragão",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 300
+  },
+  {
+    "id": 372,
+    "nome": "Shelgon",
+    "geracao": 3,
+    "tipo1": "Dragão",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 420
+  },
+  {
+    "id": 373,
+    "nome": "Salamence",
+    "geracao": 3,
+    "tipo1": "Dragão",
+    "tipo2": "Voador",
+    "estagio": 3,
+    "status_total": 600
+  },
+  {
+    "id": 374,
+    "nome": "Beldum",
+    "geracao": 3,
+    "tipo1": "Aço",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 300
+  },
+  {
+    "id": 375,
+    "nome": "Metang",
+    "geracao": 3,
+    "tipo1": "Aço",
+    "tipo2": "Psíquico",
+    "estagio": 2,
+    "status_total": 420
+  },
+  {
+    "id": 376,
+    "nome": "Metagross",
+    "geracao": 3,
+    "tipo1": "Aço",
+    "tipo2": "Psíquico",
+    "estagio": 3,
+    "status_total": 600
+  },
+  {
+    "id": 377,
+    "nome": "Regirock",
+    "geracao": 3,
+    "tipo1": "Pedra",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 580
+  },
+  {
+    "id": 378,
+    "nome": "Regice",
+    "geracao": 3,
+    "tipo1": "Gelo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 580
+  },
+  {
+    "id": 379,
+    "nome": "Registeel",
+    "geracao": 3,
+    "tipo1": "Aço",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 580
+  },
+  {
+    "id": 380,
+    "nome": "Latias",
+    "geracao": 3,
+    "tipo1": "Dragão",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 381,
+    "nome": "Latios",
+    "geracao": 3,
+    "tipo1": "Dragão",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 382,
+    "nome": "Kyogre",
+    "geracao": 3,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 670
+  },
+  {
+    "id": 383,
+    "nome": "Groudon",
+    "geracao": 3,
+    "tipo1": "Terra",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 670
+  },
+  {
+    "id": 384,
+    "nome": "Rayquaza",
+    "geracao": 3,
+    "tipo1": "Dragão",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 680
+  },
+  {
+    "id": 385,
+    "nome": "Jirachi",
+    "geracao": 3,
+    "tipo1": "Aço",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 386,
+    "nome": "Deoxys",
+    "geracao": 3,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 387,
+    "nome": "Turtwig",
+    "geracao": 4,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 318
+  },
+  {
+    "id": 388,
+    "nome": "Grotle",
+    "geracao": 4,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 389,
+    "nome": "Torterra",
+    "geracao": 4,
+    "tipo1": "Planta",
+    "tipo2": "Terra",
+    "estagio": 3,
+    "status_total": 525
+  },
+  {
+    "id": 390,
+    "nome": "Chimchar",
+    "geracao": 4,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 309
+  },
+  {
+    "id": 391,
+    "nome": "Monferno",
+    "geracao": 4,
+    "tipo1": "Fogo",
+    "tipo2": "Lutador",
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 392,
+    "nome": "Infernape",
+    "geracao": 4,
+    "tipo1": "Fogo",
+    "tipo2": "Lutador",
+    "estagio": 3,
+    "status_total": 534
+  },
+  {
+    "id": 393,
+    "nome": "Piplup",
+    "geracao": 4,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 314
+  },
+  {
+    "id": 394,
+    "nome": "Prinplup",
+    "geracao": 4,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 395,
+    "nome": "Empoleon",
+    "geracao": 4,
+    "tipo1": "Água",
+    "tipo2": "Aço",
+    "estagio": 3,
+    "status_total": 530
+  },
+  {
+    "id": 396,
+    "nome": "Starly",
+    "geracao": 4,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 245
+  },
+  {
+    "id": 397,
+    "nome": "Staravia",
+    "geracao": 4,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 340
+  },
+  {
+    "id": 398,
+    "nome": "Staraptor",
+    "geracao": 4,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 3,
+    "status_total": 485
+  },
+  {
+    "id": 399,
+    "nome": "Bidoof",
+    "geracao": 4,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 250
+  },
+  {
+    "id": 400,
+    "nome": "Bibarel",
+    "geracao": 4,
+    "tipo1": "Normal",
+    "tipo2": "Água",
+    "estagio": 2,
+    "status_total": 410
+  },
+  {
+    "id": 401,
+    "nome": "Kricketot",
+    "geracao": 4,
+    "tipo1": "Inseto",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 194
+  },
+  {
+    "id": 402,
+    "nome": "Kricketune",
+    "geracao": 4,
+    "tipo1": "Inseto",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 384
+  },
+  {
+    "id": 403,
+    "nome": "Shinx",
+    "geracao": 4,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 263
+  },
+  {
+    "id": 404,
+    "nome": "Luxio",
+    "geracao": 4,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 363
+  },
+  {
+    "id": 405,
+    "nome": "Luxray",
+    "geracao": 4,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 523
+  },
+  {
+    "id": 406,
+    "nome": "Budew",
+    "geracao": 4,
+    "tipo1": "Planta",
+    "tipo2": "Veneno",
+    "estagio": 1,
+    "status_total": 280
+  },
+  {
+    "id": 407,
+    "nome": "Roserade",
+    "geracao": 4,
+    "tipo1": "Planta",
+    "tipo2": "Veneno",
+    "estagio": 2,
+    "status_total": 515
+  },
+  {
+    "id": 408,
+    "nome": "Cranidos",
+    "geracao": 4,
+    "tipo1": "Pedra",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 350
+  },
+  {
+    "id": 409,
+    "nome": "Rampardos",
+    "geracao": 4,
+    "tipo1": "Pedra",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 495
+  },
+  {
+    "id": 410,
+    "nome": "Shieldon",
+    "geracao": 4,
+    "tipo1": "Pedra",
+    "tipo2": "Aço",
+    "estagio": 1,
+    "status_total": 350
+  },
+  {
+    "id": 411,
+    "nome": "Bastiodon",
+    "geracao": 4,
+    "tipo1": "Pedra",
+    "tipo2": "Aço",
+    "estagio": 2,
+    "status_total": 495
+  },
+  {
+    "id": 412,
+    "nome": "Burmy",
+    "geracao": 4,
+    "tipo1": "Inseto",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 224
+  },
+  {
+    "id": 413,
+    "nome": "Wormadam",
+    "geracao": 4,
+    "tipo1": "Inseto",
+    "tipo2": "Planta",
+    "estagio": 2,
+    "status_total": 424
+  },
+  {
+    "id": 414,
+    "nome": "Mothim",
+    "geracao": 4,
+    "tipo1": "Inseto",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 424
+  },
+  {
+    "id": 415,
+    "nome": "Combee",
+    "geracao": 4,
+    "tipo1": "Inseto",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 244
+  },
+  {
+    "id": 416,
+    "nome": "Vespiquen",
+    "geracao": 4,
+    "tipo1": "Inseto",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 474
+  },
+  {
+    "id": 417,
+    "nome": "Pachirisu",
+    "geracao": 4,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 405
+  },
+  {
+    "id": 418,
+    "nome": "Buizel",
+    "geracao": 4,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 330
+  },
+  {
+    "id": 419,
+    "nome": "Floatzel",
+    "geracao": 4,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 495
+  },
+  {
+    "id": 420,
+    "nome": "Cherubi",
+    "geracao": 4,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 275
+  },
+  {
+    "id": 421,
+    "nome": "Cherrim",
+    "geracao": 4,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 450
+  },
+  {
+    "id": 422,
+    "nome": "Shellos",
+    "geracao": 4,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 325
+  },
+  {
+    "id": 423,
+    "nome": "Gastrodon",
+    "geracao": 4,
+    "tipo1": "Água",
+    "tipo2": "Terra",
+    "estagio": 2,
+    "status_total": 475
+  },
+  {
+    "id": 424,
+    "nome": "Ambipom",
+    "geracao": 4,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 482
+  },
+  {
+    "id": 425,
+    "nome": "Drifloon",
+    "geracao": 4,
+    "tipo1": "Fantasma",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 348
+  },
+  {
+    "id": 426,
+    "nome": "Drifblim",
+    "geracao": 4,
+    "tipo1": "Fantasma",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 498
+  },
+  {
+    "id": 427,
+    "nome": "Buneary",
+    "geracao": 4,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 350
+  },
+  {
+    "id": 428,
+    "nome": "Lopunny",
+    "geracao": 4,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 480
+  },
+  {
+    "id": 429,
+    "nome": "Mismagius",
+    "geracao": 4,
+    "tipo1": "Fantasma",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 495
+  },
+  {
+    "id": 430,
+    "nome": "Honchkrow",
+    "geracao": 4,
+    "tipo1": "Sombrio",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 505
+  },
+  {
+    "id": 431,
+    "nome": "Glameow",
+    "geracao": 4,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 310
+  },
+  {
+    "id": 432,
+    "nome": "Purugly",
+    "geracao": 4,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 452
+  },
+  {
+    "id": 433,
+    "nome": "Chingling",
+    "geracao": 4,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 285
+  },
+  {
+    "id": 434,
+    "nome": "Stunky",
+    "geracao": 4,
+    "tipo1": "Veneno",
+    "tipo2": "Sombrio",
+    "estagio": 1,
+    "status_total": 329
+  },
+  {
+    "id": 435,
+    "nome": "Skuntank",
+    "geracao": 4,
+    "tipo1": "Veneno",
+    "tipo2": "Sombrio",
+    "estagio": 2,
+    "status_total": 479
+  },
+  {
+    "id": 436,
+    "nome": "Bronzor",
+    "geracao": 4,
+    "tipo1": "Aço",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 300
+  },
+  {
+    "id": 437,
+    "nome": "Bronzong",
+    "geracao": 4,
+    "tipo1": "Aço",
+    "tipo2": "Psíquico",
+    "estagio": 2,
+    "status_total": 500
+  },
+  {
+    "id": 438,
+    "nome": "Bonsly",
+    "geracao": 4,
+    "tipo1": "Pedra",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 290
+  },
+  {
+    "id": 439,
+    "nome": "Mime Jr.",
+    "geracao": 4,
+    "tipo1": "Psíquico",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 310
+  },
+  {
+    "id": 440,
+    "nome": "Happiny",
+    "geracao": 4,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 220
+  },
+  {
+    "id": 441,
+    "nome": "Chatot",
+    "geracao": 4,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 411
+  },
+  {
+    "id": 442,
+    "nome": "Spiritomb",
+    "geracao": 4,
+    "tipo1": "Fantasma",
+    "tipo2": "Sombrio",
+    "estagio": 1,
+    "status_total": 485
+  },
+  {
+    "id": 443,
+    "nome": "Gible",
+    "geracao": 4,
+    "tipo1": "Dragão",
+    "tipo2": "Terra",
+    "estagio": 1,
+    "status_total": 300
+  },
+  {
+    "id": 444,
+    "nome": "Gabite",
+    "geracao": 4,
+    "tipo1": "Dragão",
+    "tipo2": "Terra",
+    "estagio": 2,
+    "status_total": 410
+  },
+  {
+    "id": 445,
+    "nome": "Garchomp",
+    "geracao": 4,
+    "tipo1": "Dragão",
+    "tipo2": "Terra",
+    "estagio": 3,
+    "status_total": 600
+  },
+  {
+    "id": 446,
+    "nome": "Munchlax",
+    "geracao": 4,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 390
+  },
+  {
+    "id": 447,
+    "nome": "Riolu",
+    "geracao": 4,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 285
+  },
+  {
+    "id": 448,
+    "nome": "Lucario",
+    "geracao": 4,
+    "tipo1": "Lutador",
+    "tipo2": "Aço",
+    "estagio": 2,
+    "status_total": 525
+  },
+  {
+    "id": 449,
+    "nome": "Hippopotas",
+    "geracao": 4,
+    "tipo1": "Terra",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 330
+  },
+  {
+    "id": 450,
+    "nome": "Hippowdon",
+    "geracao": 4,
+    "tipo1": "Terra",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 525
+  },
+  {
+    "id": 451,
+    "nome": "Skorupi",
+    "geracao": 4,
+    "tipo1": "Veneno",
+    "tipo2": "Inseto",
+    "estagio": 1,
+    "status_total": 330
+  },
+  {
+    "id": 452,
+    "nome": "Drapion",
+    "geracao": 4,
+    "tipo1": "Veneno",
+    "tipo2": "Sombrio",
+    "estagio": 2,
+    "status_total": 500
+  },
+  {
+    "id": 453,
+    "nome": "Croagunk",
+    "geracao": 4,
+    "tipo1": "Veneno",
+    "tipo2": "Lutador",
+    "estagio": 1,
+    "status_total": 300
+  },
+  {
+    "id": 454,
+    "nome": "Toxicroak",
+    "geracao": 4,
+    "tipo1": "Veneno",
+    "tipo2": "Lutador",
+    "estagio": 2,
+    "status_total": 490
+  },
+  {
+    "id": 455,
+    "nome": "Carnivine",
+    "geracao": 4,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 454
+  },
+  {
+    "id": 456,
+    "nome": "Finneon",
+    "geracao": 4,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 330
+  },
+  {
+    "id": 457,
+    "nome": "Lumineon",
+    "geracao": 4,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 460
+  },
+  {
+    "id": 458,
+    "nome": "Mantyke",
+    "geracao": 4,
+    "tipo1": "Água",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 345
+  },
+  {
+    "id": 459,
+    "nome": "Snover",
+    "geracao": 4,
+    "tipo1": "Planta",
+    "tipo2": "Gelo",
+    "estagio": 1,
+    "status_total": 334
+  },
+  {
+    "id": 460,
+    "nome": "Abomasnow",
+    "geracao": 4,
+    "tipo1": "Planta",
+    "tipo2": "Gelo",
+    "estagio": 2,
+    "status_total": 494
+  },
+  {
+    "id": 461,
+    "nome": "Weavile",
+    "geracao": 4,
+    "tipo1": "Sombrio",
+    "tipo2": "Gelo",
+    "estagio": 2,
+    "status_total": 510
+  },
+  {
+    "id": 462,
+    "nome": "Magnezone",
+    "geracao": 4,
+    "tipo1": "Elétrico",
+    "tipo2": "Aço",
+    "estagio": 3,
+    "status_total": 535
+  },
+  {
+    "id": 463,
+    "nome": "Lickilicky",
+    "geracao": 4,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 515
+  },
+  {
+    "id": 464,
+    "nome": "Rhyperior",
+    "geracao": 4,
+    "tipo1": "Terra",
+    "tipo2": "Pedra",
+    "estagio": 3,
+    "status_total": 535
+  },
+  {
+    "id": 465,
+    "nome": "Tangrowth",
+    "geracao": 4,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 535
+  },
+  {
+    "id": 466,
+    "nome": "Electivire",
+    "geracao": 4,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 540
+  },
+  {
+    "id": 467,
+    "nome": "Magmortar",
+    "geracao": 4,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 540
+  },
+  {
+    "id": 468,
+    "nome": "Togekiss",
+    "geracao": 4,
+    "tipo1": "Fada",
+    "tipo2": "Voador",
+    "estagio": 3,
+    "status_total": 545
+  },
+  {
+    "id": 469,
+    "nome": "Yanmega",
+    "geracao": 4,
+    "tipo1": "Inseto",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 515
+  },
+  {
+    "id": 470,
+    "nome": "Leafeon",
+    "geracao": 4,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 525
+  },
+  {
+    "id": 471,
+    "nome": "Glaceon",
+    "geracao": 4,
+    "tipo1": "Gelo",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 525
+  },
+  {
+    "id": 472,
+    "nome": "Gliscor",
+    "geracao": 4,
+    "tipo1": "Terra",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 510
+  },
+  {
+    "id": 473,
+    "nome": "Mamoswine",
+    "geracao": 4,
+    "tipo1": "Gelo",
+    "tipo2": "Terra",
+    "estagio": 3,
+    "status_total": 530
+  },
+  {
+    "id": 474,
+    "nome": "Porygon-Z",
+    "geracao": 4,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 535
+  },
+  {
+    "id": 475,
+    "nome": "Gallade",
+    "geracao": 4,
+    "tipo1": "Psíquico",
+    "tipo2": "Lutador",
+    "estagio": 3,
+    "status_total": 518
+  },
+  {
+    "id": 476,
+    "nome": "Probopass",
+    "geracao": 4,
+    "tipo1": "Pedra",
+    "tipo2": "Aço",
+    "estagio": 2,
+    "status_total": 525
+  },
+  {
+    "id": 477,
+    "nome": "Dusknoir",
+    "geracao": 4,
+    "tipo1": "Fantasma",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 525
+  },
+  {
+    "id": 478,
+    "nome": "Froslass",
+    "geracao": 4,
+    "tipo1": "Gelo",
+    "tipo2": "Fantasma",
+    "estagio": 2,
+    "status_total": 480
+  },
+  {
+    "id": 479,
+    "nome": "Rotom",
+    "geracao": 4,
+    "tipo1": "Elétrico",
+    "tipo2": "Fantasma",
+    "estagio": 1,
+    "status_total": 440
+  },
+  {
+    "id": 480,
+    "nome": "Uxie",
+    "geracao": 4,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 580
+  },
+  {
+    "id": 481,
+    "nome": "Mesprit",
+    "geracao": 4,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 580
+  },
+  {
+    "id": 482,
+    "nome": "Azelf",
+    "geracao": 4,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 580
+  },
+  {
+    "id": 483,
+    "nome": "Dialga",
+    "geracao": 4,
+    "tipo1": "Aço",
+    "tipo2": "Dragão",
+    "estagio": 1,
+    "status_total": 680
+  },
+  {
+    "id": 484,
+    "nome": "Palkia",
+    "geracao": 4,
+    "tipo1": "Água",
+    "tipo2": "Dragão",
+    "estagio": 1,
+    "status_total": 680
+  },
+  {
+    "id": 485,
+    "nome": "Heatran",
+    "geracao": 4,
+    "tipo1": "Fogo",
+    "tipo2": "Aço",
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 486,
+    "nome": "Regigigas",
+    "geracao": 4,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 670
+  },
+  {
+    "id": 487,
+    "nome": "Giratina",
+    "geracao": 4,
+    "tipo1": "Fantasma",
+    "tipo2": "Dragão",
+    "estagio": 1,
+    "status_total": 680
+  },
+  {
+    "id": 488,
+    "nome": "Cresselia",
+    "geracao": 4,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 489,
+    "nome": "Phione",
+    "geracao": 4,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 480
+  },
+  {
+    "id": 490,
+    "nome": "Manaphy",
+    "geracao": 4,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 491,
+    "nome": "Darkrai",
+    "geracao": 4,
+    "tipo1": "Sombrio",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 492,
+    "nome": "Shaymin",
+    "geracao": 4,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 493,
+    "nome": "Arceus",
+    "geracao": 4,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 720
+  },
+  {
+    "id": 494,
+    "nome": "Victini",
+    "geracao": 5,
+    "tipo1": "Psíquico",
+    "tipo2": "Fogo",
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 495,
+    "nome": "Snivy",
+    "geracao": 5,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 308
+  },
+  {
+    "id": 496,
+    "nome": "Servine",
+    "geracao": 5,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 413
+  },
+  {
+    "id": 497,
+    "nome": "Serperior",
+    "geracao": 5,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 528
+  },
+  {
+    "id": 498,
+    "nome": "Tepig",
+    "geracao": 5,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 308
+  },
+  {
+    "id": 499,
+    "nome": "Pignite",
+    "geracao": 5,
+    "tipo1": "Fogo",
+    "tipo2": "Lutador",
+    "estagio": 2,
+    "status_total": 418
+  },
+  {
+    "id": 500,
+    "nome": "Emboar",
+    "geracao": 5,
+    "tipo1": "Fogo",
+    "tipo2": "Lutador",
+    "estagio": 3,
+    "status_total": 528
+  },
+  {
+    "id": 501,
+    "nome": "Oshawott",
+    "geracao": 5,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 308
+  },
+  {
+    "id": 502,
+    "nome": "Dewott",
+    "geracao": 5,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 413
+  },
+  {
+    "id": 503,
+    "nome": "Samurott",
+    "geracao": 5,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 528
+  },
+  {
+    "id": 504,
+    "nome": "Patrat",
+    "geracao": 5,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 255
+  },
+  {
+    "id": 505,
+    "nome": "Watchog",
+    "geracao": 5,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 420
+  },
+  {
+    "id": 506,
+    "nome": "Lillipup",
+    "geracao": 5,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 275
+  },
+  {
+    "id": 507,
+    "nome": "Herdier",
+    "geracao": 5,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 370
+  },
+  {
+    "id": 508,
+    "nome": "Stoutland",
+    "geracao": 5,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 500
+  },
+  {
+    "id": 509,
+    "nome": "Purrloin",
+    "geracao": 5,
+    "tipo1": "Sombrio",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 281
+  },
+  {
+    "id": 510,
+    "nome": "Liepard",
+    "geracao": 5,
+    "tipo1": "Sombrio",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 446
+  },
+  {
+    "id": 511,
+    "nome": "Pansage",
+    "geracao": 5,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 316
+  },
+  {
+    "id": 512,
+    "nome": "Simisage",
+    "geracao": 5,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 498
+  },
+  {
+    "id": 513,
+    "nome": "Pansear",
+    "geracao": 5,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 316
+  },
+  {
+    "id": 514,
+    "nome": "Simisear",
+    "geracao": 5,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 498
+  },
+  {
+    "id": 515,
+    "nome": "Panpour",
+    "geracao": 5,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 316
+  },
+  {
+    "id": 516,
+    "nome": "Simipour",
+    "geracao": 5,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 498
+  },
+  {
+    "id": 517,
+    "nome": "Munna",
+    "geracao": 5,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 292
+  },
+  {
+    "id": 518,
+    "nome": "Musharna",
+    "geracao": 5,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 487
+  },
+  {
+    "id": 519,
+    "nome": "Pidove",
+    "geracao": 5,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 264
+  },
+  {
+    "id": 520,
+    "nome": "Tranquill",
+    "geracao": 5,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 358
+  },
+  {
+    "id": 521,
+    "nome": "Unfezant",
+    "geracao": 5,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 3,
+    "status_total": 488
+  },
+  {
+    "id": 522,
+    "nome": "Blitzle",
+    "geracao": 5,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 295
+  },
+  {
+    "id": 523,
+    "nome": "Zebstrika",
+    "geracao": 5,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 497
+  },
+  {
+    "id": 524,
+    "nome": "Roggenrola",
+    "geracao": 5,
+    "tipo1": "Pedra",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 280
+  },
+  {
+    "id": 525,
+    "nome": "Boldore",
+    "geracao": 5,
+    "tipo1": "Pedra",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 390
+  },
+  {
+    "id": 526,
+    "nome": "Gigalith",
+    "geracao": 5,
+    "tipo1": "Pedra",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 515
+  },
+  {
+    "id": 527,
+    "nome": "Woobat",
+    "geracao": 5,
+    "tipo1": "Psíquico",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 323
+  },
+  {
+    "id": 528,
+    "nome": "Swoobat",
+    "geracao": 5,
+    "tipo1": "Psíquico",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 488
+  },
+  {
+    "id": 529,
+    "nome": "Drilbur",
+    "geracao": 5,
+    "tipo1": "Terra",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 328
+  },
+  {
+    "id": 530,
+    "nome": "Excadrill",
+    "geracao": 5,
+    "tipo1": "Terra",
+    "tipo2": "Aço",
+    "estagio": 2,
+    "status_total": 508
+  },
+  {
+    "id": 531,
+    "nome": "Audino",
+    "geracao": 5,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 445
+  },
+  {
+    "id": 532,
+    "nome": "Timburr",
+    "geracao": 5,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 305
+  },
+  {
+    "id": 533,
+    "nome": "Gurdurr",
+    "geracao": 5,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 534,
+    "nome": "Conkeldurr",
+    "geracao": 5,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 505
+  },
+  {
+    "id": 535,
+    "nome": "Tympole",
+    "geracao": 5,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 294
+  },
+  {
+    "id": 536,
+    "nome": "Palpitoad",
+    "geracao": 5,
+    "tipo1": "Água",
+    "tipo2": "Terra",
+    "estagio": 2,
+    "status_total": 384
+  },
+  {
+    "id": 537,
+    "nome": "Seismitoad",
+    "geracao": 5,
+    "tipo1": "Água",
+    "tipo2": "Terra",
+    "estagio": 3,
+    "status_total": 509
+  },
+  {
+    "id": 538,
+    "nome": "Throh",
+    "geracao": 5,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 465
+  },
+  {
+    "id": 539,
+    "nome": "Sawk",
+    "geracao": 5,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 465
+  },
+  {
+    "id": 540,
+    "nome": "Sewaddle",
+    "geracao": 5,
+    "tipo1": "Inseto",
+    "tipo2": "Planta",
+    "estagio": 1,
+    "status_total": 310
+  },
+  {
+    "id": 541,
+    "nome": "Swadloon",
+    "geracao": 5,
+    "tipo1": "Inseto",
+    "tipo2": "Planta",
+    "estagio": 2,
+    "status_total": 380
+  },
+  {
+    "id": 542,
+    "nome": "Leavanny",
+    "geracao": 5,
+    "tipo1": "Inseto",
+    "tipo2": "Planta",
+    "estagio": 3,
+    "status_total": 500
+  },
+  {
+    "id": 543,
+    "nome": "Venipede",
+    "geracao": 5,
+    "tipo1": "Inseto",
+    "tipo2": "Veneno",
+    "estagio": 1,
+    "status_total": 260
+  },
+  {
+    "id": 544,
+    "nome": "Whirlipede",
+    "geracao": 5,
+    "tipo1": "Inseto",
+    "tipo2": "Veneno",
+    "estagio": 2,
+    "status_total": 360
+  },
+  {
+    "id": 545,
+    "nome": "Scolipede",
+    "geracao": 5,
+    "tipo1": "Inseto",
+    "tipo2": "Veneno",
+    "estagio": 3,
+    "status_total": 485
+  },
+  {
+    "id": 546,
+    "nome": "Cottonee",
+    "geracao": 5,
+    "tipo1": "Planta",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 280
+  },
+  {
+    "id": 547,
+    "nome": "Whimsicott",
+    "geracao": 5,
+    "tipo1": "Planta",
+    "tipo2": "Fada",
+    "estagio": 2,
+    "status_total": 480
+  },
+  {
+    "id": 548,
+    "nome": "Petilil",
+    "geracao": 5,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 280
+  },
+  {
+    "id": 549,
+    "nome": "Lilligant",
+    "geracao": 5,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 480
+  },
+  {
+    "id": 550,
+    "nome": "Basculin",
+    "geracao": 5,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 460
+  },
+  {
+    "id": 551,
+    "nome": "Sandile",
+    "geracao": 5,
+    "tipo1": "Terra",
+    "tipo2": "Sombrio",
+    "estagio": 1,
+    "status_total": 292
+  },
+  {
+    "id": 552,
+    "nome": "Krokorok",
+    "geracao": 5,
+    "tipo1": "Terra",
+    "tipo2": "Sombrio",
+    "estagio": 2,
+    "status_total": 387
+  },
+  {
+    "id": 553,
+    "nome": "Krookodile",
+    "geracao": 5,
+    "tipo1": "Terra",
+    "tipo2": "Sombrio",
+    "estagio": 3,
+    "status_total": 519
+  },
+  {
+    "id": 554,
+    "nome": "Darumaka",
+    "geracao": 5,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 315
+  },
+  {
+    "id": 555,
+    "nome": "Darmanitan",
+    "geracao": 5,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 480
+  },
+  {
+    "id": 556,
+    "nome": "Maractus",
+    "geracao": 5,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 461
+  },
+  {
+    "id": 557,
+    "nome": "Dwebble",
+    "geracao": 5,
+    "tipo1": "Inseto",
+    "tipo2": "Pedra",
+    "estagio": 1,
+    "status_total": 325
+  },
+  {
+    "id": 558,
+    "nome": "Crustle",
+    "geracao": 5,
+    "tipo1": "Inseto",
+    "tipo2": "Pedra",
+    "estagio": 2,
+    "status_total": 485
+  },
+  {
+    "id": 559,
+    "nome": "Scraggy",
+    "geracao": 5,
+    "tipo1": "Sombrio",
+    "tipo2": "Lutador",
+    "estagio": 1,
+    "status_total": 348
+  },
+  {
+    "id": 560,
+    "nome": "Scrafty",
+    "geracao": 5,
+    "tipo1": "Sombrio",
+    "tipo2": "Lutador",
+    "estagio": 2,
+    "status_total": 488
+  },
+  {
+    "id": 561,
+    "nome": "Sigilyph",
+    "geracao": 5,
+    "tipo1": "Psíquico",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 490
+  },
+  {
+    "id": 562,
+    "nome": "Yamask",
+    "geracao": 5,
+    "tipo1": "Fantasma",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 303
+  },
+  {
+    "id": 563,
+    "nome": "Cofagrigus",
+    "geracao": 5,
+    "tipo1": "Fantasma",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 483
+  },
+  {
+    "id": 564,
+    "nome": "Tirtouga",
+    "geracao": 5,
+    "tipo1": "Água",
+    "tipo2": "Pedra",
+    "estagio": 1,
+    "status_total": 355
+  },
+  {
+    "id": 565,
+    "nome": "Carracosta",
+    "geracao": 5,
+    "tipo1": "Água",
+    "tipo2": "Pedra",
+    "estagio": 2,
+    "status_total": 495
+  },
+  {
+    "id": 566,
+    "nome": "Archen",
+    "geracao": 5,
+    "tipo1": "Pedra",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 401
+  },
+  {
+    "id": 567,
+    "nome": "Archeops",
+    "geracao": 5,
+    "tipo1": "Pedra",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 567
+  },
+  {
+    "id": 568,
+    "nome": "Trubbish",
+    "geracao": 5,
+    "tipo1": "Veneno",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 329
+  },
+  {
+    "id": 569,
+    "nome": "Garbodor",
+    "geracao": 5,
+    "tipo1": "Veneno",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 474
+  },
+  {
+    "id": 570,
+    "nome": "Zorua",
+    "geracao": 5,
+    "tipo1": "Sombrio",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 330
+  },
+  {
+    "id": 571,
+    "nome": "Zoroark",
+    "geracao": 5,
+    "tipo1": "Sombrio",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 510
+  },
+  {
+    "id": 572,
+    "nome": "Minccino",
+    "geracao": 5,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 300
+  },
+  {
+    "id": 573,
+    "nome": "Cinccino",
+    "geracao": 5,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 470
+  },
+  {
+    "id": 574,
+    "nome": "Gothita",
+    "geracao": 5,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 290
+  },
+  {
+    "id": 575,
+    "nome": "Gothorita",
+    "geracao": 5,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 390
+  },
+  {
+    "id": 576,
+    "nome": "Gothitelle",
+    "geracao": 5,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 490
+  },
+  {
+    "id": 577,
+    "nome": "Solosis",
+    "geracao": 5,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 290
+  },
+  {
+    "id": 578,
+    "nome": "Duosion",
+    "geracao": 5,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 370
+  },
+  {
+    "id": 579,
+    "nome": "Reuniclus",
+    "geracao": 5,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 490
+  },
+  {
+    "id": 580,
+    "nome": "Ducklett",
+    "geracao": 5,
+    "tipo1": "Água",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 305
+  },
+  {
+    "id": 581,
+    "nome": "Swanna",
+    "geracao": 5,
+    "tipo1": "Água",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 473
+  },
+  {
+    "id": 582,
+    "nome": "Vanillite",
+    "geracao": 5,
+    "tipo1": "Gelo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 305
+  },
+  {
+    "id": 583,
+    "nome": "Vanillish",
+    "geracao": 5,
+    "tipo1": "Gelo",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 395
+  },
+  {
+    "id": 584,
+    "nome": "Vanilluxe",
+    "geracao": 5,
+    "tipo1": "Gelo",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 535
+  },
+  {
+    "id": 585,
+    "nome": "Deerling",
+    "geracao": 5,
+    "tipo1": "Normal",
+    "tipo2": "Planta",
+    "estagio": 1,
+    "status_total": 335
+  },
+  {
+    "id": 586,
+    "nome": "Sawsbuck",
+    "geracao": 5,
+    "tipo1": "Normal",
+    "tipo2": "Planta",
+    "estagio": 2,
+    "status_total": 475
+  },
+  {
+    "id": 587,
+    "nome": "Emolga",
+    "geracao": 5,
+    "tipo1": "Elétrico",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 428
+  },
+  {
+    "id": 588,
+    "nome": "Karrablast",
+    "geracao": 5,
+    "tipo1": "Inseto",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 315
+  },
+  {
+    "id": 589,
+    "nome": "Escavalier",
+    "geracao": 5,
+    "tipo1": "Inseto",
+    "tipo2": "Aço",
+    "estagio": 2,
+    "status_total": 495
+  },
+  {
+    "id": 590,
+    "nome": "Foongus",
+    "geracao": 5,
+    "tipo1": "Planta",
+    "tipo2": "Veneno",
+    "estagio": 1,
+    "status_total": 294
+  },
+  {
+    "id": 591,
+    "nome": "Amoonguss",
+    "geracao": 5,
+    "tipo1": "Planta",
+    "tipo2": "Veneno",
+    "estagio": 2,
+    "status_total": 464
+  },
+  {
+    "id": 592,
+    "nome": "Frillish",
+    "geracao": 5,
+    "tipo1": "Água",
+    "tipo2": "Fantasma",
+    "estagio": 1,
+    "status_total": 335
+  },
+  {
+    "id": 593,
+    "nome": "Jellicent",
+    "geracao": 5,
+    "tipo1": "Água",
+    "tipo2": "Fantasma",
+    "estagio": 2,
+    "status_total": 480
+  },
+  {
+    "id": 594,
+    "nome": "Alomomola",
+    "geracao": 5,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 470
+  },
+  {
+    "id": 595,
+    "nome": "Joltik",
+    "geracao": 5,
+    "tipo1": "Inseto",
+    "tipo2": "Elétrico",
+    "estagio": 1,
+    "status_total": 319
+  },
+  {
+    "id": 596,
+    "nome": "Galvantula",
+    "geracao": 5,
+    "tipo1": "Inseto",
+    "tipo2": "Elétrico",
+    "estagio": 2,
+    "status_total": 472
+  },
+  {
+    "id": 597,
+    "nome": "Ferroseed",
+    "geracao": 5,
+    "tipo1": "Planta",
+    "tipo2": "Aço",
+    "estagio": 1,
+    "status_total": 305
+  },
+  {
+    "id": 598,
+    "nome": "Ferrothorn",
+    "geracao": 5,
+    "tipo1": "Planta",
+    "tipo2": "Aço",
+    "estagio": 2,
+    "status_total": 489
+  },
+  {
+    "id": 599,
+    "nome": "Klink",
+    "geracao": 5,
+    "tipo1": "Aço",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 300
+  },
+  {
+    "id": 600,
+    "nome": "Klang",
+    "geracao": 5,
+    "tipo1": "Aço",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 440
+  },
+  {
+    "id": 601,
+    "nome": "Klinklang",
+    "geracao": 5,
+    "tipo1": "Aço",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 520
+  },
+  {
+    "id": 602,
+    "nome": "Tynamo",
+    "geracao": 5,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 275
+  },
+  {
+    "id": 603,
+    "nome": "Eelektrik",
+    "geracao": 5,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 604,
+    "nome": "Eelektross",
+    "geracao": 5,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 515
+  },
+  {
+    "id": 605,
+    "nome": "Elgyem",
+    "geracao": 5,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 335
+  },
+  {
+    "id": 606,
+    "nome": "Beheeyem",
+    "geracao": 5,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 485
+  },
+  {
+    "id": 607,
+    "nome": "Litwick",
+    "geracao": 5,
+    "tipo1": "Fantasma",
+    "tipo2": "Fogo",
+    "estagio": 1,
+    "status_total": 275
+  },
+  {
+    "id": 608,
+    "nome": "Lampent",
+    "geracao": 5,
+    "tipo1": "Fantasma",
+    "tipo2": "Fogo",
+    "estagio": 2,
+    "status_total": 370
+  },
+  {
+    "id": 609,
+    "nome": "Chandelure",
+    "geracao": 5,
+    "tipo1": "Fantasma",
+    "tipo2": "Fogo",
+    "estagio": 3,
+    "status_total": 520
+  },
+  {
+    "id": 610,
+    "nome": "Axew",
+    "geracao": 5,
+    "tipo1": "Dragão",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 320
+  },
+  {
+    "id": 611,
+    "nome": "Fraxure",
+    "geracao": 5,
+    "tipo1": "Dragão",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 410
+  },
+  {
+    "id": 612,
+    "nome": "Haxorus",
+    "geracao": 5,
+    "tipo1": "Dragão",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 540
+  },
+  {
+    "id": 613,
+    "nome": "Cubchoo",
+    "geracao": 5,
+    "tipo1": "Gelo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 305
+  },
+  {
+    "id": 614,
+    "nome": "Beartic",
+    "geracao": 5,
+    "tipo1": "Gelo",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 505
+  },
+  {
+    "id": 615,
+    "nome": "Cryogonal",
+    "geracao": 5,
+    "tipo1": "Gelo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 515
+  },
+  {
+    "id": 616,
+    "nome": "Shelmet",
+    "geracao": 5,
+    "tipo1": "Inseto",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 305
+  },
+  {
+    "id": 617,
+    "nome": "Accelgor",
+    "geracao": 5,
+    "tipo1": "Inseto",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 495
+  },
+  {
+    "id": 618,
+    "nome": "Stunfisk",
+    "geracao": 5,
+    "tipo1": "Terra",
+    "tipo2": "Elétrico",
+    "estagio": 1,
+    "status_total": 471
+  },
+  {
+    "id": 619,
+    "nome": "Mienfoo",
+    "geracao": 5,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 350
+  },
+  {
+    "id": 620,
+    "nome": "Mienshao",
+    "geracao": 5,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 510
+  },
+  {
+    "id": 621,
+    "nome": "Druddigon",
+    "geracao": 5,
+    "tipo1": "Dragão",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 485
+  },
+  {
+    "id": 622,
+    "nome": "Golett",
+    "geracao": 5,
+    "tipo1": "Terra",
+    "tipo2": "Fantasma",
+    "estagio": 1,
+    "status_total": 303
+  },
+  {
+    "id": 623,
+    "nome": "Golurk",
+    "geracao": 5,
+    "tipo1": "Terra",
+    "tipo2": "Fantasma",
+    "estagio": 2,
+    "status_total": 483
+  },
+  {
+    "id": 624,
+    "nome": "Pawniard",
+    "geracao": 5,
+    "tipo1": "Sombrio",
+    "tipo2": "Aço",
+    "estagio": 1,
+    "status_total": 340
+  },
+  {
+    "id": 625,
+    "nome": "Bisharp",
+    "geracao": 5,
+    "tipo1": "Sombrio",
+    "tipo2": "Aço",
+    "estagio": 2,
+    "status_total": 490
+  },
+  {
+    "id": 626,
+    "nome": "Bouffalant",
+    "geracao": 5,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 490
+  },
+  {
+    "id": 627,
+    "nome": "Rufflet",
+    "geracao": 5,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 350
+  },
+  {
+    "id": 628,
+    "nome": "Braviary",
+    "geracao": 5,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 510
+  },
+  {
+    "id": 629,
+    "nome": "Vullaby",
+    "geracao": 5,
+    "tipo1": "Sombrio",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 370
+  },
+  {
+    "id": 630,
+    "nome": "Mandibuzz",
+    "geracao": 5,
+    "tipo1": "Sombrio",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 510
+  },
+  {
+    "id": 631,
+    "nome": "Heatmor",
+    "geracao": 5,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 484
+  },
+  {
+    "id": 632,
+    "nome": "Durant",
+    "geracao": 5,
+    "tipo1": "Inseto",
+    "tipo2": "Aço",
+    "estagio": 1,
+    "status_total": 484
+  },
+  {
+    "id": 633,
+    "nome": "Deino",
+    "geracao": 5,
+    "tipo1": "Sombrio",
+    "tipo2": "Dragão",
+    "estagio": 1,
+    "status_total": 300
+  },
+  {
+    "id": 634,
+    "nome": "Zweilous",
+    "geracao": 5,
+    "tipo1": "Sombrio",
+    "tipo2": "Dragão",
+    "estagio": 2,
+    "status_total": 420
+  },
+  {
+    "id": 635,
+    "nome": "Hydreigon",
+    "geracao": 5,
+    "tipo1": "Sombrio",
+    "tipo2": "Dragão",
+    "estagio": 3,
+    "status_total": 600
+  },
+  {
+    "id": 636,
+    "nome": "Larvesta",
+    "geracao": 5,
+    "tipo1": "Inseto",
+    "tipo2": "Fogo",
+    "estagio": 1,
+    "status_total": 360
+  },
+  {
+    "id": 637,
+    "nome": "Volcarona",
+    "geracao": 5,
+    "tipo1": "Inseto",
+    "tipo2": "Fogo",
+    "estagio": 2,
+    "status_total": 550
+  },
+  {
+    "id": 638,
+    "nome": "Cobalion",
+    "geracao": 5,
+    "tipo1": "Aço",
+    "tipo2": "Lutador",
+    "estagio": 1,
+    "status_total": 580
+  },
+  {
+    "id": 639,
+    "nome": "Terrakion",
+    "geracao": 5,
+    "tipo1": "Pedra",
+    "tipo2": "Lutador",
+    "estagio": 1,
+    "status_total": 580
+  },
+  {
+    "id": 640,
+    "nome": "Virizion",
+    "geracao": 5,
+    "tipo1": "Planta",
+    "tipo2": "Lutador",
+    "estagio": 1,
+    "status_total": 580
+  },
+  {
+    "id": 641,
+    "nome": "Tornadus",
+    "geracao": 5,
+    "tipo1": "Voador",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 580
+  },
+  {
+    "id": 642,
+    "nome": "Thundurus",
+    "geracao": 5,
+    "tipo1": "Elétrico",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 580
+  },
+  {
+    "id": 643,
+    "nome": "Reshiram",
+    "geracao": 5,
+    "tipo1": "Dragão",
+    "tipo2": "Fogo",
+    "estagio": 1,
+    "status_total": 680
+  },
+  {
+    "id": 644,
+    "nome": "Zekrom",
+    "geracao": 5,
+    "tipo1": "Dragão",
+    "tipo2": "Elétrico",
+    "estagio": 1,
+    "status_total": 680
+  },
+  {
+    "id": 645,
+    "nome": "Landorus",
+    "geracao": 5,
+    "tipo1": "Terra",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 646,
+    "nome": "Kyurem",
+    "geracao": 5,
+    "tipo1": "Dragão",
+    "tipo2": "Gelo",
+    "estagio": 1,
+    "status_total": 660
+  },
+  {
+    "id": 647,
+    "nome": "Keldeo",
+    "geracao": 5,
+    "tipo1": "Água",
+    "tipo2": "Lutador",
+    "estagio": 1,
+    "status_total": 580
+  },
+  {
+    "id": 648,
+    "nome": "Meloetta",
+    "geracao": 5,
+    "tipo1": "Normal",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 649,
+    "nome": "Genesect",
+    "geracao": 5,
+    "tipo1": "Inseto",
+    "tipo2": "Aço",
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 650,
+    "nome": "Chespin",
+    "geracao": 6,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 313
+  },
+  {
+    "id": 651,
+    "nome": "Quilladin",
+    "geracao": 6,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 652,
+    "nome": "Chesnaught",
+    "geracao": 6,
+    "tipo1": "Planta",
+    "tipo2": "Lutador",
+    "estagio": 3,
+    "status_total": 530
+  },
+  {
+    "id": 653,
+    "nome": "Fennekin",
+    "geracao": 6,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 307
+  },
+  {
+    "id": 654,
+    "nome": "Braixen",
+    "geracao": 6,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 409
+  },
+  {
+    "id": 655,
+    "nome": "Delphox",
+    "geracao": 6,
+    "tipo1": "Fogo",
+    "tipo2": "Psíquico",
+    "estagio": 3,
+    "status_total": 534
+  },
+  {
+    "id": 656,
+    "nome": "Froakie",
+    "geracao": 6,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 314
+  },
+  {
+    "id": 657,
+    "nome": "Frogadier",
+    "geracao": 6,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 658,
+    "nome": "Greninja",
+    "geracao": 6,
+    "tipo1": "Água",
+    "tipo2": "Sombrio",
+    "estagio": 3,
+    "status_total": 530
+  },
+  {
+    "id": 659,
+    "nome": "Bunnelby",
+    "geracao": 6,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 237
+  },
+  {
+    "id": 660,
+    "nome": "Diggersby",
+    "geracao": 6,
+    "tipo1": "Normal",
+    "tipo2": "Terra",
+    "estagio": 2,
+    "status_total": 423
+  },
+  {
+    "id": 661,
+    "nome": "Fletchling",
+    "geracao": 6,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 278
+  },
+  {
+    "id": 662,
+    "nome": "Fletchinder",
+    "geracao": 6,
+    "tipo1": "Fogo",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 382
+  },
+  {
+    "id": 663,
+    "nome": "Talonflame",
+    "geracao": 6,
+    "tipo1": "Fogo",
+    "tipo2": "Voador",
+    "estagio": 3,
+    "status_total": 499
+  },
+  {
+    "id": 664,
+    "nome": "Scatterbug",
+    "geracao": 6,
+    "tipo1": "Inseto",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 200
+  },
+  {
+    "id": 665,
+    "nome": "Spewpa",
+    "geracao": 6,
+    "tipo1": "Inseto",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 213
+  },
+  {
+    "id": 666,
+    "nome": "Vivillon",
+    "geracao": 6,
+    "tipo1": "Inseto",
+    "tipo2": "Voador",
+    "estagio": 3,
+    "status_total": 411
+  },
+  {
+    "id": 667,
+    "nome": "Litleo",
+    "geracao": 6,
+    "tipo1": "Fogo",
+    "tipo2": "Normal",
+    "estagio": 1,
+    "status_total": 330
+  },
+  {
+    "id": 668,
+    "nome": "Pyroar",
+    "geracao": 6,
+    "tipo1": "Fogo",
+    "tipo2": "Normal",
+    "estagio": 2,
+    "status_total": 507
+  },
+  {
+    "id": 669,
+    "nome": "Flabébé",
+    "geracao": 6,
+    "tipo1": "Fada",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 303
+  },
+  {
+    "id": 670,
+    "nome": "Floette",
+    "geracao": 6,
+    "tipo1": "Fada",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 371
+  },
+  {
+    "id": 671,
+    "nome": "Florges",
+    "geracao": 6,
+    "tipo1": "Fada",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 552
+  },
+  {
+    "id": 672,
+    "nome": "Skiddo",
+    "geracao": 6,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 350
+  },
+  {
+    "id": 673,
+    "nome": "Gogoat",
+    "geracao": 6,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 531
+  },
+  {
+    "id": 674,
+    "nome": "Pancham",
+    "geracao": 6,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 348
+  },
+  {
+    "id": 675,
+    "nome": "Pangoro",
+    "geracao": 6,
+    "tipo1": "Lutador",
+    "tipo2": "Sombrio",
+    "estagio": 2,
+    "status_total": 495
+  },
+  {
+    "id": 676,
+    "nome": "Furfrou",
+    "geracao": 6,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 472
+  },
+  {
+    "id": 677,
+    "nome": "Espurr",
+    "geracao": 6,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 355
+  },
+  {
+    "id": 678,
+    "nome": "Meowstic",
+    "geracao": 6,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 466
+  },
+  {
+    "id": 679,
+    "nome": "Honedge",
+    "geracao": 6,
+    "tipo1": "Aço",
+    "tipo2": "Fantasma",
+    "estagio": 1,
+    "status_total": 325
+  },
+  {
+    "id": 680,
+    "nome": "Doublade",
+    "geracao": 6,
+    "tipo1": "Aço",
+    "tipo2": "Fantasma",
+    "estagio": 2,
+    "status_total": 448
+  },
+  {
+    "id": 681,
+    "nome": "Aegislash",
+    "geracao": 6,
+    "tipo1": "Aço",
+    "tipo2": "Fantasma",
+    "estagio": 2,
+    "status_total": 520
+  },
+  {
+    "id": 682,
+    "nome": "Spritzee",
+    "geracao": 6,
+    "tipo1": "Fada",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 341
+  },
+  {
+    "id": 683,
+    "nome": "Aromatisse",
+    "geracao": 6,
+    "tipo1": "Fada",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 462
+  },
+  {
+    "id": 684,
+    "nome": "Swirlix",
+    "geracao": 6,
+    "tipo1": "Fada",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 341
+  },
+  {
+    "id": 685,
+    "nome": "Slurpuff",
+    "geracao": 6,
+    "tipo1": "Fada",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 480
+  },
+  {
+    "id": 686,
+    "nome": "Inkay",
+    "geracao": 6,
+    "tipo1": "Sombrio",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 288
+  },
+  {
+    "id": 687,
+    "nome": "Malamar",
+    "geracao": 6,
+    "tipo1": "Sombrio",
+    "tipo2": "Psíquico",
+    "estagio": 2,
+    "status_total": 482
+  },
+  {
+    "id": 688,
+    "nome": "Binacle",
+    "geracao": 6,
+    "tipo1": "Pedra",
+    "tipo2": "Água",
+    "estagio": 1,
+    "status_total": 306
+  },
+  {
+    "id": 689,
+    "nome": "Barbaracle",
+    "geracao": 6,
+    "tipo1": "Pedra",
+    "tipo2": "Água",
+    "estagio": 2,
+    "status_total": 500
+  },
+  {
+    "id": 690,
+    "nome": "Skrelp",
+    "geracao": 6,
+    "tipo1": "Veneno",
+    "tipo2": "Água",
+    "estagio": 1,
+    "status_total": 320
+  },
+  {
+    "id": 691,
+    "nome": "Dragalge",
+    "geracao": 6,
+    "tipo1": "Veneno",
+    "tipo2": "Dragão",
+    "estagio": 2,
+    "status_total": 494
+  },
+  {
+    "id": 692,
+    "nome": "Clauncher",
+    "geracao": 6,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 330
+  },
+  {
+    "id": 693,
+    "nome": "Clawitzer",
+    "geracao": 6,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 500
+  },
+  {
+    "id": 694,
+    "nome": "Helioptile",
+    "geracao": 6,
+    "tipo1": "Elétrico",
+    "tipo2": "Normal",
+    "estagio": 1,
+    "status_total": 289
+  },
+  {
+    "id": 695,
+    "nome": "Heliolisk",
+    "geracao": 6,
+    "tipo1": "Elétrico",
+    "tipo2": "Normal",
+    "estagio": 2,
+    "status_total": 481
+  },
+  {
+    "id": 696,
+    "nome": "Tyrunt",
+    "geracao": 6,
+    "tipo1": "Pedra",
+    "tipo2": "Dragão",
+    "estagio": 1,
+    "status_total": 362
+  },
+  {
+    "id": 697,
+    "nome": "Tyrantrum",
+    "geracao": 6,
+    "tipo1": "Pedra",
+    "tipo2": "Dragão",
+    "estagio": 2,
+    "status_total": 521
+  },
+  {
+    "id": 698,
+    "nome": "Amaura",
+    "geracao": 6,
+    "tipo1": "Pedra",
+    "tipo2": "Gelo",
+    "estagio": 1,
+    "status_total": 362
+  },
+  {
+    "id": 699,
+    "nome": "Aurorus",
+    "geracao": 6,
+    "tipo1": "Pedra",
+    "tipo2": "Gelo",
+    "estagio": 2,
+    "status_total": 521
+  },
+  {
+    "id": 700,
+    "nome": "Sylveon",
+    "geracao": 6,
+    "tipo1": "Fada",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 525
+  },
+  {
+    "id": 701,
+    "nome": "Hawlucha",
+    "geracao": 6,
+    "tipo1": "Lutador",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 500
+  },
+  {
+    "id": 702,
+    "nome": "Dedenne",
+    "geracao": 6,
+    "tipo1": "Elétrico",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 431
+  },
+  {
+    "id": 703,
+    "nome": "Carbink",
+    "geracao": 6,
+    "tipo1": "Pedra",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 500
+  },
+  {
+    "id": 704,
+    "nome": "Goomy",
+    "geracao": 6,
+    "tipo1": "Dragão",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 300
+  },
+  {
+    "id": 705,
+    "nome": "Sliggoo",
+    "geracao": 6,
+    "tipo1": "Dragão",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 452
+  },
+  {
+    "id": 706,
+    "nome": "Goodra",
+    "geracao": 6,
+    "tipo1": "Dragão",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 600
+  },
+  {
+    "id": 707,
+    "nome": "Klefki",
+    "geracao": 6,
+    "tipo1": "Aço",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 470
+  },
+  {
+    "id": 708,
+    "nome": "Phantump",
+    "geracao": 6,
+    "tipo1": "Fantasma",
+    "tipo2": "Planta",
+    "estagio": 1,
+    "status_total": 309
+  },
+  {
+    "id": 709,
+    "nome": "Trevenant",
+    "geracao": 6,
+    "tipo1": "Fantasma",
+    "tipo2": "Planta",
+    "estagio": 2,
+    "status_total": 474
+  },
+  {
+    "id": 710,
+    "nome": "Pumpkaboo",
+    "geracao": 6,
+    "tipo1": "Fantasma",
+    "tipo2": "Planta",
+    "estagio": 1,
+    "status_total": 335
+  },
+  {
+    "id": 711,
+    "nome": "Gourgeist",
+    "geracao": 6,
+    "tipo1": "Fantasma",
+    "tipo2": "Planta",
+    "estagio": 2,
+    "status_total": 494
+  },
+  {
+    "id": 712,
+    "nome": "Bergmite",
+    "geracao": 6,
+    "tipo1": "Gelo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 304
+  },
+  {
+    "id": 713,
+    "nome": "Avalugg",
+    "geracao": 6,
+    "tipo1": "Gelo",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 514
+  },
+  {
+    "id": 714,
+    "nome": "Noibat",
+    "geracao": 6,
+    "tipo1": "Voador",
+    "tipo2": "Dragão",
+    "estagio": 1,
+    "status_total": 245
+  },
+  {
+    "id": 715,
+    "nome": "Noivern",
+    "geracao": 6,
+    "tipo1": "Voador",
+    "tipo2": "Dragão",
+    "estagio": 2,
+    "status_total": 535
+  },
+  {
+    "id": 716,
+    "nome": "Xerneas",
+    "geracao": 6,
+    "tipo1": "Fada",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 680
+  },
+  {
+    "id": 717,
+    "nome": "Yveltal",
+    "geracao": 6,
+    "tipo1": "Sombrio",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 680
+  },
+  {
+    "id": 718,
+    "nome": "Zygarde",
+    "geracao": 6,
+    "tipo1": "Dragão",
+    "tipo2": "Terra",
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 719,
+    "nome": "Diancie",
+    "geracao": 6,
+    "tipo1": "Pedra",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 720,
+    "nome": "Hoopa",
+    "geracao": 6,
+    "tipo1": "Psíquico",
+    "tipo2": "Fantasma",
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 721,
+    "nome": "Volcanion",
+    "geracao": 6,
+    "tipo1": "Fogo",
+    "tipo2": "Água",
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 722,
+    "nome": "Rowlet",
+    "geracao": 7,
+    "tipo1": "Planta",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 320
+  },
+  {
+    "id": 723,
+    "nome": "Dartrix",
+    "geracao": 7,
+    "tipo1": "Planta",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 420
+  },
+  {
+    "id": 724,
+    "nome": "Decidueye",
+    "geracao": 7,
+    "tipo1": "Planta",
+    "tipo2": "Fantasma",
+    "estagio": 3,
+    "status_total": 530
+  },
+  {
+    "id": 725,
+    "nome": "Litten",
+    "geracao": 7,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 320
+  },
+  {
+    "id": 726,
+    "nome": "Torracat",
+    "geracao": 7,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 420
+  },
+  {
+    "id": 727,
+    "nome": "Incineroar",
+    "geracao": 7,
+    "tipo1": "Fogo",
+    "tipo2": "Sombrio",
+    "estagio": 3,
+    "status_total": 530
+  },
+  {
+    "id": 728,
+    "nome": "Popplio",
+    "geracao": 7,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 320
+  },
+  {
+    "id": 729,
+    "nome": "Brionne",
+    "geracao": 7,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 420
+  },
+  {
+    "id": 730,
+    "nome": "Primarina",
+    "geracao": 7,
+    "tipo1": "Água",
+    "tipo2": "Fada",
+    "estagio": 3,
+    "status_total": 530
+  },
+  {
+    "id": 731,
+    "nome": "Pikipek",
+    "geracao": 7,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 265
+  },
+  {
+    "id": 732,
+    "nome": "Trumbeak",
+    "geracao": 7,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 355
+  },
+  {
+    "id": 733,
+    "nome": "Toucannon",
+    "geracao": 7,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 3,
+    "status_total": 485
+  },
+  {
+    "id": 734,
+    "nome": "Yungoos",
+    "geracao": 7,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 253
+  },
+  {
+    "id": 735,
+    "nome": "Gumshoos",
+    "geracao": 7,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 418
+  },
+  {
+    "id": 736,
+    "nome": "Grubbin",
+    "geracao": 7,
+    "tipo1": "Inseto",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 224
+  },
+  {
+    "id": 737,
+    "nome": "Charjabug",
+    "geracao": 7,
+    "tipo1": "Inseto",
+    "tipo2": "Elétrico",
+    "estagio": 2,
+    "status_total": 374
+  },
+  {
+    "id": 738,
+    "nome": "Vikavolt",
+    "geracao": 7,
+    "tipo1": "Inseto",
+    "tipo2": "Elétrico",
+    "estagio": 3,
+    "status_total": 500
+  },
+  {
+    "id": 739,
+    "nome": "Crabrawler",
+    "geracao": 7,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 338
+  },
+  {
+    "id": 740,
+    "nome": "Crabominable",
+    "geracao": 7,
+    "tipo1": "Lutador",
+    "tipo2": "Gelo",
+    "estagio": 2,
+    "status_total": 478
+  },
+  {
+    "id": 741,
+    "nome": "Oricorio",
+    "geracao": 7,
+    "tipo1": "Fogo",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 476
+  },
+  {
+    "id": 742,
+    "nome": "Cutiefly",
+    "geracao": 7,
+    "tipo1": "Inseto",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 304
+  },
+  {
+    "id": 743,
+    "nome": "Ribombee",
+    "geracao": 7,
+    "tipo1": "Inseto",
+    "tipo2": "Fada",
+    "estagio": 2,
+    "status_total": 464
+  },
+  {
+    "id": 744,
+    "nome": "Rockruff",
+    "geracao": 7,
+    "tipo1": "Pedra",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 280
+  },
+  {
+    "id": 745,
+    "nome": "Lycanroc",
+    "geracao": 7,
+    "tipo1": "Pedra",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 487
+  },
+  {
+    "id": 746,
+    "nome": "Wishiwashi",
+    "geracao": 7,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 175
+  },
+  {
+    "id": 747,
+    "nome": "Mareanie",
+    "geracao": 7,
+    "tipo1": "Veneno",
+    "tipo2": "Água",
+    "estagio": 1,
+    "status_total": 305
+  },
+  {
+    "id": 748,
+    "nome": "Toxapex",
+    "geracao": 7,
+    "tipo1": "Veneno",
+    "tipo2": "Água",
+    "estagio": 2,
+    "status_total": 495
+  },
+  {
+    "id": 749,
+    "nome": "Mudbray",
+    "geracao": 7,
+    "tipo1": "Terra",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 330
+  },
+  {
+    "id": 750,
+    "nome": "Mudsdale",
+    "geracao": 7,
+    "tipo1": "Terra",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 500
+  },
+  {
+    "id": 751,
+    "nome": "Dewpider",
+    "geracao": 7,
+    "tipo1": "Água",
+    "tipo2": "Inseto",
+    "estagio": 1,
+    "status_total": 269
+  },
+  {
+    "id": 752,
+    "nome": "Araquanid",
+    "geracao": 7,
+    "tipo1": "Água",
+    "tipo2": "Inseto",
+    "estagio": 2,
+    "status_total": 454
+  },
+  {
+    "id": 753,
+    "nome": "Fomantis",
+    "geracao": 7,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 250
+  },
+  {
+    "id": 754,
+    "nome": "Lurantis",
+    "geracao": 7,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 480
+  },
+  {
+    "id": 755,
+    "nome": "Morelull",
+    "geracao": 7,
+    "tipo1": "Planta",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 285
+  },
+  {
+    "id": 756,
+    "nome": "Shiinotic",
+    "geracao": 7,
+    "tipo1": "Planta",
+    "tipo2": "Fada",
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 757,
+    "nome": "Salandit",
+    "geracao": 7,
+    "tipo1": "Veneno",
+    "tipo2": "Fogo",
+    "estagio": 1,
+    "status_total": 320
+  },
+  {
+    "id": 758,
+    "nome": "Salazzle",
+    "geracao": 7,
+    "tipo1": "Veneno",
+    "tipo2": "Fogo",
+    "estagio": 2,
+    "status_total": 480
+  },
+  {
+    "id": 759,
+    "nome": "Stufful",
+    "geracao": 7,
+    "tipo1": "Normal",
+    "tipo2": "Lutador",
+    "estagio": 1,
+    "status_total": 340
+  },
+  {
+    "id": 760,
+    "nome": "Bewear",
+    "geracao": 7,
+    "tipo1": "Normal",
+    "tipo2": "Lutador",
+    "estagio": 2,
+    "status_total": 500
+  },
+  {
+    "id": 761,
+    "nome": "Bounsweet",
+    "geracao": 7,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 210
+  },
+  {
+    "id": 762,
+    "nome": "Steenee",
+    "geracao": 7,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 290
+  },
+  {
+    "id": 763,
+    "nome": "Tsareena",
+    "geracao": 7,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 510
+  },
+  {
+    "id": 764,
+    "nome": "Comfey",
+    "geracao": 7,
+    "tipo1": "Fada",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 485
+  },
+  {
+    "id": 765,
+    "nome": "Oranguru",
+    "geracao": 7,
+    "tipo1": "Normal",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 490
+  },
+  {
+    "id": 766,
+    "nome": "Passimian",
+    "geracao": 7,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 490
+  },
+  {
+    "id": 767,
+    "nome": "Wimpod",
+    "geracao": 7,
+    "tipo1": "Inseto",
+    "tipo2": "Água",
+    "estagio": 1,
+    "status_total": 230
+  },
+  {
+    "id": 768,
+    "nome": "Golisopod",
+    "geracao": 7,
+    "tipo1": "Inseto",
+    "tipo2": "Água",
+    "estagio": 2,
+    "status_total": 530
+  },
+  {
+    "id": 769,
+    "nome": "Sandygast",
+    "geracao": 7,
+    "tipo1": "Fantasma",
+    "tipo2": "Terra",
+    "estagio": 1,
+    "status_total": 320
+  },
+  {
+    "id": 770,
+    "nome": "Palossand",
+    "geracao": 7,
+    "tipo1": "Fantasma",
+    "tipo2": "Terra",
+    "estagio": 2,
+    "status_total": 480
+  },
+  {
+    "id": 771,
+    "nome": "Pyukumuku",
+    "geracao": 7,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 410
+  },
+  {
+    "id": 772,
+    "nome": "Type: Null",
+    "geracao": 7,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 534
+  },
+  {
+    "id": 773,
+    "nome": "Silvally",
+    "geracao": 7,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 570
+  },
+  {
+    "id": 774,
+    "nome": "Minior",
+    "geracao": 7,
+    "tipo1": "Pedra",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 500
+  },
+  {
+    "id": 775,
+    "nome": "Komala",
+    "geracao": 7,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 480
+  },
+  {
+    "id": 776,
+    "nome": "Turtonator",
+    "geracao": 7,
+    "tipo1": "Fogo",
+    "tipo2": "Dragão",
+    "estagio": 1,
+    "status_total": 485
+  },
+  {
+    "id": 777,
+    "nome": "Togedemaru",
+    "geracao": 7,
+    "tipo1": "Elétrico",
+    "tipo2": "Aço",
+    "estagio": 1,
+    "status_total": 435
+  },
+  {
+    "id": 778,
+    "nome": "Mimikyu",
+    "geracao": 7,
+    "tipo1": "Fantasma",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 476
+  },
+  {
+    "id": 779,
+    "nome": "Bruxish",
+    "geracao": 7,
+    "tipo1": "Água",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 475
+  },
+  {
+    "id": 780,
+    "nome": "Drampa",
+    "geracao": 7,
+    "tipo1": "Normal",
+    "tipo2": "Dragão",
+    "estagio": 1,
+    "status_total": 485
+  },
+  {
+    "id": 781,
+    "nome": "Dhelmise",
+    "geracao": 7,
+    "tipo1": "Fantasma",
+    "tipo2": "Planta",
+    "estagio": 1,
+    "status_total": 517
+  },
+  {
+    "id": 782,
+    "nome": "Jangmo-o",
+    "geracao": 7,
+    "tipo1": "Dragão",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 300
+  },
+  {
+    "id": 783,
+    "nome": "Hakamo-o",
+    "geracao": 7,
+    "tipo1": "Dragão",
+    "tipo2": "Lutador",
+    "estagio": 2,
+    "status_total": 420
+  },
+  {
+    "id": 784,
+    "nome": "Kommo-o",
+    "geracao": 7,
+    "tipo1": "Dragão",
+    "tipo2": "Lutador",
+    "estagio": 3,
+    "status_total": 600
+  },
+  {
+    "id": 785,
+    "nome": "Tapu Koko",
+    "geracao": 7,
+    "tipo1": "Elétrico",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 786,
+    "nome": "Tapu Lele",
+    "geracao": 7,
+    "tipo1": "Psíquico",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 787,
+    "nome": "Tapu Bulu",
+    "geracao": 7,
+    "tipo1": "Planta",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 788,
+    "nome": "Tapu Fini",
+    "geracao": 7,
+    "tipo1": "Água",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 789,
+    "nome": "Cosmog",
+    "geracao": 7,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 200
+  },
+  {
+    "id": 790,
+    "nome": "Cosmoem",
+    "geracao": 7,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 400
+  },
+  {
+    "id": 791,
+    "nome": "Solgaleo",
+    "geracao": 7,
+    "tipo1": "Psíquico",
+    "tipo2": "Aço",
+    "estagio": 1,
+    "status_total": 680
+  },
+  {
+    "id": 792,
+    "nome": "Lunala",
+    "geracao": 7,
+    "tipo1": "Psíquico",
+    "tipo2": "Fantasma",
+    "estagio": 1,
+    "status_total": 680
+  },
+  {
+    "id": 793,
+    "nome": "Nihilego",
+    "geracao": 7,
+    "tipo1": "Pedra",
+    "tipo2": "Veneno",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 794,
+    "nome": "Buzzwole",
+    "geracao": 7,
+    "tipo1": "Inseto",
+    "tipo2": "Lutador",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 795,
+    "nome": "Pheromosa",
+    "geracao": 7,
+    "tipo1": "Inseto",
+    "tipo2": "Lutador",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 796,
+    "nome": "Xurkitree",
+    "geracao": 7,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 797,
+    "nome": "Celesteela",
+    "geracao": 7,
+    "tipo1": "Aço",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 798,
+    "nome": "Kartana",
+    "geracao": 7,
+    "tipo1": "Planta",
+    "tipo2": "Aço",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 799,
+    "nome": "Guzzlord",
+    "geracao": 7,
+    "tipo1": "Sombrio",
+    "tipo2": "Dragão",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 800,
+    "nome": "Necrozma",
+    "geracao": 7,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 801,
+    "nome": "Magearna",
+    "geracao": 7,
+    "tipo1": "Aço",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 802,
+    "nome": "Marshadow",
+    "geracao": 7,
+    "tipo1": "Lutador",
+    "tipo2": "Fantasma",
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 803,
+    "nome": "Poipole",
+    "geracao": 7,
+    "tipo1": "Veneno",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 420
+  },
+  {
+    "id": 804,
+    "nome": "Naganadel",
+    "geracao": 7,
+    "tipo1": "Veneno",
+    "tipo2": "Dragão",
+    "estagio": 2,
+    "status_total": 540
+  },
+  {
+    "id": 805,
+    "nome": "Stakataka",
+    "geracao": 7,
+    "tipo1": "Pedra",
+    "tipo2": "Aço",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 806,
+    "nome": "Blacephalon",
+    "geracao": 7,
+    "tipo1": "Fogo",
+    "tipo2": "Fantasma",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 807,
+    "nome": "Zeraora",
+    "geracao": 7,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 808,
+    "nome": "Meltan",
+    "geracao": 7,
+    "tipo1": "Aço",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 300
+  },
+  {
+    "id": 809,
+    "nome": "Melmetal",
+    "geracao": 7,
+    "tipo1": "Aço",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 600
+  },
+  {
+    "id": 810,
+    "nome": "Grookey",
+    "geracao": 8,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 310
+  },
+  {
+    "id": 811,
+    "nome": "Thwackey",
+    "geracao": 8,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 812,
+    "nome": "Rillaboom",
+    "geracao": 8,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 530
+  },
+  {
+    "id": 813,
+    "nome": "Scorbunny",
+    "geracao": 8,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 310
+  },
+  {
+    "id": 814,
+    "nome": "Raboot",
+    "geracao": 8,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 815,
+    "nome": "Cinderace",
+    "geracao": 8,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 530
+  },
+  {
+    "id": 816,
+    "nome": "Sobble",
+    "geracao": 8,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 310
+  },
+  {
+    "id": 817,
+    "nome": "Drizzile",
+    "geracao": 8,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 405
+  },
+  {
+    "id": 818,
+    "nome": "Inteleon",
+    "geracao": 8,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 530
+  },
+  {
+    "id": 819,
+    "nome": "Skwovet",
+    "geracao": 8,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 275
+  },
+  {
+    "id": 820,
+    "nome": "Greedent",
+    "geracao": 8,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 460
+  },
+  {
+    "id": 821,
+    "nome": "Rookidee",
+    "geracao": 8,
+    "tipo1": "Voador",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 245
+  },
+  {
+    "id": 822,
+    "nome": "Corvisquire",
+    "geracao": 8,
+    "tipo1": "Voador",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 365
+  },
+  {
+    "id": 823,
+    "nome": "Corviknight",
+    "geracao": 8,
+    "tipo1": "Voador",
+    "tipo2": "Aço",
+    "estagio": 3,
+    "status_total": 495
+  },
+  {
+    "id": 824,
+    "nome": "Blipbug",
+    "geracao": 8,
+    "tipo1": "Inseto",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 180
+  },
+  {
+    "id": 825,
+    "nome": "Dottler",
+    "geracao": 8,
+    "tipo1": "Inseto",
+    "tipo2": "Psíquico",
+    "estagio": 2,
+    "status_total": 335
+  },
+  {
+    "id": 826,
+    "nome": "Orbeetle",
+    "geracao": 8,
+    "tipo1": "Inseto",
+    "tipo2": "Psíquico",
+    "estagio": 3,
+    "status_total": 495
+  },
+  {
+    "id": 827,
+    "nome": "Nickit",
+    "geracao": 8,
+    "tipo1": "Sombrio",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 245
+  },
+  {
+    "id": 828,
+    "nome": "Thievul",
+    "geracao": 8,
+    "tipo1": "Sombrio",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 422
+  },
+  {
+    "id": 829,
+    "nome": "Gossifleur",
+    "geracao": 8,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 285
+  },
+  {
+    "id": 830,
+    "nome": "Eldegoss",
+    "geracao": 8,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 460
+  },
+  {
+    "id": 831,
+    "nome": "Wooloo",
+    "geracao": 8,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 270
+  },
+  {
+    "id": 832,
+    "nome": "Dubwool",
+    "geracao": 8,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 490
+  },
+  {
+    "id": 833,
+    "nome": "Chewtle",
+    "geracao": 8,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 284
+  },
+  {
+    "id": 834,
+    "nome": "Drednaw",
+    "geracao": 8,
+    "tipo1": "Água",
+    "tipo2": "Pedra",
+    "estagio": 2,
+    "status_total": 485
+  },
+  {
+    "id": 835,
+    "nome": "Yamper",
+    "geracao": 8,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 303
+  },
+  {
+    "id": 836,
+    "nome": "Boltund",
+    "geracao": 8,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 490
+  },
+  {
+    "id": 837,
+    "nome": "Rolycoly",
+    "geracao": 8,
+    "tipo1": "Pedra",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 240
+  },
+  {
+    "id": 838,
+    "nome": "Carkol",
+    "geracao": 8,
+    "tipo1": "Pedra",
+    "tipo2": "Fogo",
+    "estagio": 2,
+    "status_total": 410
+  },
+  {
+    "id": 839,
+    "nome": "Coalossal",
+    "geracao": 8,
+    "tipo1": "Pedra",
+    "tipo2": "Fogo",
+    "estagio": 3,
+    "status_total": 510
+  },
+  {
+    "id": 840,
+    "nome": "Applin",
+    "geracao": 8,
+    "tipo1": "Planta",
+    "tipo2": "Dragão",
+    "estagio": 1,
+    "status_total": 260
+  },
+  {
+    "id": 841,
+    "nome": "Flapple",
+    "geracao": 8,
+    "tipo1": "Planta",
+    "tipo2": "Dragão",
+    "estagio": 2,
+    "status_total": 485
+  },
+  {
+    "id": 842,
+    "nome": "Appletun",
+    "geracao": 8,
+    "tipo1": "Planta",
+    "tipo2": "Dragão",
+    "estagio": 2,
+    "status_total": 485
+  },
+  {
+    "id": 843,
+    "nome": "Silicobra",
+    "geracao": 8,
+    "tipo1": "Terra",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 315
+  },
+  {
+    "id": 844,
+    "nome": "Sandaconda",
+    "geracao": 8,
+    "tipo1": "Terra",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 480
+  },
+  {
+    "id": 845,
+    "nome": "Cramorant",
+    "geracao": 8,
+    "tipo1": "Voador",
+    "tipo2": "Água",
+    "estagio": 1,
+    "status_total": 475
+  },
+  {
+    "id": 846,
+    "nome": "Arrokuda",
+    "geracao": 8,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 280
+  },
+  {
+    "id": 847,
+    "nome": "Barraskewda",
+    "geracao": 8,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 490
+  },
+  {
+    "id": 848,
+    "nome": "Toxel",
+    "geracao": 8,
+    "tipo1": "Elétrico",
+    "tipo2": "Veneno",
+    "estagio": 1,
+    "status_total": 242
+  },
+  {
+    "id": 849,
+    "nome": "Toxtricity",
+    "geracao": 8,
+    "tipo1": "Elétrico",
+    "tipo2": "Veneno",
+    "estagio": 2,
+    "status_total": 502
+  },
+  {
+    "id": 850,
+    "nome": "Sizzlipede",
+    "geracao": 8,
+    "tipo1": "Fogo",
+    "tipo2": "Inseto",
+    "estagio": 1,
+    "status_total": 305
+  },
+  {
+    "id": 851,
+    "nome": "Centiskorch",
+    "geracao": 8,
+    "tipo1": "Fogo",
+    "tipo2": "Inseto",
+    "estagio": 2,
+    "status_total": 525
+  },
+  {
+    "id": 852,
+    "nome": "Clobbopus",
+    "geracao": 8,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 310
+  },
+  {
+    "id": 853,
+    "nome": "Grapploct",
+    "geracao": 8,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 480
+  },
+  {
+    "id": 854,
+    "nome": "Sinistea",
+    "geracao": 8,
+    "tipo1": "Fantasma",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 308
+  },
+  {
+    "id": 855,
+    "nome": "Polteageist",
+    "geracao": 8,
+    "tipo1": "Fantasma",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 508
+  },
+  {
+    "id": 856,
+    "nome": "Hatenna",
+    "geracao": 8,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 265
+  },
+  {
+    "id": 857,
+    "nome": "Hattrem",
+    "geracao": 8,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 370
+  },
+  {
+    "id": 858,
+    "nome": "Hatterene",
+    "geracao": 8,
+    "tipo1": "Psíquico",
+    "tipo2": "Fada",
+    "estagio": 3,
+    "status_total": 510
+  },
+  {
+    "id": 859,
+    "nome": "Impidimp",
+    "geracao": 8,
+    "tipo1": "Sombrio",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 265
+  },
+  {
+    "id": 860,
+    "nome": "Morgrem",
+    "geracao": 8,
+    "tipo1": "Sombrio",
+    "tipo2": "Fada",
+    "estagio": 2,
+    "status_total": 370
+  },
+  {
+    "id": 861,
+    "nome": "Grimmsnarl",
+    "geracao": 8,
+    "tipo1": "Sombrio",
+    "tipo2": "Fada",
+    "estagio": 3,
+    "status_total": 510
+  },
+  {
+    "id": 862,
+    "nome": "Obstagoon",
+    "geracao": 8,
+    "tipo1": "Sombrio",
+    "tipo2": "Normal",
+    "estagio": 2,
+    "status_total": 514
+  },
+  {
+    "id": 863,
+    "nome": "Perrserker",
+    "geracao": 8,
+    "tipo1": "Aço",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 440
+  },
+  {
+    "id": 864,
+    "nome": "Cursola",
+    "geracao": 8,
+    "tipo1": "Fantasma",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 510
+  },
+  {
+    "id": 865,
+    "nome": "Sirfetch'd",
+    "geracao": 8,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 507
+  },
+  {
+    "id": 866,
+    "nome": "Mr. Rime",
+    "geracao": 8,
+    "tipo1": "Gelo",
+    "tipo2": "Psíquico",
+    "estagio": 2,
+    "status_total": 520
+  },
+  {
+    "id": 867,
+    "nome": "Runerigus",
+    "geracao": 8,
+    "tipo1": "Terra",
+    "tipo2": "Fantasma",
+    "estagio": 2,
+    "status_total": 483
+  },
+  {
+    "id": 868,
+    "nome": "Milcery",
+    "geracao": 8,
+    "tipo1": "Fada",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 270
+  },
+  {
+    "id": 869,
+    "nome": "Alcremie",
+    "geracao": 8,
+    "tipo1": "Fada",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 495
+  },
+  {
+    "id": 870,
+    "nome": "Falinks",
+    "geracao": 8,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 470
+  },
+  {
+    "id": 871,
+    "nome": "Pincurchin",
+    "geracao": 8,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 435
+  },
+  {
+    "id": 872,
+    "nome": "Snom",
+    "geracao": 8,
+    "tipo1": "Gelo",
+    "tipo2": "Inseto",
+    "estagio": 1,
+    "status_total": 185
+  },
+  {
+    "id": 873,
+    "nome": "Frosmoth",
+    "geracao": 8,
+    "tipo1": "Gelo",
+    "tipo2": "Inseto",
+    "estagio": 2,
+    "status_total": 475
+  },
+  {
+    "id": 874,
+    "nome": "Stonjourner",
+    "geracao": 8,
+    "tipo1": "Pedra",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 470
+  },
+  {
+    "id": 875,
+    "nome": "Eiscue",
+    "geracao": 8,
+    "tipo1": "Gelo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 470
+  },
+  {
+    "id": 876,
+    "nome": "Indeedee",
+    "geracao": 8,
+    "tipo1": "Psíquico",
+    "tipo2": "Normal",
+    "estagio": 1,
+    "status_total": 475
+  },
+  {
+    "id": 877,
+    "nome": "Morpeko",
+    "geracao": 8,
+    "tipo1": "Elétrico",
+    "tipo2": "Sombrio",
+    "estagio": 1,
+    "status_total": 436
+  },
+  {
+    "id": 878,
+    "nome": "Cufant",
+    "geracao": 8,
+    "tipo1": "Aço",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 330
+  },
+  {
+    "id": 879,
+    "nome": "Copperajah",
+    "geracao": 8,
+    "tipo1": "Aço",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 540
+  },
+  {
+    "id": 880,
+    "nome": "Dracozolt",
+    "geracao": 8,
+    "tipo1": "Elétrico",
+    "tipo2": "Dragão",
+    "estagio": 1,
+    "status_total": 505
+  },
+  {
+    "id": 881,
+    "nome": "Arctozolt",
+    "geracao": 8,
+    "tipo1": "Elétrico",
+    "tipo2": "Gelo",
+    "estagio": 1,
+    "status_total": 505
+  },
+  {
+    "id": 882,
+    "nome": "Dracovish",
+    "geracao": 8,
+    "tipo1": "Água",
+    "tipo2": "Dragão",
+    "estagio": 1,
+    "status_total": 505
+  },
+  {
+    "id": 883,
+    "nome": "Arctovish",
+    "geracao": 8,
+    "tipo1": "Água",
+    "tipo2": "Gelo",
+    "estagio": 1,
+    "status_total": 505
+  },
+  {
+    "id": 884,
+    "nome": "Duraludon",
+    "geracao": 8,
+    "tipo1": "Aço",
+    "tipo2": "Dragão",
+    "estagio": 2,
+    "status_total": 535
+  },
+  {
+    "id": 885,
+    "nome": "Dreepy",
+    "geracao": 8,
+    "tipo1": "Dragão",
+    "tipo2": "Fantasma",
+    "estagio": 1,
+    "status_total": 270
+  },
+  {
+    "id": 886,
+    "nome": "Drakloak",
+    "geracao": 8,
+    "tipo1": "Dragão",
+    "tipo2": "Fantasma",
+    "estagio": 2,
+    "status_total": 410
+  },
+  {
+    "id": 887,
+    "nome": "Dragapult",
+    "geracao": 8,
+    "tipo1": "Dragão",
+    "tipo2": "Fantasma",
+    "estagio": 3,
+    "status_total": 600
+  },
+  {
+    "id": 888,
+    "nome": "Zacian",
+    "geracao": 8,
+    "tipo1": "Fada",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 670
+  },
+  {
+    "id": 889,
+    "nome": "Zamazenta",
+    "geracao": 8,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 670
+  },
+  {
+    "id": 890,
+    "nome": "Eternatus",
+    "geracao": 8,
+    "tipo1": "Veneno",
+    "tipo2": "Dragão",
+    "estagio": 1,
+    "status_total": 690
+  },
+  {
+    "id": 891,
+    "nome": "Kubfu",
+    "geracao": 8,
+    "tipo1": "Lutador",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 385
+  },
+  {
+    "id": 892,
+    "nome": "Urshifu",
+    "geracao": 8,
+    "tipo1": "Lutador",
+    "tipo2": "Sombrio",
+    "estagio": 2,
+    "status_total": 550
+  },
+  {
+    "id": 893,
+    "nome": "Zarude",
+    "geracao": 8,
+    "tipo1": "Sombrio",
+    "tipo2": "Planta",
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 894,
+    "nome": "Regieleki",
+    "geracao": 8,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 580
+  },
+  {
+    "id": 895,
+    "nome": "Regidrago",
+    "geracao": 8,
+    "tipo1": "Dragão",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 580
+  },
+  {
+    "id": 896,
+    "nome": "Glastrier",
+    "geracao": 8,
+    "tipo1": "Gelo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 580
+  },
+  {
+    "id": 897,
+    "nome": "Spectrier",
+    "geracao": 8,
+    "tipo1": "Fantasma",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 580
+  },
+  {
+    "id": 898,
+    "nome": "Calyrex",
+    "geracao": 8,
+    "tipo1": "Psíquico",
+    "tipo2": "Planta",
+    "estagio": 1,
+    "status_total": 680
+  },
+  {
+    "id": 906,
+    "nome": "Sprigatito",
+    "geracao": 9,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 310
+  },
+  {
+    "id": 907,
+    "nome": "Floragato",
+    "geracao": 9,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 410
+  },
+  {
+    "id": 908,
+    "nome": "Meowscarada",
+    "geracao": 9,
+    "tipo1": "Planta",
+    "tipo2": "Sombrio",
+    "estagio": 3,
+    "status_total": 530
+  },
+  {
+    "id": 909,
+    "nome": "Fuecoco",
+    "geracao": 9,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 310
+  },
+  {
+    "id": 910,
+    "nome": "Crocalor",
+    "geracao": 9,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 411
+  },
+  {
+    "id": 911,
+    "nome": "Skeledirge",
+    "geracao": 9,
+    "tipo1": "Fogo",
+    "tipo2": "Fantasma",
+    "estagio": 3,
+    "status_total": 530
+  },
+  {
+    "id": 912,
+    "nome": "Quaxly",
+    "geracao": 9,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 310
+  },
+  {
+    "id": 913,
+    "nome": "Quaxwell",
+    "geracao": 9,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 410
+  },
+  {
+    "id": 914,
+    "nome": "Quaquaval",
+    "geracao": 9,
+    "tipo1": "Água",
+    "tipo2": "Lutador",
+    "estagio": 3,
+    "status_total": 530
+  },
+  {
+    "id": 915,
+    "nome": "Lechonk",
+    "geracao": 9,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 254
+  },
+  {
+    "id": 916,
+    "nome": "Oinkologne",
+    "geracao": 9,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 489
+  },
+  {
+    "id": 917,
+    "nome": "Tarountula",
+    "geracao": 9,
+    "tipo1": "Inseto",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 210
+  },
+  {
+    "id": 918,
+    "nome": "Spidops",
+    "geracao": 9,
+    "tipo1": "Inseto",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 404
+  },
+  {
+    "id": 919,
+    "nome": "Nymble",
+    "geracao": 9,
+    "tipo1": "Inseto",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 210
+  },
+  {
+    "id": 920,
+    "nome": "Lokix",
+    "geracao": 9,
+    "tipo1": "Inseto",
+    "tipo2": "Sombrio",
+    "estagio": 2,
+    "status_total": 450
+  },
+  {
+    "id": 921,
+    "nome": "Pawmi",
+    "geracao": 9,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 240
+  },
+  {
+    "id": 922,
+    "nome": "Pawmo",
+    "geracao": 9,
+    "tipo1": "Elétrico",
+    "tipo2": "Lutador",
+    "estagio": 2,
+    "status_total": 350
+  },
+  {
+    "id": 923,
+    "nome": "Pawmot",
+    "geracao": 9,
+    "tipo1": "Elétrico",
+    "tipo2": "Lutador",
+    "estagio": 3,
+    "status_total": 490
+  },
+  {
+    "id": 924,
+    "nome": "Tandemaus",
+    "geracao": 9,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 305
+  },
+  {
+    "id": 925,
+    "nome": "Maushold",
+    "geracao": 9,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 470
+  },
+  {
+    "id": 926,
+    "nome": "Fidough",
+    "geracao": 9,
+    "tipo1": "Fada",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 312
+  },
+  {
+    "id": 927,
+    "nome": "Dachsbun",
+    "geracao": 9,
+    "tipo1": "Fada",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 477
+  },
+  {
+    "id": 928,
+    "nome": "Smoliv",
+    "geracao": 9,
+    "tipo1": "Planta",
+    "tipo2": "Normal",
+    "estagio": 1,
+    "status_total": 270
+  },
+  {
+    "id": 929,
+    "nome": "Dolliv",
+    "geracao": 9,
+    "tipo1": "Planta",
+    "tipo2": "Normal",
+    "estagio": 2,
+    "status_total": 370
+  },
+  {
+    "id": 930,
+    "nome": "Arboliva",
+    "geracao": 9,
+    "tipo1": "Planta",
+    "tipo2": "Normal",
+    "estagio": 3,
+    "status_total": 510
+  },
+  {
+    "id": 931,
+    "nome": "Squawkabilly",
+    "geracao": 9,
+    "tipo1": "Normal",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 417
+  },
+  {
+    "id": 932,
+    "nome": "Nacli",
+    "geracao": 9,
+    "tipo1": "Pedra",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 280
+  },
+  {
+    "id": 933,
+    "nome": "Naclstack",
+    "geracao": 9,
+    "tipo1": "Pedra",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 370
+  },
+  {
+    "id": 934,
+    "nome": "Garganacl",
+    "geracao": 9,
+    "tipo1": "Pedra",
+    "tipo2": null,
+    "estagio": 3,
+    "status_total": 500
+  },
+  {
+    "id": 935,
+    "nome": "Charcadet",
+    "geracao": 9,
+    "tipo1": "Fogo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 255
+  },
+  {
+    "id": 936,
+    "nome": "Armarouge",
+    "geracao": 9,
+    "tipo1": "Fogo",
+    "tipo2": "Psíquico",
+    "estagio": 2,
+    "status_total": 525
+  },
+  {
+    "id": 937,
+    "nome": "Ceruledge",
+    "geracao": 9,
+    "tipo1": "Fogo",
+    "tipo2": "Fantasma",
+    "estagio": 2,
+    "status_total": 525
+  },
+  {
+    "id": 938,
+    "nome": "Tadbulb",
+    "geracao": 9,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 272
+  },
+  {
+    "id": 939,
+    "nome": "Bellibolt",
+    "geracao": 9,
+    "tipo1": "Elétrico",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 495
+  },
+  {
+    "id": 940,
+    "nome": "Wattrel",
+    "geracao": 9,
+    "tipo1": "Elétrico",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 280
+  },
+  {
+    "id": 941,
+    "nome": "Kilowattrel",
+    "geracao": 9,
+    "tipo1": "Elétrico",
+    "tipo2": "Voador",
+    "estagio": 2,
+    "status_total": 490
+  },
+  {
+    "id": 942,
+    "nome": "Maschiff",
+    "geracao": 9,
+    "tipo1": "Sombrio",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 340
+  },
+  {
+    "id": 943,
+    "nome": "Mabosstiff",
+    "geracao": 9,
+    "tipo1": "Sombrio",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 505
+  },
+  {
+    "id": 944,
+    "nome": "Shroodle",
+    "geracao": 9,
+    "tipo1": "Veneno",
+    "tipo2": "Normal",
+    "estagio": 1,
+    "status_total": 290
+  },
+  {
+    "id": 945,
+    "nome": "Grafaiai",
+    "geracao": 9,
+    "tipo1": "Veneno",
+    "tipo2": "Normal",
+    "estagio": 2,
+    "status_total": 485
+  },
+  {
+    "id": 946,
+    "nome": "Bramblin",
+    "geracao": 9,
+    "tipo1": "Planta",
+    "tipo2": "Fantasma",
+    "estagio": 1,
+    "status_total": 275
+  },
+  {
+    "id": 947,
+    "nome": "Brambleghast",
+    "geracao": 9,
+    "tipo1": "Planta",
+    "tipo2": "Fantasma",
+    "estagio": 2,
+    "status_total": 480
+  },
+  {
+    "id": 948,
+    "nome": "Toedscool",
+    "geracao": 9,
+    "tipo1": "Terra",
+    "tipo2": "Planta",
+    "estagio": 1,
+    "status_total": 335
+  },
+  {
+    "id": 949,
+    "nome": "Toedscruel",
+    "geracao": 9,
+    "tipo1": "Terra",
+    "tipo2": "Planta",
+    "estagio": 2,
+    "status_total": 515
+  },
+  {
+    "id": 950,
+    "nome": "Klawf",
+    "geracao": 9,
+    "tipo1": "Pedra",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 450
+  },
+  {
+    "id": 951,
+    "nome": "Capsakid",
+    "geracao": 9,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 304
+  },
+  {
+    "id": 952,
+    "nome": "Scovillain",
+    "geracao": 9,
+    "tipo1": "Planta",
+    "tipo2": "Fogo",
+    "estagio": 2,
+    "status_total": 486
+  },
+  {
+    "id": 953,
+    "nome": "Rellor",
+    "geracao": 9,
+    "tipo1": "Inseto",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 270
+  },
+  {
+    "id": 954,
+    "nome": "Rabsca",
+    "geracao": 9,
+    "tipo1": "Inseto",
+    "tipo2": "Psíquico",
+    "estagio": 2,
+    "status_total": 470
+  },
+  {
+    "id": 955,
+    "nome": "Flittle",
+    "geracao": 9,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 255
+  },
+  {
+    "id": 956,
+    "nome": "Espathra",
+    "geracao": 9,
+    "tipo1": "Psíquico",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 481
+  },
+  {
+    "id": 957,
+    "nome": "Tinkatink",
+    "geracao": 9,
+    "tipo1": "Fada",
+    "tipo2": "Aço",
+    "estagio": 1,
+    "status_total": 297
+  },
+  {
+    "id": 958,
+    "nome": "Tinkatuff",
+    "geracao": 9,
+    "tipo1": "Fada",
+    "tipo2": "Aço",
+    "estagio": 2,
+    "status_total": 380
+  },
+  {
+    "id": 959,
+    "nome": "Tinkaton",
+    "geracao": 9,
+    "tipo1": "Fada",
+    "tipo2": "Aço",
+    "estagio": 3,
+    "status_total": 506
+  },
+  {
+    "id": 960,
+    "nome": "Wiglett",
+    "geracao": 9,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 245
+  },
+  {
+    "id": 961,
+    "nome": "Wugtrio",
+    "geracao": 9,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 425
+  },
+  {
+    "id": 962,
+    "nome": "Bombirdier",
+    "geracao": 9,
+    "tipo1": "Voador",
+    "tipo2": "Sombrio",
+    "estagio": 1,
+    "status_total": 485
+  },
+  {
+    "id": 963,
+    "nome": "Finizen",
+    "geracao": 9,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 315
+  },
+  {
+    "id": 964,
+    "nome": "Palafin",
+    "geracao": 9,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 457
+  },
+  {
+    "id": 965,
+    "nome": "Varoom",
+    "geracao": 9,
+    "tipo1": "Aço",
+    "tipo2": "Veneno",
+    "estagio": 1,
+    "status_total": 300
+  },
+  {
+    "id": 966,
+    "nome": "Revavroom",
+    "geracao": 9,
+    "tipo1": "Aço",
+    "tipo2": "Veneno",
+    "estagio": 2,
+    "status_total": 500
+  },
+  {
+    "id": 967,
+    "nome": "Cyclizar",
+    "geracao": 9,
+    "tipo1": "Dragão",
+    "tipo2": "Normal",
+    "estagio": 1,
+    "status_total": 501
+  },
+  {
+    "id": 968,
+    "nome": "Orthworm",
+    "geracao": 9,
+    "tipo1": "Aço",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 480
+  },
+  {
+    "id": 969,
+    "nome": "Glimmet",
+    "geracao": 9,
+    "tipo1": "Pedra",
+    "tipo2": "Veneno",
+    "estagio": 1,
+    "status_total": 350
+  },
+  {
+    "id": 970,
+    "nome": "Glimmora",
+    "geracao": 9,
+    "tipo1": "Pedra",
+    "tipo2": "Veneno",
+    "estagio": 2,
+    "status_total": 525
+  },
+  {
+    "id": 971,
+    "nome": "Greavard",
+    "geracao": 9,
+    "tipo1": "Fantasma",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 290
+  },
+  {
+    "id": 972,
+    "nome": "Houndstone",
+    "geracao": 9,
+    "tipo1": "Fantasma",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 488
+  },
+  {
+    "id": 973,
+    "nome": "Flamigo",
+    "geracao": 9,
+    "tipo1": "Voador",
+    "tipo2": "Lutador",
+    "estagio": 1,
+    "status_total": 500
+  },
+  {
+    "id": 974,
+    "nome": "Cetoddle",
+    "geracao": 9,
+    "tipo1": "Gelo",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 334
+  },
+  {
+    "id": 975,
+    "nome": "Cetitan",
+    "geracao": 9,
+    "tipo1": "Gelo",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 534
+  },
+  {
+    "id": 976,
+    "nome": "Veluza",
+    "geracao": 9,
+    "tipo1": "Água",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 478
+  },
+  {
+    "id": 977,
+    "nome": "Dondozo",
+    "geracao": 9,
+    "tipo1": "Água",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 530
+  },
+  {
+    "id": 978,
+    "nome": "Tatsugiri",
+    "geracao": 9,
+    "tipo1": "Dragão",
+    "tipo2": "Água",
+    "estagio": 1,
+    "status_total": 475
+  },
+  {
+    "id": 979,
+    "nome": "Annihilape",
+    "geracao": 9,
+    "tipo1": "Lutador",
+    "tipo2": "Fantasma",
+    "estagio": 2,
+    "status_total": 535
+  },
+  {
+    "id": 980,
+    "nome": "Clodsire",
+    "geracao": 9,
+    "tipo1": "Veneno",
+    "tipo2": "Terra",
+    "estagio": 2,
+    "status_total": 430
+  },
+  {
+    "id": 981,
+    "nome": "Farigiraf",
+    "geracao": 9,
+    "tipo1": "Normal",
+    "tipo2": "Psíquico",
+    "estagio": 2,
+    "status_total": 520
+  },
+  {
+    "id": 982,
+    "nome": "Dudunsparce",
+    "geracao": 9,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 2,
+    "status_total": 520
+  },
+  {
+    "id": 983,
+    "nome": "Kingambit",
+    "geracao": 9,
+    "tipo1": "Sombrio",
+    "tipo2": "Aço",
+    "estagio": 3,
+    "status_total": 550
+  },
+  {
+    "id": 984,
+    "nome": "Great Tusk",
+    "geracao": 9,
+    "tipo1": "Terra",
+    "tipo2": "Lutador",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 985,
+    "nome": "Scream Tail",
+    "geracao": 9,
+    "tipo1": "Fada",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 986,
+    "nome": "Brute Bonnet",
+    "geracao": 9,
+    "tipo1": "Planta",
+    "tipo2": "Sombrio",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 987,
+    "nome": "Flutter Mane",
+    "geracao": 9,
+    "tipo1": "Fantasma",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 988,
+    "nome": "Slither Wing",
+    "geracao": 9,
+    "tipo1": "Inseto",
+    "tipo2": "Lutador",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 989,
+    "nome": "Sandy Shocks",
+    "geracao": 9,
+    "tipo1": "Elétrico",
+    "tipo2": "Terra",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 990,
+    "nome": "Iron Treads",
+    "geracao": 9,
+    "tipo1": "Terra",
+    "tipo2": "Aço",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 991,
+    "nome": "Iron Bundle",
+    "geracao": 9,
+    "tipo1": "Gelo",
+    "tipo2": "Água",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 992,
+    "nome": "Iron Hands",
+    "geracao": 9,
+    "tipo1": "Lutador",
+    "tipo2": "Elétrico",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 993,
+    "nome": "Iron Jugulis",
+    "geracao": 9,
+    "tipo1": "Sombrio",
+    "tipo2": "Voador",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 994,
+    "nome": "Iron Moth",
+    "geracao": 9,
+    "tipo1": "Fogo",
+    "tipo2": "Veneno",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 995,
+    "nome": "Iron Thorns",
+    "geracao": 9,
+    "tipo1": "Pedra",
+    "tipo2": "Elétrico",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 996,
+    "nome": "Frigibax",
+    "geracao": 9,
+    "tipo1": "Dragão",
+    "tipo2": "Gelo",
+    "estagio": 1,
+    "status_total": 320
+  },
+  {
+    "id": 997,
+    "nome": "Arctibax",
+    "geracao": 9,
+    "tipo1": "Dragão",
+    "tipo2": "Gelo",
+    "estagio": 2,
+    "status_total": 420
+  },
+  {
+    "id": 998,
+    "nome": "Baxcalibur",
+    "geracao": 9,
+    "tipo1": "Dragão",
+    "tipo2": "Gelo",
+    "estagio": 3,
+    "status_total": 600
+  },
+  {
+    "id": 999,
+    "nome": "Gimmighoul",
+    "geracao": 9,
+    "tipo1": "Fantasma",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 300
+  },
+  {
+    "id": 1000,
+    "nome": "Gholdengo",
+    "geracao": 9,
+    "tipo1": "Aço",
+    "tipo2": "Fantasma",
+    "estagio": 2,
+    "status_total": 550
+  },
+  {
+    "id": 1001,
+    "nome": "Wo-Chien",
+    "geracao": 9,
+    "tipo1": "Sombrio",
+    "tipo2": "Planta",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 1002,
+    "nome": "Chien-Pao",
+    "geracao": 9,
+    "tipo1": "Sombrio",
+    "tipo2": "Gelo",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 1003,
+    "nome": "Ting-Lu",
+    "geracao": 9,
+    "tipo1": "Sombrio",
+    "tipo2": "Terra",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 1004,
+    "nome": "Chi-Yu",
+    "geracao": 9,
+    "tipo1": "Sombrio",
+    "tipo2": "Fogo",
+    "estagio": 1,
+    "status_total": 570
+  },
+  {
+    "id": 1005,
+    "nome": "Roaring Moon",
+    "geracao": 9,
+    "tipo1": "Dragão",
+    "tipo2": "Sombrio",
+    "estagio": 1,
+    "status_total": 590
+  },
+  {
+    "id": 1006,
+    "nome": "Iron Valiant",
+    "geracao": 9,
+    "tipo1": "Fada",
+    "tipo2": "Lutador",
+    "estagio": 1,
+    "status_total": 590
+  },
+  {
+    "id": 1007,
+    "nome": "Koraidon",
+    "geracao": 9,
+    "tipo1": "Lutador",
+    "tipo2": "Dragão",
+    "estagio": 1,
+    "status_total": 670
+  },
+  {
+    "id": 1008,
+    "nome": "Miraidon",
+    "geracao": 9,
+    "tipo1": "Elétrico",
+    "tipo2": "Dragão",
+    "estagio": 1,
+    "status_total": 670
+  },
+  {
+    "id": 1009,
+    "nome": "Walking Wake",
+    "geracao": 9,
+    "tipo1": "Água",
+    "tipo2": "Dragão",
+    "estagio": 1,
+    "status_total": 590
+  },
+  {
+    "id": 1010,
+    "nome": "Iron Leaves",
+    "geracao": 9,
+    "tipo1": "Planta",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 590
+  },
+  {
+    "id": 1014,
+    "nome": "Okidogi",
+    "geracao": 9,
+    "tipo1": "Veneno",
+    "tipo2": "Lutador",
+    "estagio": 1,
+    "status_total": 555
+  },
+  {
+    "id": 1015,
+    "nome": "Munkidori",
+    "geracao": 9,
+    "tipo1": "Veneno",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 555
+  },
+  {
+    "id": 1016,
+    "nome": "Fezandipiti",
+    "geracao": 9,
+    "tipo1": "Veneno",
+    "tipo2": "Fada",
+    "estagio": 1,
+    "status_total": 555
+  },
+  {
+    "id": 1017,
+    "nome": "Ogerpon",
+    "geracao": 9,
+    "tipo1": "Planta",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 550
+  },
+  {
+    "id": 1020,
+    "nome": "Gouging Fire",
+    "geracao": 9,
+    "tipo1": "Fogo",
+    "tipo2": "Dragão",
+    "estagio": 1,
+    "status_total": 590
+  },
+  {
+    "id": 1021,
+    "nome": "Raging Bolt",
+    "geracao": 9,
+    "tipo1": "Elétrico",
+    "tipo2": "Dragão",
+    "estagio": 1,
+    "status_total": 590
+  },
+  {
+    "id": 1022,
+    "nome": "Iron Boulder",
+    "geracao": 9,
+    "tipo1": "Pedra",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 590
+  },
+  {
+    "id": 1023,
+    "nome": "Iron Crown",
+    "geracao": 9,
+    "tipo1": "Aço",
+    "tipo2": "Psíquico",
+    "estagio": 1,
+    "status_total": 590
+  },
+  {
+    "id": 1024,
+    "nome": "Terapagos",
+    "geracao": 9,
+    "tipo1": "Normal",
+    "tipo2": null,
+    "estagio": 1,
+    "status_total": 600
+  },
+  {
+    "id": 1025,
+    "nome": "Pecharunt",
+    "geracao": 9,
+    "tipo1": "Veneno",
+    "tipo2": "Fantasma",
+    "estagio": 1,
+    "status_total": 600
+  }
+]
