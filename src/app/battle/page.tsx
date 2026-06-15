@@ -1,46 +1,149 @@
 'use client'
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import { useEffect, useMemo, useState } from 'react'
 import { useGameStore } from '@/store/gameStore'
-import { getLiga, LIGAS } from '@/lib/ligas'
+import { getLiga } from '@/lib/ligas'
+import { rotuloFase, FASES } from '@/lib/battle/torneioFases'
+import { simulateBattle } from '@/lib/battle/simulateBattle'
+import type { Pokemon } from '@/store/types'
+import TournamentBracket from '@/components/battle/TournamentBracket'
+import PositioningBoard from '@/components/battle/PositioningBoard'
+import BattleArena from '@/components/battle/BattleArena'
+import PhaseResult from '@/components/battle/PhaseResult'
+import { DefeatModal } from '@/components/battle/DefeatModal'
 
-// Placeholder — a arena de batalha é a Fase 2. Esta rota apenas evita um 404
-// ao concluir o draft. O botão "Concluir Liga" permite testar a progressão
-// sequencial das ligas (persistida em localStorage) enquanto não há batalha real.
+type Modo = 'posicionar' | 'arena' | 'resultado'
+
 export default function BattlePage() {
   const router = useRouter()
+  const teamSlots = useGameStore(s => s.teamSlots)
   const jornadaAtual = useGameStore(s => s.jornadaAtual)
+  const torneio = useGameStore(s => s.torneio)
+  const iniciarTorneio = useGameStore(s => s.iniciarTorneio)
+  const registrarResultado = useGameStore(s => s.registrarResultado)
+  const avancarFase = useGameStore(s => s.avancarFase)
+  const abandonarTorneio = useGameStore(s => s.abandonarTorneio)
   const completarLiga = useGameStore(s => s.completarLiga)
-  const liga = getLiga(jornadaAtual)
-  const proxima = LIGAS.find(l => l.jornada === jornadaAtual + 1)
 
-  function concluir() {
-    completarLiga(jornadaAtual)
-    router.push('/')
+  const [modo, setModo] = useState<Modo>('posicionar')
+
+  useEffect(() => {
+    if (torneio) return
+    const ids = teamSlots.filter((p): p is Pokemon => p !== null).map(p => p.id)
+    if (ids.length < 5) {
+      router.replace('/draft')
+      return
+    }
+    iniciarTorneio(jornadaAtual, ids)
+  }, [torneio, teamSlots, jornadaAtual, iniciarTorneio, router])
+
+  const pokePorId = useMemo(() => {
+    const m = new Map<number, Pokemon>()
+    for (const p of teamSlots) if (p) m.set(p.id, p)
+    return m
+  }, [teamSlots])
+
+  const outcomeArena = useMemo(
+    () =>
+      modo === 'arena' && torneio
+        ? simulateBattle(
+            torneio.ordem.map(id => pokePorId.get(id)).filter((p): p is Pokemon => !!p),
+            torneio.adversarios[torneio.faseAtual - 1].time,
+            torneio.seed + torneio.faseAtual,
+          )
+        : null,
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [modo, torneio?.seed, torneio?.faseAtual],
+  )
+
+  if (!torneio) return null
+
+  const liga = getLiga(torneio.jornada)
+  const adversario = torneio.adversarios[torneio.faseAtual - 1]
+  const playerTeam = torneio.ordem.map(id => pokePorId.get(id)).filter((p): p is Pokemon => !!p)
+  const opponentTeam = adversario.time
+  const ehFinal = torneio.faseAtual >= FASES.length
+  const ultimoResultado = torneio.resultados[torneio.resultados.length - 1]
+
+  // Derive the name of the first pokemon the player lost for DefeatModal
+  const nomePokemonDerrotado = useMemo(() => {
+    if (!ultimoResultado) return ''
+    const slotPerdido = ultimoResultado.slots.find(s => s.winner === 'trainer')
+    if (!slotPerdido) return ''
+    return pokePorId.get(slotPerdido.playerPokemonId)?.name ?? ''
+  }, [ultimoResultado, pokePorId])
+
+  function iniciarConfronto() {
+    setModo('arena')
+  }
+
+  function aoFimDaArena() {
+    const t = useGameStore.getState().torneio!
+    const time = t.ordem.map(id => pokePorId.get(id)).filter((p): p is Pokemon => !!p)
+    const outcome = simulateBattle(time, t.adversarios[t.faseAtual - 1].time, t.seed + t.faseAtual)
+    registrarResultado(outcome)
+    setModo('resultado')
+  }
+
+  function continuar() {
+    const t = useGameStore.getState().torneio!
+    if (t.status === 'concluido') {
+      completarLiga(t.jornada)
+      abandonarTorneio()
+      router.push('/')
+    } else if (t.status === 'resolvido') {
+      avancarFase()
+      setModo('posicionar')
+    }
+  }
+
+  function aoPerder() {
+    abandonarTorneio()
+    router.push('/draft')
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4">
-      <div className="text-6xl mb-4">⚔️</div>
-      <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-2">Arena de Batalhas</h2>
-      <p className="text-blue-300 mb-8 max-w-md">
-        Seu time está pronto! As batalhas chegam na próxima fase do Pokeweb.
+    <div className="px-4 py-8 min-h-[70vh]">
+      <h2 className="text-center text-2xl font-extrabold text-white mb-1">⚔️ {liga.nome}</h2>
+      <p className="text-center text-blue-300 text-sm mb-6">
+        {rotuloFase(torneio.faseAtual)} · {adversario.tipo === 'lider' ? `Líder ${adversario.nome}` : adversario.nome}
       </p>
+      <TournamentBracket faseAtual={torneio.faseAtual} />
 
-      <button
-        onClick={concluir}
-        className="min-h-[52px] inline-flex items-center gap-2 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-white font-extrabold px-7 py-3 shadow-lg shadow-emerald-500/30 transition-all active:scale-95 cursor-pointer"
-      >
-        🏆 Concluir {liga.nome}
-        {proxima && <span className="text-emerald-100/80 font-bold text-sm">→ desbloqueia {proxima.nome}</span>}
-      </button>
+      {modo === 'posicionar' && (
+        <PositioningBoard
+          ordemPokemon={playerTeam}
+          habilidadeGinasio={ehFinal ? adversario.habilidadeGinasio : undefined}
+          rotuloFase={rotuloFase(torneio.faseAtual)}
+          onConfirmar={iniciarConfronto}
+        />
+      )}
 
-      <Link
-        href="/draft"
-        className="mt-4 min-h-[48px] inline-flex items-center rounded-xl bg-white/10 ring-1 ring-white/15 hover:bg-white/20 text-white font-bold px-6 py-3 transition-all active:scale-95"
-      >
-        ← Voltar ao Draft
-      </Link>
+      {modo === 'arena' && outcomeArena && (
+        <BattleArena
+          outcome={outcomeArena}
+          playerTeam={playerTeam}
+          opponentTeam={opponentTeam}
+          onFim={aoFimDaArena}
+        />
+      )}
+
+      {modo === 'resultado' && ultimoResultado && torneio.status !== 'derrota' && (
+        <PhaseResult
+          outcome={ultimoResultado}
+          ehFinal={ehFinal}
+          rotuloProxima={rotuloFase(torneio.faseAtual + 1)}
+          onContinuar={continuar}
+        />
+      )}
+
+      {torneio.status === 'derrota' && (
+        <DefeatModal
+          onAssistirAnúncio={aoPerder}
+          onDesistir={aoPerder}
+          nomePokemonDerrotado={nomePokemonDerrotado}
+        />
+      )}
     </div>
   )
 }
