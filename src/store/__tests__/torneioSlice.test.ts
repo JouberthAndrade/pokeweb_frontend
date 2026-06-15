@@ -34,8 +34,9 @@ describe('torneio slice', () => {
     useGameStore.setState({ faíscas: 0 })
     useGameStore.getState().iniciarTorneio(1, IDS)
     useGameStore.getState().trocarSlots(0, 1)
+    const ordemAfterFirstSwap = useGameStore.getState().torneio!.ordem[1]
     expect(useGameStore.getState().trocarSlots(1, 2)).toBe(false)
-    expect(useGameStore.getState().torneio!.ordem[1]).toBe(IDS[1])
+    expect(useGameStore.getState().torneio!.ordem[1]).toBe(ordemAfterFirstSwap)
   })
 
   it('avancarFase reseta a troca grátis e segue para a próxima', () => {
@@ -52,5 +53,13 @@ describe('torneio slice', () => {
     useGameStore.getState().iniciarTorneio(1, IDS)
     useGameStore.getState().abandonarTorneio()
     expect(useGameStore.getState().torneio).toBeNull()
+  })
+
+  it('troca grátis reordena torneio.ordem sem alterar teamSlots', () => {
+    useGameStore.setState({ teamSlots: [null, null, null, null, null] })
+    useGameStore.getState().iniciarTorneio(1, IDS)
+    expect(useGameStore.getState().trocarSlots(0, 1)).toBe(true)
+    expect(useGameStore.getState().torneio!.ordem).toEqual([4, 1, 7, 10, 13])
+    expect(useGameStore.getState().teamSlots).toEqual([null, null, null, null, null])
   })
 })

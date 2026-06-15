@@ -110,9 +110,9 @@ export const useGameStore = create<GameState>()(
         if (t.trocaGratisUsada) {
           if (!get().gastarFaísca(1)) return false
         }
-        const teamSlots = [...get().teamSlots]
-        ;[teamSlots[a], teamSlots[b]] = [teamSlots[b], teamSlots[a]]
-        set({ teamSlots, torneio: { ...get().torneio!, trocaGratisUsada: true } })
+        const ordem = [...t.ordem]
+        ;[ordem[a], ordem[b]] = [ordem[b], ordem[a]]
+        set({ torneio: { ...get().torneio!, ordem, trocaGratisUsada: true } })
         return true
       },
 
