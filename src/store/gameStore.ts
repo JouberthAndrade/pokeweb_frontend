@@ -4,6 +4,7 @@ import type { GameState, Pokemon } from './types'
 import { TEAM_SIZE, MAX_LOCKS } from '@/lib/draftRound'
 import { gerarTorneio } from '@/lib/battle/generateOpponents'
 import type { BattleOutcome } from '@/lib/battle/types'
+import { TOTAL_FASES } from '@/lib/battle/torneioFases'
 
 export const useGameStore = create<GameState>()(
   persist(
@@ -120,7 +121,7 @@ export const useGameStore = create<GameState>()(
         set(state => {
           if (!state.torneio) return state
           const venceu = resultado.result === 'PLAYER_WIN'
-          const ehFinal = state.torneio.faseAtual >= 4
+          const ehFinal = state.torneio.faseAtual >= TOTAL_FASES
           return {
             torneio: {
               ...state.torneio,

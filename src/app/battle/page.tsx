@@ -56,6 +56,14 @@ export default function BattlePage() {
     [modo, torneio?.seed, torneio?.faseAtual],
   )
 
+  const nomePokemonDerrotado = useMemo(() => {
+    const ultimo = torneio?.resultados[torneio.resultados.length - 1]
+    if (!ultimo) return ''
+    const perdido = ultimo.slots.find(s => s.winner === 'trainer')
+    if (!perdido) return ''
+    return pokePorId.get(perdido.playerPokemonId)?.name ?? ''
+  }, [torneio, pokePorId])
+
   if (!torneio) return null
 
   const liga = getLiga(torneio.jornada)
@@ -65,23 +73,13 @@ export default function BattlePage() {
   const ehFinal = torneio.faseAtual >= FASES.length
   const ultimoResultado = torneio.resultados[torneio.resultados.length - 1]
 
-  // Derive the name of the first pokemon the player lost for DefeatModal
-  const nomePokemonDerrotado = useMemo(() => {
-    if (!ultimoResultado) return ''
-    const slotPerdido = ultimoResultado.slots.find(s => s.winner === 'trainer')
-    if (!slotPerdido) return ''
-    return pokePorId.get(slotPerdido.playerPokemonId)?.name ?? ''
-  }, [ultimoResultado, pokePorId])
-
   function iniciarConfronto() {
     setModo('arena')
   }
 
   function aoFimDaArena() {
-    const t = useGameStore.getState().torneio!
-    const time = t.ordem.map(id => pokePorId.get(id)).filter((p): p is Pokemon => !!p)
-    const outcome = simulateBattle(time, t.adversarios[t.faseAtual - 1].time, t.seed + t.faseAtual)
-    registrarResultado(outcome)
+    if (!outcomeArena) return
+    registrarResultado(outcomeArena)
     setModo('resultado')
   }
 
