@@ -156,6 +156,18 @@ export const useGameStore = create<GameState>()(
 
       abandonarTorneio: () => set({ torneio: null }),
 
+      // Recomeça o draft do zero (mesma liga): limpa time, cartas, travas e
+      // restaura os rerolls gratuitos. Usado após derrota → redraft.
+      reiniciarDraft: () =>
+        set({
+          teamSlots: Array(TEAM_SIZE).fill(null),
+          draftCards: [],
+          lockedCards: [],
+          cartasReveladas: false,
+          bannedType: null,
+          rerollsDisponíveis: 3,
+        }),
+
       completarLiga: (jornada) =>
         set(state => (
           state.ligasCompletas.includes(jornada)

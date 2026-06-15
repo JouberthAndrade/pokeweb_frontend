@@ -67,6 +67,24 @@ describe('torneio slice', () => {
     expect(useGameStore.getState().torneio).toBeNull()
   })
 
+  it('reiniciarDraft limpa time/cartas e restaura rerolls', () => {
+    useGameStore.setState({
+      teamSlots: [{ id: 1 } as never, null, null, null, null],
+      lockedCards: [0, 1],
+      cartasReveladas: true,
+      bannedType: 'Fire',
+      rerollsDisponíveis: 0,
+    })
+    useGameStore.getState().reiniciarDraft()
+    const s = useGameStore.getState()
+    expect(s.teamSlots.every(p => p === null)).toBe(true)
+    expect(s.draftCards).toEqual([])
+    expect(s.lockedCards).toEqual([])
+    expect(s.cartasReveladas).toBe(false)
+    expect(s.bannedType).toBeNull()
+    expect(s.rerollsDisponíveis).toBe(3)
+  })
+
   it('troca grátis reordena torneio.ordem sem alterar teamSlots', () => {
     useGameStore.setState({ teamSlots: [null, null, null, null, null] })
     useGameStore.getState().iniciarTorneio(1, IDS)

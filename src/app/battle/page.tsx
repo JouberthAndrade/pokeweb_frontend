@@ -25,6 +25,7 @@ export default function BattlePage() {
   const avancarFase = useGameStore(s => s.avancarFase)
   const abandonarTorneio = useGameStore(s => s.abandonarTorneio)
   const completarLiga = useGameStore(s => s.completarLiga)
+  const reiniciarDraft = useGameStore(s => s.reiniciarDraft)
 
   const [modo, setModo] = useState<Modo>('posicionar')
 
@@ -99,7 +100,9 @@ export default function BattlePage() {
   }
 
   function aoPerder() {
+    // Derrota perde o draft: limpa o time/cartas e recomeça o draft na mesma liga.
     abandonarTorneio()
+    reiniciarDraft()
     router.push('/draft')
   }
 

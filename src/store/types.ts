@@ -81,4 +81,5 @@ export interface GameState {
   gastarPokémoedas: (valor: number) => boolean
   ganharFaíscas: (valor: number) => void
   completarLiga: (jornada: number) => void
+  reiniciarDraft: () => void
 }
