@@ -5,6 +5,7 @@ import { useGameStore } from '@/store/gameStore'
 import { getLiga } from '@/lib/ligas'
 import { rotuloFase, FASES } from '@/lib/battle/torneioFases'
 import { simulateBattle } from '@/lib/battle/simulateBattle'
+import { carregarPokemon } from '@/lib/pokemonData'
 import type { Pokemon } from '@/store/types'
 import TournamentBracket from '@/components/battle/TournamentBracket'
 import PositioningBoard from '@/components/battle/PositioningBoard'
@@ -37,11 +38,13 @@ export default function BattlePage() {
     iniciarTorneio(jornadaAtual, ids)
   }, [torneio, teamSlots, jornadaAtual, iniciarTorneio, router])
 
+  // Resolve ids contra o dataset completo: o time persiste no torneio (ordem),
+  // mas teamSlots é transitório e some no refresh. Assim o tabuleiro sempre popula.
   const pokePorId = useMemo(() => {
     const m = new Map<number, Pokemon>()
-    for (const p of teamSlots) if (p) m.set(p.id, p)
+    for (const p of carregarPokemon()) m.set(p.id, p)
     return m
-  }, [teamSlots])
+  }, [])
 
   const outcomeArena = useMemo(
     () =>
@@ -111,7 +114,8 @@ export default function BattlePage() {
       {modo === 'posicionar' && (
         <PositioningBoard
           ordemPokemon={playerTeam}
-          habilidadeGinasio={ehFinal ? adversario.habilidadeGinasio : undefined}
+          oponente={adversario}
+          mostrarHabilidade={ehFinal}
           rotuloFase={rotuloFase(torneio.faseAtual)}
           onConfirmar={iniciarConfronto}
         />
