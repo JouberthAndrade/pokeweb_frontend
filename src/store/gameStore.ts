@@ -2,6 +2,8 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import type { GameState, Pokemon } from './types'
 import { TEAM_SIZE, MAX_LOCKS } from '@/lib/draftRound'
+import { gerarTorneio } from '@/lib/battle/generateOpponents'
+import type { BattleOutcome } from '@/lib/battle/types'
 
 export const useGameStore = create<GameState>()(
   persist(
@@ -22,6 +24,7 @@ export const useGameStore = create<GameState>()(
       derrotas: 0,
       ligasCompletas: [],
       emBatalha: false,
+      torneio: null,
 
       lockCard: (índice) =>
         set(state => {
@@ -74,6 +77,75 @@ export const useGameStore = create<GameState>()(
       ganharFaíscas: (valor) =>
         set(state => ({ faíscas: state.faíscas + valor })),
 
+      gastarFaísca: (valor) => {
+        const { faíscas } = get()
+        if (faíscas < valor) return false
+        set({ faíscas: faíscas - valor })
+        return true
+      },
+
+      iniciarTorneio: (jornada, ids) =>
+        set(() => {
+          const seed = Math.floor(Math.random() * 0xffffffff)
+          return {
+            torneio: {
+              jornada,
+              faseAtual: 1,
+              ordem: [...ids],
+              trocaGratisUsada: false,
+              adversarios: gerarTorneio(jornada, seed),
+              resultados: [],
+              seed,
+              status: 'posicionando' as const,
+            },
+          }
+        }),
+
+      definirOrdem: (ids) =>
+        set(state => (state.torneio ? { torneio: { ...state.torneio, ordem: [...ids] } } : state)),
+
+      trocarSlots: (a, b) => {
+        const t = get().torneio
+        if (!t) return false
+        if (t.trocaGratisUsada) {
+          if (!get().gastarFaísca(1)) return false
+        }
+        const teamSlots = [...get().teamSlots]
+        ;[teamSlots[a], teamSlots[b]] = [teamSlots[b], teamSlots[a]]
+        set({ teamSlots, torneio: { ...get().torneio!, trocaGratisUsada: true } })
+        return true
+      },
+
+      registrarResultado: (resultado: BattleOutcome) =>
+        set(state => {
+          if (!state.torneio) return state
+          const venceu = resultado.result === 'PLAYER_WIN'
+          const ehFinal = state.torneio.faseAtual >= 4
+          return {
+            torneio: {
+              ...state.torneio,
+              resultados: [...state.torneio.resultados, resultado],
+              status: !venceu ? 'derrota' : ehFinal ? 'concluido' : 'resolvido',
+            },
+          }
+        }),
+
+      avancarFase: () =>
+        set(state =>
+          state.torneio
+            ? {
+                torneio: {
+                  ...state.torneio,
+                  faseAtual: state.torneio.faseAtual + 1,
+                  trocaGratisUsada: false,
+                  status: 'posicionando',
+                },
+              }
+            : state
+        ),
+
+      abandonarTorneio: () => set({ torneio: null }),
+
       completarLiga: (jornada) =>
         set(state => (
           state.ligasCompletas.includes(jornada)
@@ -88,9 +160,11 @@ export const useGameStore = create<GameState>()(
       partialize: (state) => ({
         ligasCompletas: state.ligasCompletas,
         pokémoedas: state.pokémoedas,
+        faíscas: state.faíscas,
         gemas: state.gemas,
         vitórias: state.vitórias,
         derrotas: state.derrotas,
+        torneio: state.torneio,
       }),
     }
   )

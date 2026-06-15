@@ -1,11 +1,29 @@
+import type { BattleOutcome } from '@/lib/battle/types'
+import type { Adversario } from '@/lib/battle/generateOpponents'
+
+export interface TorneioState {
+  jornada: number
+  faseAtual: number
+  ordem: number[]
+  trocaGratisUsada: boolean
+  adversarios: Adversario[]
+  resultados: BattleOutcome[]
+  seed: number
+  status: 'posicionando' | 'resolvido' | 'derrota' | 'concluido'
+}
+
 export interface Pokemon {
   id: number
-  nome: string
-  geracao: number
-  tipo1: string
-  tipo2: string | null
-  estagio: number           // 1, 2 ou 3
-  status_total: number      // BST
+  name: string
+  types: string[]          // 1 ou 2 tipos, EN capitalizado ("Fire", "Flying")
+  stats: {
+    hp: number; atk: number; def: number
+    spAtk: number; spDef: number; speed: number
+  }
+  bst: number              // soma dos 6 stats (ex-status_total)
+  stage: number            // 1, 2 ou 3 (ex-estagio)
+  generation: number       // 1..9 (ex-geracao)
+  abilities: string[]
 }
 
 export interface DraftCard {
@@ -42,6 +60,16 @@ export interface GameState {
 
   // Batalha
   emBatalha: boolean
+  torneio: TorneioState | null
+
+  // Torneio
+  iniciarTorneio: (jornada: number, ids: number[]) => void
+  definirOrdem: (ids: number[]) => void
+  trocarSlots: (a: number, b: number) => boolean
+  registrarResultado: (resultado: BattleOutcome) => void
+  avancarFase: () => void
+  abandonarTorneio: () => void
+  gastarFaísca: (valor: number) => boolean
 
   // Ações
   lockCard: (índice: number) => void
