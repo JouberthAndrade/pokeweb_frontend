@@ -13,10 +13,10 @@ const PESOS_ESTÁGIO: Record<number, number> = { 1: 50, 2: 35, 3: 15 }
 
 function weightedPick(pool: Pokemon[]): Pokemon {
   if (pool.length === 0) throw new Error('Pool vazio — ajuste os filtros de BST ou tipo banido')
-  const total = pool.reduce((acc, p) => acc + (PESOS_ESTÁGIO[p.estagio] ?? 35), 0)
+  const total = pool.reduce((acc, p) => acc + (PESOS_ESTÁGIO[p.stage] ?? 35), 0)
   let rand = Math.random() * total
   for (const pokemon of pool) {
-    rand -= PESOS_ESTÁGIO[pokemon.estagio] ?? 35
+    rand -= PESOS_ESTÁGIO[pokemon.stage] ?? 35
     if (rand <= 0) return pokemon
   }
   return pool[pool.length - 1]

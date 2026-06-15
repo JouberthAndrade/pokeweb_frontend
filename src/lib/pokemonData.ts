@@ -8,17 +8,17 @@ export function carregarPokemon(): Pokemon[] {
 }
 
 export function filtrarPorTipo(pokemon: Pokemon[], tipoBanido: string): Pokemon[] {
-  return pokemon.filter(p => p.tipo1 !== tipoBanido && p.tipo2 !== tipoBanido)
+  return pokemon.filter(p => !p.types.includes(tipoBanido))
 }
 
 export function filtrarPorGeracao(pokemon: Pokemon[], geracao: number): Pokemon[] {
-  return pokemon.filter(p => p.geracao === geracao)
+  return pokemon.filter(p => p.generation === geracao)
 }
 
 export function buscarPorEstágio(pokemon: Pokemon[], estagio: number): Pokemon[] {
-  return pokemon.filter(p => p.estagio === estagio)
+  return pokemon.filter(p => p.stage === estagio)
 }
 
 export function filtrarPorBSTRange(pokemon: Pokemon[], min: number, max: number): Pokemon[] {
-  return pokemon.filter(p => p.status_total >= min && p.status_total <= max)
+  return pokemon.filter(p => p.bst >= min && p.bst <= max)
 }

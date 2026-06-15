@@ -166,6 +166,7 @@ export const useGameStore = create<GameState>()(
           cartasReveladas: false,
           bannedType: null,
           rerollsDisponíveis: 3,
+          torneio: null,
         }),
 
       completarLiga: (jornada) =>

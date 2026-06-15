@@ -4,7 +4,11 @@ import type { DraftCard } from '@/store/types'
 
 function carta(id: number, locked = false): DraftCard {
   return {
-    pokemon: { id, nome: `Mon${id}`, geracao: 1, tipo1: 'Normal', tipo2: null, estagio: 1, status_total: 300 },
+    pokemon: {
+      id, name: `Mon${id}`, generation: 1, types: ['Normal'], stage: 1, bst: 300,
+      stats: { hp: 50, atk: 50, def: 50, spAtk: 50, spDef: 50, speed: 50 },
+      abilities: [],
+    },
     locked,
   }
 }

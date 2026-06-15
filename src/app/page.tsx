@@ -19,6 +19,8 @@ export default function LigasPage() {
 
   function selecionarLiga(jornada: number) {
     // Começa uma jornada limpa: define a liga e zera o time/draft/travas.
+    // Descarta qualquer torneio remanescente (persistido) para que a batalha
+    // seja iniciada a partir do time recém-draftado, e não de um time antigo.
     useGameStore.setState({
       jornadaAtual: jornada,
       teamSlots: Array(TEAM_SIZE).fill(null),
@@ -26,6 +28,7 @@ export default function LigasPage() {
       lockedCards: [],
       cartasReveladas: false,
       rerollsDisponíveis: 1,
+      torneio: null,
     })
     router.push('/draft')
   }

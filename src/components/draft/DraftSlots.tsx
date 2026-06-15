@@ -196,8 +196,8 @@ export function DraftSlots() {
 
             <button
               onClick={handleReroll}
-              disabled={rolando || (rerollsDisponíveis === 0 && pokémoedas < 30)}
-              title="Sortear novas cartas"
+              disabled={rolando || !cartasReveladas || (rerollsDisponíveis === 0 && pokémoedas < 30)}
+              title={cartasReveladas ? 'Sortear novas cartas' : 'Revele as cartas antes de rerolar'}
               className="
                 min-h-[48px] inline-flex items-center gap-2 rounded-xl px-4 py-2.5 cursor-pointer
                 bg-white/5 ring-1 ring-white/10 hover:bg-white/10
@@ -301,7 +301,7 @@ function TeamSlot({ pokemon, numero }: { pokemon: Pokemon | null; numero: number
       <div className="flex aspect-square w-full items-center justify-center rounded-full bg-gradient-to-b from-slate-700 to-slate-900 ring-2 ring-yellow-400/40">
         <img
           src={erro ? POKEBALL_PLACEHOLDER : spritePrincipal(pokemon.id)}
-          alt={pokemon.nome}
+          alt={pokemon.name}
           width={64}
           height={64}
           onError={() => setErro(true)}
@@ -309,7 +309,7 @@ function TeamSlot({ pokemon, numero }: { pokemon: Pokemon | null; numero: number
         />
       </div>
       <span className="text-[10px] sm:text-xs font-medium text-white/70 capitalize truncate w-full text-center">
-        {pokemon.nome}
+        {pokemon.name}
       </span>
     </div>
   )

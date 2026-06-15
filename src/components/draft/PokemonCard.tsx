@@ -185,7 +185,7 @@ export function PokemonCard({
               <div className="my-1 flex h-24 w-24 items-center justify-center rounded-full bg-black/30">
                 <img
                   src={srcAtual}
-                  alt={pokemon.nome}
+                  alt={pokemon.name}
                   width={112}
                   height={112}
                   loading="lazy"
@@ -196,20 +196,20 @@ export function PokemonCard({
 
               {/* Nome */}
               <p className="font-extrabold text-sm text-white capitalize leading-tight line-clamp-1 w-full">
-                {pokemon.nome}
+                {pokemon.name}
               </p>
 
               {/* Tipos */}
               <div className="flex flex-wrap justify-center gap-1 mt-1.5">
-                <TypePill tipo={pokemon.tipo1} />
-                {pokemon.tipo2 && <TypePill tipo={pokemon.tipo2} />}
+                <TypePill tipo={pokemon.types[0]} />
+                {pokemon.types[1] && <TypePill tipo={pokemon.types[1]} />}
               </div>
 
               {/* FORÇA (BST) */}
               <div className="mt-2 flex items-center gap-1 rounded-lg bg-emerald-500/10 px-2.5 py-1 ring-1 ring-emerald-400/20">
                 <span className="text-amber-400 text-sm">⚡</span>
                 <span className="text-[11px] font-semibold uppercase tracking-wide text-emerald-300/80">Força</span>
-                <span className="text-sm font-extrabold text-emerald-200">{pokemon.status_total}</span>
+                <span className="text-sm font-extrabold text-emerald-200">{pokemon.bst}</span>
               </div>
             </>
           )}

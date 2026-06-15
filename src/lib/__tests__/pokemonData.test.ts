@@ -3,27 +3,21 @@ import { carregarPokemon, filtrarPorTipo, filtrarPorGeracao, buscarPorEstágio }
 
 describe('pokemonData', () => {
   it('carrega todos os pokémon', () => {
-    const pokemon = carregarPokemon()
-    expect(pokemon.length).toBeGreaterThan(0)
+    expect(carregarPokemon().length).toBeGreaterThan(0)
   })
 
   it('filtra pokémon excluindo um tipo', () => {
-    const pokemon = carregarPokemon()
-    const semFogo = filtrarPorTipo(pokemon, 'Fire')
-    const temFogo = semFogo.some(p => p.tipo1 === 'Fire' || p.tipo2 === 'Fire')
-    expect(temFogo).toBe(false)
+    const semFire = filtrarPorTipo(carregarPokemon(), 'Fire')
+    expect(semFire.some(p => p.types.includes('Fire'))).toBe(false)
   })
 
   it('filtra por geração', () => {
-    const pokemon = carregarPokemon()
-    const gen1 = filtrarPorGeracao(pokemon, 1)
-    gen1.forEach(p => expect(p.geracao).toBe(1))
+    filtrarPorGeracao(carregarPokemon(), 1).forEach(p => expect(p.generation).toBe(1))
   })
 
   it('busca pokémon por estágio', () => {
-    const pokemon = carregarPokemon()
-    const estagio3 = buscarPorEstágio(pokemon, 3)
-    estagio3.forEach(p => expect(p.estagio).toBe(3))
+    const estagio3 = buscarPorEstágio(carregarPokemon(), 3)
+    estagio3.forEach(p => expect(p.stage).toBe(3))
     expect(estagio3.length).toBeGreaterThan(0)
   })
 })
