@@ -20,9 +20,20 @@ describe('torneio slice', () => {
     expect(t.trocaGratisUsada).toBe(false)
   })
 
-  it('1ª troca é grátis; a 2ª na mesma fase debita 1 faísca', () => {
+  it('fase 1 (oitavas) permite reordenar livre e ilimitado sem faísca', () => {
+    useGameStore.setState({ faíscas: 0 })
+    useGameStore.getState().iniciarTorneio(1, IDS)
+    expect(useGameStore.getState().trocarSlots(0, 1)).toBe(true)
+    expect(useGameStore.getState().trocarSlots(1, 2)).toBe(true)
+    expect(useGameStore.getState().trocarSlots(2, 3)).toBe(true)
+    expect(useGameStore.getState().torneio!.trocaGratisUsada).toBe(false)
+    expect(useGameStore.getState().faíscas).toBe(0)
+  })
+
+  it('da fase 2 em diante: 1ª troca grátis, a 2ª debita 1 faísca', () => {
     useGameStore.setState({ faíscas: 1 })
     useGameStore.getState().iniciarTorneio(1, IDS)
+    useGameStore.getState().avancarFase() // fase 2
     expect(useGameStore.getState().trocarSlots(0, 1)).toBe(true)
     expect(useGameStore.getState().torneio!.trocaGratisUsada).toBe(true)
     expect(useGameStore.getState().faíscas).toBe(1)
@@ -30,13 +41,14 @@ describe('torneio slice', () => {
     expect(useGameStore.getState().faíscas).toBe(0)
   })
 
-  it('troca paga falha sem faísca', () => {
+  it('da fase 2 em diante: troca paga falha sem faísca', () => {
     useGameStore.setState({ faíscas: 0 })
     useGameStore.getState().iniciarTorneio(1, IDS)
+    useGameStore.getState().avancarFase() // fase 2
     useGameStore.getState().trocarSlots(0, 1)
-    const ordemAfterFirstSwap = useGameStore.getState().torneio!.ordem[1]
+    const ordemAposPrimeira = useGameStore.getState().torneio!.ordem[1]
     expect(useGameStore.getState().trocarSlots(1, 2)).toBe(false)
-    expect(useGameStore.getState().torneio!.ordem[1]).toBe(ordemAfterFirstSwap)
+    expect(useGameStore.getState().torneio!.ordem[1]).toBe(ordemAposPrimeira)
   })
 
   it('avancarFase reseta a troca grátis e segue para a próxima', () => {

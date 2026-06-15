@@ -108,12 +108,21 @@ export const useGameStore = create<GameState>()(
       trocarSlots: (a, b) => {
         const t = get().torneio
         if (!t) return false
-        if (t.trocaGratisUsada) {
+        // Posicionamento inicial (oitavas) é livre e ilimitado; nas fases seguintes,
+        // a 1ª troca é grátis (prêmio por avançar) e as extras custam 1 faísca.
+        const inicial = t.faseAtual === 1
+        if (!inicial && t.trocaGratisUsada) {
           if (!get().gastarFaísca(1)) return false
         }
         const ordem = [...t.ordem]
         ;[ordem[a], ordem[b]] = [ordem[b], ordem[a]]
-        set({ torneio: { ...get().torneio!, ordem, trocaGratisUsada: true } })
+        set({
+          torneio: {
+            ...get().torneio!,
+            ordem,
+            trocaGratisUsada: inicial ? t.trocaGratisUsada : true,
+          },
+        })
         return true
       },
 

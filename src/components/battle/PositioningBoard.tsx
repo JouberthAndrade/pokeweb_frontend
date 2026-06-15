@@ -30,6 +30,7 @@ export default function PositioningBoard({ ordemPokemon, habilidadeGinasio, onCo
   const [sel, setSel] = useState<number | null>(null)
   const trocarSlots = useGameStore(s => s.trocarSlots)
   const faíscas = useGameStore(s => s.faíscas)
+  const faseAtual = useGameStore(s => s.torneio?.faseAtual ?? 1)
   const trocaGratisUsada = useGameStore(s => s.torneio?.trocaGratisUsada ?? false)
 
   function clicar(i: number) {
@@ -45,13 +46,21 @@ export default function PositioningBoard({ ordemPokemon, habilidadeGinasio, onCo
     setSel(null)
   }
 
-  const custoProxima = trocaGratisUsada ? '1 ⚡' : 'grátis'
+  const inicial = faseAtual === 1
+  const custoProxima = inicial ? 'livre' : trocaGratisUsada ? '1 ⚡' : 'grátis'
 
   return (
     <div className="w-full max-w-xl mx-auto text-center">
       <h3 className="text-lg font-extrabold text-white">{rotuloFase} — Posicione seu time</h3>
       <p className="text-xs text-blue-300 mb-1">A ordem importa: slot 1 luta com o slot 1 do adversário.</p>
-      <p className="text-[11px] text-white/50 mb-4">Próxima troca: <b>{custoProxima}</b> · Faíscas: {faíscas} ⚡</p>
+      <p className="text-[11px] text-white/60 mb-1">
+        Toque em <b>dois Pokémon</b> para trocar as posições.
+      </p>
+      <p className="text-[11px] text-white/50 mb-4">
+        {inicial
+          ? 'Posicionamento inicial: trocas livres.'
+          : <>Próxima troca: <b>{custoProxima}</b> · Faíscas: {faíscas} ⚡</>}
+      </p>
 
       {habilidadeGinasio && (
         <div className="mb-4 rounded-xl bg-violet-500/15 ring-1 ring-violet-400/30 px-4 py-2 text-sm text-violet-200">
