@@ -6,7 +6,9 @@ import { gerarTorneio } from '@/lib/battle/generateOpponents'
 import type { BattleOutcome } from '@/lib/battle/types'
 import { TOTAL_FASES } from '@/lib/battle/torneioFases'
 import { criarSeed, construirRodada } from '@/lib/api/draft'
+import { criarSessao, posicionar } from '@/lib/api/battle'
 import { ApiError } from '@/lib/api/http'
+import type { BattleOutcomeDto } from '@/lib/api/types'
 
 export const useGameStore = create<GameState>()(
   persist(
@@ -31,6 +33,10 @@ export const useGameStore = create<GameState>()(
       ligasCompletas: [],
       emBatalha: false,
       torneio: null,
+      battleSessionId: null,
+      battleOutcome: null,
+      trainerThemeTypes: [],
+      batalhaErro: null,
 
       lockCard: (índice) =>
         set(state => {
@@ -175,6 +181,10 @@ export const useGameStore = create<GameState>()(
           seedId: null,
           rodadaAtual: 1,
           draftErro: null,
+          battleSessionId: null,
+          battleOutcome: null,
+          trainerThemeTypes: [],
+          batalhaErro: null,
         }),
 
       // --- Draft server-authoritative ---
@@ -231,6 +241,41 @@ export const useGameStore = create<GameState>()(
       },
 
       limparDraftErro: () => set({ draftErro: null }),
+
+      // --- Batalha server-authoritative (two-step) ---
+
+      // Step 1: criar sessão ao entrar em posicionamento → guarda trainerThemeTypes + battleSessionId
+      iniciarSessaoBatalha: async (leagueId, stage, playerSlotIds) => {
+        try {
+          const sessao = await criarSessao({ leagueId, stage, draftPokemonIds: playerSlotIds })
+          set({
+            battleSessionId: sessao.sessionId,
+            trainerThemeTypes: sessao.trainerThemeTypes,
+            batalhaErro: null,
+          })
+        } catch (err) {
+          const msg = err instanceof ApiError ? err.message : 'Falha ao criar sessão de batalha'
+          set({ batalhaErro: msg })
+          throw err
+        }
+      },
+
+      // Step 2: posicionar time ao confirmar → guarda battleOutcome
+      confirmarPosicao: async (playerSlots) => {
+        const { battleSessionId } = get()
+        if (!battleSessionId) throw new Error('Sessão de batalha não iniciada')
+        try {
+          const outcome = await posicionar({ sessionId: battleSessionId, playerSlots })
+          set({ battleOutcome: outcome, batalhaErro: null })
+          return outcome
+        } catch (err) {
+          const msg = err instanceof ApiError ? err.message : 'Falha ao posicionar time'
+          set({ batalhaErro: msg })
+          throw err
+        }
+      },
+
+      limparBatalhaErro: () => set({ batalhaErro: null }),
 
       completarLiga: (jornada) =>
         set(state => (

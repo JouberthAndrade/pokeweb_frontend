@@ -1,5 +1,6 @@
 import type { BattleOutcome } from '@/lib/battle/types'
 import type { Adversario } from '@/lib/battle/generateOpponents'
+import type { BattleOutcomeDto } from '@/lib/api/types'
 
 export interface TorneioState {
   jornada: number
@@ -65,6 +66,12 @@ export interface GameState {
   emBatalha: boolean
   torneio: TorneioState | null
 
+  // Batalha server-authoritative
+  battleSessionId: string | null
+  battleOutcome: BattleOutcomeDto | null
+  trainerThemeTypes: string[]
+  batalhaErro: string | null
+
   // Torneio
   iniciarTorneio: (jornada: number, ids: number[]) => void
   definirOrdem: (ids: number[]) => void
@@ -73,6 +80,13 @@ export interface GameState {
   avancarFase: () => void
   abandonarTorneio: () => void
   gastarFaísca: (valor: number) => boolean
+
+  // Batalha server-authoritative actions (two-step flow)
+  // Step 1: create session when entering positioning → stores trainerThemeTypes + battleSessionId
+  iniciarSessaoBatalha: (leagueId: number, stage: number, playerSlotIds: number[]) => Promise<void>
+  // Step 2: send positioning on confirm → stores battleOutcome
+  confirmarPosicao: (playerSlots: number[]) => Promise<BattleOutcomeDto>
+  limparBatalhaErro: () => void
 
   // Ações
   lockCard: (índice: number) => void

@@ -1,3 +1,9 @@
+/**
+ * @legacy PRODUCTION battles are now resolved server-side via POST /battle/session
+ * + POST /battle/position (see src/store/gameStore.ts — iniciarSessaoBatalha /
+ * confirmarPosicao). This module is kept for unit tests only. Do NOT use
+ * simulateBattle() in the production battle flow.
+ */
 import type { Pokemon } from '@/store/types'
 import type { BattleOutcome, RoundEvent, SlotResult, Actor } from './types'
 import { mulberry32 } from './rng'

@@ -1,12 +1,13 @@
 'use client'
 import { useRouter } from 'next/navigation'
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useGameStore } from '@/store/gameStore'
 import { getLiga } from '@/lib/ligas'
 import { rotuloFase, FASES } from '@/lib/battle/torneioFases'
-import { simulateBattle } from '@/lib/battle/simulateBattle'
 import { carregarPokemon } from '@/lib/pokemonData'
+import { dtoToBattleOutcome } from '@/lib/battle/dtoAdapter'
 import type { Pokemon } from '@/store/types'
+import type { BattleOutcome } from '@/lib/battle/types'
 import TournamentBracket from '@/components/battle/TournamentBracket'
 import PositioningBoard from '@/components/battle/PositioningBoard'
 import BattleArena from '@/components/battle/BattleArena'
@@ -27,7 +28,19 @@ export default function BattlePage() {
   const completarLiga = useGameStore(s => s.completarLiga)
   const reiniciarDraft = useGameStore(s => s.reiniciarDraft)
 
+  // Server-authoritative battle actions (two-step)
+  const iniciarSessaoBatalha = useGameStore(s => s.iniciarSessaoBatalha)
+  const confirmarPosicao = useGameStore(s => s.confirmarPosicao)
+  const trainerThemeTypes = useGameStore(s => s.trainerThemeTypes)
+  const batalhaErro = useGameStore(s => s.batalhaErro)
+  const limparBatalhaErro = useGameStore(s => s.limparBatalhaErro)
+
   const [modo, setModo] = useState<Modo>('posicionar')
+  // outcomeArena is now server-derived (via confirmarPosicao), adapted to client shape
+  const [outcomeArena, setOutcomeArena] = useState<BattleOutcome | null>(null)
+  // Loading states
+  const [iniciandoSessao, setIniciandoSessao] = useState(false)
+  const [confirmando, setConfirmando] = useState(false)
 
   useEffect(() => {
     if (torneio) return
@@ -47,19 +60,6 @@ export default function BattlePage() {
     return m
   }, [])
 
-  const outcomeArena = useMemo(
-    () =>
-      modo === 'arena' && torneio
-        ? simulateBattle(
-            torneio.ordem.map(id => pokePorId.get(id)).filter((p): p is Pokemon => !!p),
-            torneio.adversarios[torneio.faseAtual - 1].time,
-            torneio.seed + torneio.faseAtual,
-          )
-        : null,
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [modo, torneio?.seed, torneio?.faseAtual],
-  )
-
   const nomePokemonDerrotado = useMemo(() => {
     const ultimo = torneio?.resultados[torneio.resultados.length - 1]
     if (!ultimo) return ''
@@ -67,6 +67,31 @@ export default function BattlePage() {
     if (!perdido) return ''
     return pokePorId.get(perdido.playerPokemonId)?.name ?? ''
   }, [torneio, pokePorId])
+
+  // Step 1: ao entrar no modo posicionar (ou ao avançar fase), criar sessão no servidor
+  // para obter trainerThemeTypes. Roda sempre que o torneio/fase muda e o modo é 'posicionar'.
+  const criarSessaoAtual = useCallback(async () => {
+    if (!torneio) return
+    setIniciandoSessao(true)
+    try {
+      const liga = getLiga(torneio.jornada)
+      const leagueId = liga.jornada               // jornada 1..4 maps to leagueId
+      const stage = Math.min(torneio.faseAtual, 3) // clamp: backend accepts 1..3 only
+      // NOTE: stage clamping is a temporary measure. Full multi-phase/líder mapping
+      // (FASES.length > 3) is deferred to a future PRD.
+      await iniciarSessaoBatalha(leagueId, stage, torneio.ordem)
+    } finally {
+      setIniciandoSessao(false)
+    }
+  }, [torneio, iniciarSessaoBatalha])
+
+  useEffect(() => {
+    if (modo === 'posicionar' && torneio) {
+      criarSessaoAtual()
+    }
+  // We only want to re-run when the phase actually changes, not on every torneio ref update.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [torneio?.faseAtual, modo])
 
   if (!torneio) return null
 
@@ -77,8 +102,25 @@ export default function BattlePage() {
   const ehFinal = torneio.faseAtual >= FASES.length
   const ultimoResultado = torneio.resultados[torneio.resultados.length - 1]
 
-  function iniciarConfronto() {
-    setModo('arena')
+  // Step 2: confirmar posicionamento — chama /battle/position e recebe o outcome
+  async function iniciarConfronto() {
+    if (!torneio) return
+    setConfirmando(true)
+    limparBatalhaErro()
+    try {
+      const dto = await confirmarPosicao(torneio.ordem)
+      // Adapt DTO → client BattleOutcome so BattleArena and registrarResultado work
+      // unchanged. The server does not return per-round events, so events: [] causes
+      // BattleArena to finish instantly (no per-round animation). Full replay is
+      // deferred to a future PRD adding GET /battle/replay/:id → RoundEvent[].
+      const outcome = dtoToBattleOutcome(dto)
+      setOutcomeArena(outcome)
+      setModo('arena')
+    } catch {
+      // erro já gravado em batalhaErro pelo store
+    } finally {
+      setConfirmando(false)
+    }
   }
 
   function aoFimDaArena() {
@@ -114,6 +156,18 @@ export default function BattlePage() {
       </p>
       <TournamentBracket faseAtual={torneio.faseAtual} />
 
+      {batalhaErro && (
+        <div className="mb-4 rounded-xl bg-rose-500/20 ring-1 ring-rose-400/40 px-4 py-3 text-sm text-rose-200 text-center">
+          ⚠️ {batalhaErro}
+          <button
+            onClick={limparBatalhaErro}
+            className="ml-3 underline text-rose-300 hover:text-rose-100 cursor-pointer"
+          >
+            Fechar
+          </button>
+        </div>
+      )}
+
       {modo === 'posicionar' && (
         <PositioningBoard
           ordemPokemon={playerTeam}
@@ -121,6 +175,8 @@ export default function BattlePage() {
           mostrarHabilidade={ehFinal}
           rotuloFase={rotuloFase(torneio.faseAtual)}
           onConfirmar={iniciarConfronto}
+          trainerThemeTypes={trainerThemeTypes.length > 0 ? trainerThemeTypes : undefined}
+          confirmandoDisabled={iniciandoSessao || confirmando}
         />
       )}
 

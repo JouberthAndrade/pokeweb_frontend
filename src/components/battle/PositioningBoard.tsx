@@ -6,6 +6,7 @@ import type { Pokemon } from '@/store/types'
 import type { Adversario } from '@/lib/battle/generateOpponents'
 import { useGameStore } from '@/store/gameStore'
 import MatchupPanel from './MatchupPanel'
+import { TypePill } from '@/components/ui/TypePill'
 
 interface Props {
   ordemPokemon: Pokemon[]
@@ -13,6 +14,11 @@ interface Props {
   mostrarHabilidade: boolean
   onConfirmar: () => void
   rotuloFase: string
+  /** Tipos-tema do treinador oponente recebidos do servidor.
+   *  Quando presente, substitui a coluna de sprites do oponente por pílulas de tipo. */
+  trainerThemeTypes?: string[]
+  /** Desabilita o botão de confirmar (ex: aguardando resposta do servidor) */
+  confirmandoDisabled?: boolean
 }
 
 const CUSTO_REVELAR = 20
@@ -60,7 +66,7 @@ function CardOponente({ poke, n, oculto }: { poke: Pokemon; n: number; oculto: b
   )
 }
 
-export default function PositioningBoard({ ordemPokemon, oponente, mostrarHabilidade, onConfirmar, rotuloFase }: Props) {
+export default function PositioningBoard({ ordemPokemon, oponente, mostrarHabilidade, onConfirmar, rotuloFase, trainerThemeTypes, confirmandoDisabled }: Props) {
   const [sel, setSel] = useState<number | null>(null)
   const [revelado, setRevelado] = useState(false)
   const trocarSlots = useGameStore(s => s.trocarSlots)
@@ -120,18 +126,33 @@ export default function PositioningBoard({ ordemPokemon, oponente, mostrarHabili
           </div>
         </div>
 
-        {/* Time do oponente */}
+        {/* Time do oponente — server mode: mostra tipos-tema; fallback: sprites locais */}
         <div className="flex-1">
           <p className="text-xs font-bold text-rose-300 mb-2">🔴 TIME DE {tituloOponente.toUpperCase()}</p>
-          <div className="grid grid-cols-5 sm:grid-cols-3 gap-2">
-            {oponente.time.map((p, i) => (
-              <CardOponente key={`op-${i}`} poke={p} n={i + 1} oculto={i === ultimoIdx && !revelado} />
-            ))}
-          </div>
+          {trainerThemeTypes && trainerThemeTypes.length > 0 ? (
+            <div className="flex flex-col items-center gap-3 rounded-2xl ring-1 ring-rose-500/30 bg-rose-500/10 p-4">
+              <p className="text-[11px] text-rose-200/80 font-semibold">Tema do oponente:</p>
+              <div className="flex flex-wrap gap-2 justify-center">
+                {trainerThemeTypes.map(tipo => (
+                  <TypePill key={tipo} tipo={tipo} />
+                ))}
+              </div>
+              <p className="text-[10px] text-white/40 mt-1">
+                O time real será revelado após a batalha.
+              </p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-5 sm:grid-cols-3 gap-2">
+              {oponente.time.map((p, i) => (
+                <CardOponente key={`op-${i}`} poke={p} n={i + 1} oculto={i === ultimoIdx && !revelado} />
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
-      {sel !== null && ordemPokemon[sel] && (
+      {/* MatchupPanel só disponível quando exibindo sprites locais (modo sem trainerThemeTypes) */}
+      {!trainerThemeTypes?.length && sel !== null && ordemPokemon[sel] && (
         <div className="mb-4 animate-fade-in">
           <MatchupPanel
             poke={ordemPokemon[sel]}
@@ -141,7 +162,7 @@ export default function PositioningBoard({ ordemPokemon, oponente, mostrarHabili
         </div>
       )}
 
-      {!revelado && (
+      {!trainerThemeTypes?.length && !revelado && (
         <div className="mb-4">
           <button
             onClick={revelar}
@@ -157,9 +178,10 @@ export default function PositioningBoard({ ordemPokemon, oponente, mostrarHabili
       <div>
         <button
           onClick={onConfirmar}
-          className="min-h-[52px] inline-flex items-center gap-2 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-white font-extrabold px-8 py-3 shadow-lg shadow-emerald-500/30 transition-all active:scale-95 cursor-pointer"
+          disabled={confirmandoDisabled}
+          className="min-h-[52px] inline-flex items-center gap-2 rounded-2xl bg-emerald-500 hover:bg-emerald-400 disabled:opacity-50 disabled:cursor-not-allowed text-white font-extrabold px-8 py-3 shadow-lg shadow-emerald-500/30 transition-all active:scale-95 cursor-pointer"
         >
-          ⚔️ Iniciar confronto
+          {confirmandoDisabled ? '⏳ Processando…' : '⚔️ Iniciar confronto'}
         </button>
       </div>
     </div>
