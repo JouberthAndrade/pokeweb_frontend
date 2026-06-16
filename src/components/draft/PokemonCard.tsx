@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { TypePill } from '@/components/ui/TypePill'
 import { useGameStore } from '@/store/gameStore'
 import { spriteFallbackChain, spritesRoleta, spritePrincipal, POKEBALL_PLACEHOLDER } from '@/lib/pokemonSprites'
@@ -278,11 +279,22 @@ export function PokemonCard({
         </div>
       )}
 
-      {/* Painel de inspeção — bottom-sheet no mobile (via botão ⓘ) */}
-      {final && infoFixado && (
+      {/*
+        Painel de inspeção — bottom-sheet no mobile (via botão ⓘ).
+        Renderizado via Portal no document.body: o card vive dentro de um
+        ancestral com `perspective`/`transform` (o flip 3D), e um ancestral
+        transformado faz `position: fixed` ancorar nele em vez da viewport —
+        era a causa da sobreposição. O Portal escapa esse contexto.
+      */}
+      {final && infoFixado && typeof document !== 'undefined' && createPortal(
         <div className="sm:hidden">
-          <div className="fixed inset-0 z-40 bg-black/50" onClick={() => setInfoFixado(false)} />
-          <div className="fixed inset-x-0 bottom-0 z-50 rounded-t-3xl bg-slate-900 ring-1 ring-white/10 p-4 animate-slide-up">
+          <div className="fixed inset-0 z-60 bg-black/50" onClick={() => setInfoFixado(false)} />
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-label={`Stats e fraquezas de ${pokemon.name}`}
+            className="fixed inset-x-0 bottom-0 z-61 max-h-[75dvh] overflow-y-auto rounded-t-3xl bg-slate-900 ring-1 ring-white/10 px-4 pt-4 pb-[max(1rem,env(safe-area-inset-bottom))] animate-slide-up"
+          >
             <div className="flex justify-end mb-1">
               <button
                 onClick={() => setInfoFixado(false)}
@@ -293,7 +305,8 @@ export function PokemonCard({
             </div>
             <PokemonInfoPanel pokemon={pokemon} />
           </div>
-        </div>
+        </div>,
+        document.body,
       )}
     </div>
   )
