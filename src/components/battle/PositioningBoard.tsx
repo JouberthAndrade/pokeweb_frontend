@@ -5,6 +5,7 @@ import { spritePrincipal, POKEBALL_PLACEHOLDER } from '@/lib/pokemonSprites'
 import type { Pokemon } from '@/store/types'
 import type { Adversario } from '@/lib/battle/generateOpponents'
 import { useGameStore } from '@/store/gameStore'
+import MatchupPanel from './MatchupPanel'
 
 interface Props {
   ordemPokemon: Pokemon[]
@@ -129,6 +130,16 @@ export default function PositioningBoard({ ordemPokemon, oponente, mostrarHabili
           </div>
         </div>
       </div>
+
+      {sel !== null && ordemPokemon[sel] && (
+        <div className="mb-4 animate-fade-in">
+          <MatchupPanel
+            poke={ordemPokemon[sel]}
+            oponente={oponente.time[sel] ?? null}
+            oponenteOculto={sel === ultimoIdx && !revelado}
+          />
+        </div>
+      )}
 
       {!revelado && (
         <div className="mb-4">
