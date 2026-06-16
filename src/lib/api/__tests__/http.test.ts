@@ -25,4 +25,9 @@ describe('apiFetch', () => {
     vi.stubGlobal('fetch', vi.fn().mockRejectedValue(new Error('down')))
     await expect(apiFetch('/x')).rejects.toMatchObject({ status: 0 })
   })
+
+  it('resolve undefined em 200 com corpo vazio', async () => {
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(new Response('', { status: 200 })))
+    await expect(apiFetch('/x')).resolves.toBeUndefined()
+  })
 })

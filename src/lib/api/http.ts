@@ -33,6 +33,9 @@ export async function apiFetch<T>(path: string, opts: ApiOptions = {}): Promise<
     throw new ApiError(res.status, message)
   }
 
+  // Corpo vazio (204, ou 200 sem corpo como o POST /leaderboard/victory do Nest):
+  // ler como texto evita SyntaxError de res.json() sobre corpo vazio.
   if (res.status === 204) return undefined as T
-  return (await res.json()) as T
+  const texto = await res.text()
+  return (texto ? JSON.parse(texto) : undefined) as T
 }
