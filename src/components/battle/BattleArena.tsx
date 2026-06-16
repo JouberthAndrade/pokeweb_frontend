@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
-import type { BattleOutcome } from '@/lib/battle/types'
+import type { BattleOutcome, StatusKind } from '@/lib/battle/types'
 import type { Pokemon } from '@/store/types'
 import SlotDuel from './SlotDuel'
 
@@ -33,9 +33,16 @@ export default function BattleArena({ outcome, playerTeam, opponentTeam, onFim }
   const tHpMax = maxHp(tPoke.stats.hp)
   let pHp = pHpMax
   let tHp = tHpMax
+  let pStatus: StatusKind | null = null
+  let tStatus: StatusKind | null = null
   for (const e of eventosAteAgora) {
-    if (e.actor === 'player') tHp = e.defenderHpAfter
-    else pHp = e.defenderHpAfter
+    if (e.actor === 'player') {
+      tHp = e.defenderHpAfter
+      if (e.statusInflicted) tStatus = e.statusInflicted
+    } else {
+      pHp = e.defenderHpAfter
+      if (e.statusInflicted) pStatus = e.statusInflicted
+    }
   }
 
   useEffect(() => {
@@ -57,8 +64,10 @@ export default function BattleArena({ outcome, playerTeam, opponentTeam, onFim }
   const flutuante = ultimo
     ? {
         actor: ultimo.actor,
-        texto: ultimo.damage > 0 ? `-${ultimo.damage}${ultimo.crit ? ' CRIT!' : ''}` : 'errou',
-        cor: ultimo.effectiveness >= 2 ? 'text-emerald-300' : ultimo.effectiveness === 0 ? 'text-white/40' : 'text-rose-300',
+        dano: ultimo.damage,
+        crit: ultimo.crit,
+        missed: ultimo.missed,
+        efetividade: ultimo.effectiveness,
       }
     : null
 
@@ -74,9 +83,10 @@ export default function BattleArena({ outcome, playerTeam, opponentTeam, onFim }
         </button>
       </div>
       <SlotDuel
-        player={{ id: pPoke.id, nome: pPoke.name, hp: pHp, hpMax: pHpMax }}
-        trainer={{ id: tPoke.id, nome: tPoke.name, hp: tHp, hpMax: tHpMax }}
+        player={{ id: pPoke.id, nome: pPoke.name, hp: pHp, hpMax: pHpMax, status: pStatus }}
+        trainer={{ id: tPoke.id, nome: tPoke.name, hp: tHp, hpMax: tHpMax, status: tStatus }}
         flutuante={flutuante}
+        tick={`${slotIdx}:${eventoIdx}`}
       />
       <div className="mt-2 flex justify-center gap-1">
         {outcome.slots.map((s, i) => (

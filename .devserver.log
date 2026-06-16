@@ -1,0 +1,17 @@
+
+> pokeweb-frontend@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.7 (Turbopack)
+- Local:         http://localhost:3100
+- Network:       http://192.168.15.15:3100
+✓ Ready in 416ms
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3000
+- PID:          45020
+- Dir:          C:\Projetos\Pokeweb\pokeweb-frontend
+- Log:          .next\dev\logs\next-development.log
+
+Run taskkill /PID 45020 /F to stop it.
+[?25h

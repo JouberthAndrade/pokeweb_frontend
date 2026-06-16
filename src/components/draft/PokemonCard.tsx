@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from 'react'
 import { TypePill } from '@/components/ui/TypePill'
 import { useGameStore } from '@/store/gameStore'
 import { spriteFallbackChain, spritesRoleta, spritePrincipal, POKEBALL_PLACEHOLDER } from '@/lib/pokemonSprites'
+import { hpDeBatalha } from '@/lib/pokemonStats'
+import { PokemonInfoPanel } from './PokemonInfoPanel'
 import type { DraftCard } from '@/store/types'
 
 // Altura de cada item da fita (= diâmetro da janela). Combina com o style inline.
@@ -35,6 +37,8 @@ export function PokemonCard({
 
   const [settled, setSettled] = useState(false)
   const [reel, setReel] = useState<string[]>([])
+  const [hover, setHover] = useState(false)
+  const [infoFixado, setInfoFixado] = useState(false)
   const stripRef = useRef<HTMLDivElement>(null)
   const onSettleRef = useRef(onSettle)
   onSettleRef.current = onSettle
@@ -101,8 +105,17 @@ export function PokemonCard({
   // Cartas travadas não refazem o flip a cada rodada.
   const flipDelay = locked ? '0ms' : `${índice * 130}ms`
 
+  // Painel de inspeção (stats + fraquezas): só no estado final do card.
+  const infoAberto = final && (hover || infoFixado)
+  // Abre ao lado do card; a última carta (3 por rodada) abre à esquerda p/ não sair da tela.
+  const abrirAEsquerda = índice >= 2
+
   return (
-    <div className={`w-full max-w-[160px] mx-auto [perspective:1000px] ${capturando ? 'animate-capture' : ''}`}>
+    <div
+      className={`relative w-full max-w-[160px] mx-auto [perspective:1000px] ${infoAberto ? 'z-50' : ''} ${capturando ? 'animate-capture' : ''}`}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
       <div
         className="relative h-full transition-transform duration-500 ease-out [transform-style:preserve-3d]"
         style={{
@@ -156,6 +169,21 @@ export function PokemonCard({
             {girando ? '' : `#${String(pokemon.id).padStart(3, '0')}`}
           </span>
 
+          {/* Botão de inspeção (stats + fraquezas) */}
+          {final && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation()
+                setInfoFixado(v => !v)
+              }}
+              title="Ver stats e fraquezas"
+              aria-label="Ver stats e fraquezas"
+              className={`absolute bottom-2 right-2 z-10 h-6 w-6 rounded-full text-xs font-bold flex items-center justify-center transition-colors cursor-pointer ${infoFixado ? 'bg-sky-400 text-slate-900' : 'bg-white/10 text-white/70 hover:bg-white/20'}`}
+            >
+              ⓘ
+            </button>
+          )}
+
           {girando ? (
             /* ===== Janela da roleta com fita rolando ===== */
             <div
@@ -205,11 +233,22 @@ export function PokemonCard({
                 {pokemon.types[1] && <TypePill tipo={pokemon.types[1]} />}
               </div>
 
-              {/* FORÇA (BST) */}
-              <div className="mt-2 flex items-center gap-1 rounded-lg bg-emerald-500/10 px-2.5 py-1 ring-1 ring-emerald-400/20">
-                <span className="text-amber-400 text-sm">⚡</span>
-                <span className="text-[11px] font-semibold uppercase tracking-wide text-emerald-300/80">Força</span>
-                <span className="text-sm font-extrabold text-emerald-200">{pokemon.bst}</span>
+              {/* FORÇA (BST) + HP de batalha */}
+              <div className="mt-2 flex items-center justify-center gap-1.5">
+                <div
+                  title="Força (soma dos stats)"
+                  className="flex items-center gap-1 rounded-lg bg-emerald-500/10 px-2 py-1 ring-1 ring-emerald-400/20"
+                >
+                  <span className="text-amber-400 text-xs">⚡</span>
+                  <span className="text-sm font-extrabold text-emerald-200">{pokemon.bst}</span>
+                </div>
+                <div
+                  title="HP em batalha"
+                  className="flex items-center gap-1 rounded-lg bg-rose-500/10 px-2 py-1 ring-1 ring-rose-400/20"
+                >
+                  <span className="text-rose-300 text-xs">❤️</span>
+                  <span className="text-sm font-extrabold text-rose-200">{hpDeBatalha(pokemon.stats.hp)}</span>
+                </div>
               </div>
             </>
           )}
@@ -228,6 +267,34 @@ export function PokemonCard({
           </div>
         </div>
       </div>
+
+      {/* Painel de inspeção — popover ao lado do card (desktop) */}
+      {infoAberto && (
+        <div
+          data-testid="info-popover"
+          className={`hidden sm:block absolute top-0 z-40 w-64 rounded-2xl bg-slate-900/95 ring-1 ring-white/10 p-3 shadow-xl animate-fade-in ${abrirAEsquerda ? 'right-full mr-3' : 'left-full ml-3'}`}
+        >
+          <PokemonInfoPanel pokemon={pokemon} />
+        </div>
+      )}
+
+      {/* Painel de inspeção — bottom-sheet no mobile (via botão ⓘ) */}
+      {final && infoFixado && (
+        <div className="sm:hidden">
+          <div className="fixed inset-0 z-40 bg-black/50" onClick={() => setInfoFixado(false)} />
+          <div className="fixed inset-x-0 bottom-0 z-50 rounded-t-3xl bg-slate-900 ring-1 ring-white/10 p-4 animate-slide-up">
+            <div className="flex justify-end mb-1">
+              <button
+                onClick={() => setInfoFixado(false)}
+                className="text-white/60 text-sm font-bold px-2 py-1 cursor-pointer"
+              >
+                Fechar ✕
+              </button>
+            </div>
+            <PokemonInfoPanel pokemon={pokemon} />
+          </div>
+        </div>
+      )}
     </div>
   )
 }
