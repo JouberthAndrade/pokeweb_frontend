@@ -16,7 +16,9 @@ describe('apiFetch', () => {
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue(
       new Response(JSON.stringify({ message: 'inválido' }), { status: 400 })
     ))
-    await expect(apiFetch('/x')).rejects.toMatchObject({ status: 400, message: 'inválido' })
+    const err = await apiFetch('/x').catch((e) => e)
+    expect(err).toBeInstanceOf(ApiError)
+    expect(err).toMatchObject({ status: 400, message: 'inválido' })
   })
 
   it('lança ApiError status 0 em falha de rede', async () => {

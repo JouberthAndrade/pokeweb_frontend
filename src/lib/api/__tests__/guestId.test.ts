@@ -1,8 +1,9 @@
-import { describe, it, expect, beforeEach } from 'vitest'
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
 import { getUserId } from '../guestId'
 
 describe('getUserId', () => {
   beforeEach(() => localStorage.clear())
+  afterEach(() => vi.unstubAllGlobals())
 
   it('gera e persiste um id na primeira chamada', () => {
     const id = getUserId()
@@ -14,5 +15,10 @@ describe('getUserId', () => {
     const a = getUserId()
     const b = getUserId()
     expect(a).toBe(b)
+  })
+
+  it('retorna ssr-anon quando não há window (SSR)', () => {
+    vi.stubGlobal('window', undefined)
+    expect(getUserId()).toBe('ssr-anon')
   })
 })
