@@ -45,6 +45,8 @@ export interface GameState {
   lockedCards: number[]          // índices de cartas travadas (máx. 2)
   cartasReveladas: boolean       // true após clicar "Capture seu Pokémon" na rodada
   bannedType: string | null      // tipo vetado no início da jornada
+  seedId: string | null          // seed atual do draft (criada 1x pelo servidor)
+  rodadaAtual: number            // 1..5 (espelha o estado do servidor)
 
   // Economia
   pokémoedas: number
@@ -82,4 +84,9 @@ export interface GameState {
   ganharFaíscas: (valor: number) => void
   completarLiga: (jornada: number) => void
   reiniciarDraft: () => void
+
+  // Ações de draft server-authoritative
+  setDraftCards: (cards: DraftCard[]) => void
+  iniciarDraft: (jornadaId: number) => Promise<void>        // cria seed + carrega rodada 1
+  proximaRodada: (índiceCapturado: number) => Promise<void> // avança rodada via servidor
 }

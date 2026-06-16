@@ -5,6 +5,7 @@ import { TEAM_SIZE, MAX_LOCKS } from '@/lib/draftRound'
 import { gerarTorneio } from '@/lib/battle/generateOpponents'
 import type { BattleOutcome } from '@/lib/battle/types'
 import { TOTAL_FASES } from '@/lib/battle/torneioFases'
+import { criarSeed, construirRodada } from '@/lib/api/draft'
 
 export const useGameStore = create<GameState>()(
   persist(
@@ -14,6 +15,8 @@ export const useGameStore = create<GameState>()(
       lockedCards: [],
       cartasReveladas: false,
       bannedType: null,
+      seedId: null,
+      rodadaAtual: 1,
 
       pokémoedas: 100,
       faíscas: 0,
@@ -167,7 +170,45 @@ export const useGameStore = create<GameState>()(
           bannedType: null,
           rerollsDisponíveis: 3,
           torneio: null,
+          seedId: null,
+          rodadaAtual: 1,
         }),
+
+      // --- Draft server-authoritative ---
+
+      setDraftCards: (cards) => set({ draftCards: cards }),
+
+      iniciarDraft: async (jornadaId) => {
+        const { seedId } = await criarSeed()
+        const { cards } = await construirRodada({ seedId, jornadaId, rodada: 1 })
+        set({
+          seedId,
+          rodadaAtual: 1,
+          draftCards: cards.map((p) => ({ pokemon: p, locked: false })),
+          lockedCards: [],
+          cartasReveladas: false,
+        })
+      },
+
+      proximaRodada: async (índiceCapturado) => {
+        const st = get()
+        if (!st.seedId) return
+        const novosTravados = st.lockedCards.filter((i) => i !== índiceCapturado)
+        const proxima = st.rodadaAtual + 1
+        const { cards } = await construirRodada({
+          seedId: st.seedId,
+          jornadaId: st.jornadaAtual,
+          rodada: proxima,
+          indicesTravados: novosTravados,
+          playerLockedIds: novosTravados.map((i) => st.draftCards[i].pokemon.id),
+        })
+        set({
+          rodadaAtual: proxima,
+          lockedCards: novosTravados,
+          draftCards: cards.map((p, i) => ({ pokemon: p, locked: novosTravados.includes(i) })),
+          cartasReveladas: false,
+        })
+      },
 
       completarLiga: (jornada) =>
         set(state => (
