@@ -1,11 +1,12 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import type { GameState, Pokemon } from './types'
-import { TEAM_SIZE, MAX_LOCKS } from '@/lib/draftRound'
+import { TEAM_SIZE, MAX_LOCKS, RODADAS_TOTAL } from '@/lib/draftRound'
 import { gerarTorneio } from '@/lib/battle/generateOpponents'
 import type { BattleOutcome } from '@/lib/battle/types'
 import { TOTAL_FASES } from '@/lib/battle/torneioFases'
 import { criarSeed, construirRodada } from '@/lib/api/draft'
+import { ApiError } from '@/lib/api/http'
 
 export const useGameStore = create<GameState>()(
   persist(
@@ -17,6 +18,7 @@ export const useGameStore = create<GameState>()(
       bannedType: null,
       seedId: null,
       rodadaAtual: 1,
+      draftErro: null,
 
       pokémoedas: 100,
       faíscas: 0,
@@ -172,6 +174,7 @@ export const useGameStore = create<GameState>()(
           torneio: null,
           seedId: null,
           rodadaAtual: 1,
+          draftErro: null,
         }),
 
       // --- Draft server-authoritative ---
@@ -179,15 +182,21 @@ export const useGameStore = create<GameState>()(
       setDraftCards: (cards) => set({ draftCards: cards }),
 
       iniciarDraft: async (jornadaId) => {
-        const { seedId } = await criarSeed()
-        const { cards } = await construirRodada({ seedId, jornadaId, rodada: 1 })
-        set({
-          seedId,
-          rodadaAtual: 1,
-          draftCards: cards.map((p) => ({ pokemon: p, locked: false })),
-          lockedCards: [],
-          cartasReveladas: false,
-        })
+        try {
+          const { seedId } = await criarSeed()
+          const { cards } = await construirRodada({ seedId, jornadaId, rodada: 1 })
+          set({
+            seedId,
+            rodadaAtual: 1,
+            draftCards: cards.map((p) => ({ pokemon: p, locked: false })),
+            lockedCards: [],
+            cartasReveladas: false,
+            draftErro: null,
+          })
+        } catch (err) {
+          const msg = err instanceof ApiError ? err.message : 'Falha ao buscar cartas'
+          set({ draftErro: msg })
+        }
       },
 
       proximaRodada: async (índiceCapturado) => {
@@ -195,20 +204,33 @@ export const useGameStore = create<GameState>()(
         if (!st.seedId) return
         const novosTravados = st.lockedCards.filter((i) => i !== índiceCapturado)
         const proxima = st.rodadaAtual + 1
-        const { cards } = await construirRodada({
-          seedId: st.seedId,
-          jornadaId: st.jornadaAtual,
-          rodada: proxima,
-          indicesTravados: novosTravados,
-          playerLockedIds: novosTravados.map((i) => st.draftCards[i].pokemon.id),
-        })
-        set({
-          rodadaAtual: proxima,
-          lockedCards: novosTravados,
-          draftCards: cards.map((p, i) => ({ pokemon: p, locked: novosTravados.includes(i) })),
-          cartasReveladas: false,
-        })
+        // Guard: não avançar além do total de rodadas definido
+        if (proxima > RODADAS_TOTAL) return
+        try {
+          const { cards } = await construirRodada({
+            seedId: st.seedId,
+            jornadaId: st.jornadaAtual,
+            rodada: proxima,
+            indicesTravados: novosTravados,
+            playerLockedIds: novosTravados.map((i) => st.draftCards[i].pokemon.id),
+          })
+          // Contrato de ordem: o servidor retorna os Pokémon travados nos mesmos
+          // índices de slot enviados em `indicesTravados`; o flag `locked` é
+          // aplicado posicionalmente com base nesse contrato.
+          set({
+            rodadaAtual: proxima,
+            lockedCards: novosTravados,
+            draftCards: cards.map((p, i) => ({ pokemon: p, locked: novosTravados.includes(i) })),
+            cartasReveladas: false,
+            draftErro: null,
+          })
+        } catch (err) {
+          const msg = err instanceof ApiError ? err.message : 'Falha ao buscar cartas'
+          set({ draftErro: msg })
+        }
       },
+
+      limparDraftErro: () => set({ draftErro: null }),
 
       completarLiga: (jornada) =>
         set(state => (

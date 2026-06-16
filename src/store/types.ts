@@ -47,6 +47,7 @@ export interface GameState {
   bannedType: string | null      // tipo vetado no início da jornada
   seedId: string | null          // seed atual do draft (criada 1x pelo servidor)
   rodadaAtual: number            // 1..5 (espelha o estado do servidor)
+  draftErro: string | null       // mensagem de erro da última operação de draft
 
   // Economia
   pokémoedas: number
@@ -89,4 +90,5 @@ export interface GameState {
   setDraftCards: (cards: DraftCard[]) => void
   iniciarDraft: (jornadaId: number) => Promise<void>        // cria seed + carrega rodada 1
   proximaRodada: (índiceCapturado: number) => Promise<void> // avança rodada via servidor
+  limparDraftErro: () => void
 }

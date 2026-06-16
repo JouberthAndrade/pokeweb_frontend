@@ -31,6 +31,8 @@ export function DraftSlots() {
   const gastarPokémoedas = useGameStore(s => s.gastarPokémoedas)
   const iniciarDraft = useGameStore(s => s.iniciarDraft)
   const proximaRodada = useGameStore(s => s.proximaRodada)
+  const draftErro = useGameStore(s => s.draftErro)
+  const limparDraftErro = useGameStore(s => s.limparDraftErro)
 
   const [capturandoIdx, setCapturandoIdx] = useState<number | null>(null)
   const [rolando, setRolando] = useState(false)
@@ -38,6 +40,13 @@ export function DraftSlots() {
   const [carregando, setCarregando] = useState(false)
   const settledRef = useRef(0)   // quantas cartas já pararam de girar
   const targetRef = useRef(0)    // quantas cartas precisam parar (não-travadas)
+
+  // Última operação que falhou — usada para retry ao clicar "Tentar novamente"
+  type UltimaOp =
+    | { tipo: 'inicio' }
+    | { tipo: 'rodada'; indice: number }
+    | { tipo: 'reroll' }
+  const ultimaOpRef = useRef<UltimaOp | null>(null)
 
   const liga = getLiga(jornadaAtual)
 
@@ -53,6 +62,7 @@ export function DraftSlots() {
   // Se não houver seedId/cartas, chama o servidor para criar seed e rodada 1.
   useEffect(() => {
     if (!completo && draftCards.length === 0 && !carregando) {
+      ultimaOpRef.current = { tipo: 'inicio' }
       setCarregando(true)
       iniciarDraft(jornadaAtual).finally(() => setCarregando(false))
     }
@@ -98,10 +108,12 @@ export function DraftSlots() {
   async function handleReroll() {
     if (rolando || carregando || !seedId) return
     const grátis = rerollsDisponíveis > 0
-    if (!grátis && !gastarPokémoedas(30)) return
+    // Verifica acessibilidade sem debitar — a moeda só é gasta em caso de sucesso.
+    if (!grátis && pokémoedas < 30) return
 
     // Re-busca a mesma rodada atual do servidor (sem avançar),
     // passando as travas atuais para preservar as cartas travadas.
+    ultimaOpRef.current = { tipo: 'reroll' }
     setCarregando(true)
     try {
       const { cards } = await construirRodada({
@@ -111,11 +123,20 @@ export function DraftSlots() {
         indicesTravados: lockedCards,
         playerLockedIds: lockedCards.map((i) => draftCards[i].pokemon.id),
       })
+      // Debita SOMENTE após sucesso: se a chamada acima lançar, nada é cobrado.
+      if (grátis) {
+        useGameStore.setState({ rerollsDisponíveis: rerollsDisponíveis - 1 })
+      } else {
+        gastarPokémoedas(30)
+      }
       useGameStore.setState({
         draftCards: cards.map((p, i) => ({ pokemon: p, locked: lockedCards.includes(i) })),
         cartasReveladas: false,
-        ...(grátis ? { rerollsDisponíveis: rerollsDisponíveis - 1 } : {}),
+        draftErro: null,
       })
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : 'Falha ao buscar cartas'
+      useGameStore.setState({ draftErro: msg })
     } finally {
       setCarregando(false)
     }
@@ -139,6 +160,7 @@ export function DraftSlots() {
         router.push('/battle')
       } else {
         // Busca as cartas da próxima rodada no servidor
+        ultimaOpRef.current = { tipo: 'rodada', indice: i }
         setCarregando(true)
         try {
           await proximaRodada(i)
@@ -187,6 +209,39 @@ export function DraftSlots() {
 
       {!completo && (
         <>
+          {/* Banner de erro com retry */}
+          {draftErro && (
+            <div className="flex items-center justify-between gap-3 rounded-xl bg-red-500/15 ring-1 ring-red-500/40 px-4 py-3">
+              <span className="text-sm font-medium text-red-300">⚠️ {draftErro}</span>
+              <button
+                onClick={async () => {
+                  const op = ultimaOpRef.current
+                  if (!op) return
+                  limparDraftErro()
+                  if (op.tipo === 'reroll') {
+                    // handleReroll gerencia carregando internamente
+                    await handleReroll()
+                  } else {
+                    setCarregando(true)
+                    try {
+                      if (op.tipo === 'inicio') {
+                        await iniciarDraft(jornadaAtual)
+                      } else {
+                        await proximaRodada(op.indice)
+                      }
+                    } finally {
+                      setCarregando(false)
+                    }
+                  }
+                }}
+                disabled={carregando}
+                className="shrink-0 rounded-lg bg-red-500/25 px-3 py-1.5 text-xs font-bold text-red-200 hover:bg-red-500/40 disabled:opacity-50 transition-colors"
+              >
+                Tentar novamente
+              </button>
+            </div>
+          )}
+
           {/* Ações */}
           <div className="flex items-center gap-3 flex-wrap">
             {cartasReveladas && !rolando && !carregando ? (
