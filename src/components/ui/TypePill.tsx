@@ -21,12 +21,15 @@ const TYPE_COLORS: Record<string, string> = {
 
 interface TypePillProps {
   tipo: string
+  /** 'md' (padrão) ou 'xs' para espaços apertados (slots do time). */
+  size?: 'md' | 'xs'
 }
 
-export function TypePill({ tipo }: TypePillProps) {
+export function TypePill({ tipo, size = 'md' }: TypePillProps) {
   const cor = TYPE_COLORS[tipo] ?? 'bg-gray-500'
+  const dim = size === 'xs' ? 'text-[9px] px-1.5 py-0' : 'text-xs px-2 py-0.5'
   return (
-    <span className={`${cor} text-white text-xs font-bold px-2 py-0.5 rounded-full`}>
+    <span className={`${cor} ${dim} text-white font-bold rounded-full`}>
       {tipo}
     </span>
   )

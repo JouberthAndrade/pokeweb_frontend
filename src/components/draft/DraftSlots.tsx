@@ -2,14 +2,17 @@
 import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useGameStore } from '@/store/gameStore'
-import { buildCardPool } from '@/lib/buildCardPool'
-import { resolverCaptura, TEAM_SIZE, RODADAS_TOTAL, MAX_LOCKS } from '@/lib/draftRound'
+import { construirRodada } from '@/lib/api/draft'
+import { TEAM_SIZE, RODADAS_TOTAL, MAX_LOCKS } from '@/lib/draftRound'
 import { getLiga } from '@/lib/ligas'
+import { ligaPermitida } from '@/lib/access'
 import { calcularSinergias } from '@/lib/synergies'
 import { spritePrincipal, POKEBALL_PLACEHOLDER } from '@/lib/pokemonSprites'
+import { hpDeBatalha } from '@/lib/pokemonStats'
+import { TypePill } from '@/components/ui/TypePill'
 import { PokemonCard } from './PokemonCard'
 import { SynergyBadge } from './SynergyBadge'
-import type { Pokemon } from '@/store/types'
+import type { Pokemon, DraftCard } from '@/store/types'
 
 const CAPTURE_MS = 430
 const SPIN_STAGGER = 350   // atraso entre o início do giro de cada carta
@@ -21,41 +24,56 @@ export function DraftSlots() {
   const teamSlots = useGameStore(s => s.teamSlots)
   const lockedCards = useGameStore(s => s.lockedCards)
   const cartasReveladas = useGameStore(s => s.cartasReveladas)
-  const bannedType = useGameStore(s => s.bannedType)
   const jornadaAtual = useGameStore(s => s.jornadaAtual)
+  const seedId = useGameStore(s => s.seedId)
+  const rodadaAtualStore = useGameStore(s => s.rodadaAtual)
   const pokémoedas = useGameStore(s => s.pokémoedas)
   const rerollsDisponíveis = useGameStore(s => s.rerollsDisponíveis)
   const addToTeam = useGameStore(s => s.addToTeam)
   const revelarCartas = useGameStore(s => s.revelarCartas)
   const gastarPokémoedas = useGameStore(s => s.gastarPokémoedas)
+  const iniciarDraft = useGameStore(s => s.iniciarDraft)
+  const proximaRodada = useGameStore(s => s.proximaRodada)
+  const draftErro = useGameStore(s => s.draftErro)
+  const limparDraftErro = useGameStore(s => s.limparDraftErro)
 
   const [capturandoIdx, setCapturandoIdx] = useState<number | null>(null)
   const [rolando, setRolando] = useState(false)
+  // carregando: true enquanto uma requisição ao servidor está em voo
+  const [carregando, setCarregando] = useState(false)
   const settledRef = useRef(0)   // quantas cartas já pararam de girar
   const targetRef = useRef(0)    // quantas cartas precisam parar (não-travadas)
 
+  // Última operação que falhou — usada para retry ao clicar "Tentar novamente"
+  type UltimaOp =
+    | { tipo: 'inicio' }
+    | { tipo: 'rodada'; indice: number }
+    | { tipo: 'reroll' }
+  const ultimaOpRef = useRef<UltimaOp | null>(null)
+
   const liga = getLiga(jornadaAtual)
-  const { bstMin, bstMax } = liga
-  const tipoBanido = bannedType ?? undefined
 
   const capturados = teamSlots.filter(Boolean).length
   const completo = capturados >= TEAM_SIZE
-  const rodadaAtual = Math.min(capturados + 1, RODADAS_TOTAL)
+  const rodadaAtual = rodadaAtualStore
   const podeTravar = lockedCards.length < MAX_LOCKS
 
   const timeMontado = teamSlots.filter(Boolean) as Pokemon[]
   const sinergias = calcularSinergias(timeMontado)
 
-  function gerarNovoPool() {
-    useGameStore.setState({
-      draftCards: buildCardPool({ bstMin, bstMax, tipoBanido }),
-      cartasReveladas: false,
-    })
-  }
-
   // Garante um pool inicial (face-down) ao entrar no draft.
+  // Se não houver seedId/cartas, chama o servidor para criar seed e rodada 1.
   useEffect(() => {
-    if (!completo && draftCards.length === 0) gerarNovoPool()
+    // Guarda de acesso: convidado só joga ligas 1–2. URL direta sem permissão → home.
+    if (!ligaPermitida(jornadaAtual, false)) {
+      router.replace('/')
+      return
+    }
+    if (!completo && draftCards.length === 0 && !carregando) {
+      ultimaOpRef.current = { tipo: 'inicio' }
+      setCarregando(true)
+      iniciarDraft(jornadaAtual).finally(() => setCarregando(false))
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -74,20 +92,14 @@ export function DraftSlots() {
     }
   }
 
-  function handleRevelar() {
-    if (cartasReveladas || rolando) return
-    let cartas = draftCards
-    if (cartas.length === 0) {
-      cartas = buildCardPool({ bstMin, bstMax, tipoBanido })
-      useGameStore.setState({ draftCards: cartas, cartasReveladas: false })
-    }
-
+  // Dispara o giro da roleta para um conjunto de cartas. Usado tanto pelo botão
+  // "Capture seu Pokémon" quanto pelo Reroll (que assim revela sem clique extra).
+  function girarRoleta(cartas: DraftCard[]) {
     // Acessibilidade: sem roleta quando o usuário pede menos movimento.
     if (prefereMenosMovimento()) {
       revelarCartas()
       return
     }
-
     // Só giram as cartas não-travadas; se todas estão travadas, revela direto.
     settledRef.current = 0
     targetRef.current = cartas.filter(c => !c.locked).length
@@ -98,46 +110,91 @@ export function DraftSlots() {
     setRolando(true)
   }
 
-  function handleReroll() {
-    if (rolando) return
+  function handleRevelar() {
+    if (cartasReveladas || rolando || carregando) return
+    if (draftCards.length === 0) return  // ainda carregando do servidor
+    girarRoleta(draftCards)
+  }
+
+  async function handleReroll() {
+    if (rolando || carregando || !seedId) return
     const grátis = rerollsDisponíveis > 0
-    if (!grátis && !gastarPokémoedas(30)) return
-    const novas = buildCardPool({
-      bstMin, bstMax, tipoBanido,
-      cartasTravadas: draftCards,
-      índicesTravados: lockedCards,
-    })
-    useGameStore.setState({
-      draftCards: novas,
-      ...(grátis ? { rerollsDisponíveis: rerollsDisponíveis - 1 } : {}),
-    })
+    // Verifica acessibilidade sem debitar — a moeda só é gasta em caso de sucesso.
+    if (!grátis && pokémoedas < 30) return
+
+    // Re-busca a mesma rodada atual do servidor (sem avançar), passando as travas
+    // atuais para preservar as cartas travadas. O nonce de reroll varia a mão:
+    // sem ele, o backend (determinístico por seed+rodada) devolveria cartas idênticas.
+    ultimaOpRef.current = { tipo: 'reroll' }
+    const proximoNonce = useGameStore.getState().rerollNonce + 1
+    setCarregando(true)
+    try {
+      const { cards } = await construirRodada({
+        seedId,
+        jornadaId: jornadaAtual,
+        rodada: rodadaAtual,
+        reroll: proximoNonce,
+        indicesTravados: lockedCards,
+        playerLockedIds: lockedCards.map((i) => draftCards[i].pokemon.id),
+      })
+      // Debita SOMENTE após sucesso: se a chamada acima lançar, nada é cobrado.
+      if (grátis) {
+        useGameStore.setState({ rerollsDisponíveis: rerollsDisponíveis - 1 })
+      } else {
+        gastarPokémoedas(30)
+      }
+      const novasCartas: DraftCard[] = cards.map((p, i) => ({ pokemon: p, locked: lockedCards.includes(i) }))
+      useGameStore.setState({
+        rerollNonce: proximoNonce,
+        draftCards: novasCartas,
+        cartasReveladas: false,
+        draftErro: null,
+      })
+      // Reroll = mesma experiência do "Capture seu Pokémon": gira a roleta
+      // automaticamente, revelando as cartas novas sem um clique extra.
+      girarRoleta(novasCartas)
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : 'Falha ao buscar cartas'
+      useGameStore.setState({ draftErro: msg })
+    } finally {
+      setCarregando(false)
+    }
   }
 
   function handleCapturar(i: number) {
-    if (capturandoIdx !== null || rolando) return
+    if (capturandoIdx !== null || rolando || carregando) return
     const card = draftCards[i]
     const revelada = card.locked || cartasReveladas
     if (!revelada) return
 
     setCapturandoIdx(i)
     const pokemon = card.pokemon
-    setTimeout(() => {
+    setTimeout(async () => {
       addToTeam(pokemon)
       const jaCapturados = useGameStore.getState().teamSlots.filter(Boolean).length
       if (jaCapturados >= TEAM_SIZE) {
+        // Draft concluído: limpa cartas e navega para batalha
         useGameStore.setState({ draftCards: [], lockedCards: [], cartasReveladas: false })
+        setCapturandoIdx(null)
+        router.push('/battle')
       } else {
-        const { novasCartas, novosTravados } = resolverCaptura({
-          draftCards, lockedCards, índice: i, bstMin, bstMax, tipoBanido,
-        })
-        useGameStore.setState({ draftCards: novasCartas, lockedCards: novosTravados, cartasReveladas: false })
+        // Busca as cartas da próxima rodada no servidor
+        ultimaOpRef.current = { tipo: 'rodada', indice: i }
+        setCarregando(true)
+        try {
+          await proximaRodada(i)
+        } finally {
+          settledRef.current = 0
+          setCapturandoIdx(null)
+          setCarregando(false)
+        }
       }
-      settledRef.current = 0
-      setCapturandoIdx(null)
     }, CAPTURE_MS)
   }
 
   const accentStyle = { '--accent': liga.accent } as React.CSSProperties
+  // Bloqueia interação enquanto aguarda resposta do servidor
+  const bloqueado = rolando || carregando
 
   return (
     <div className="space-y-4" style={accentStyle}>
@@ -171,16 +228,49 @@ export function DraftSlots() {
 
       {!completo && (
         <>
+          {/* Banner de erro com retry */}
+          {draftErro && (
+            <div className="flex items-center justify-between gap-3 rounded-xl bg-red-500/15 ring-1 ring-red-500/40 px-4 py-3">
+              <span className="text-sm font-medium text-red-300">⚠️ {draftErro}</span>
+              <button
+                onClick={async () => {
+                  const op = ultimaOpRef.current
+                  if (!op) return
+                  limparDraftErro()
+                  if (op.tipo === 'reroll') {
+                    // handleReroll gerencia carregando internamente
+                    await handleReroll()
+                  } else {
+                    setCarregando(true)
+                    try {
+                      if (op.tipo === 'inicio') {
+                        await iniciarDraft(jornadaAtual)
+                      } else {
+                        await proximaRodada(op.indice)
+                      }
+                    } finally {
+                      setCarregando(false)
+                    }
+                  }
+                }}
+                disabled={carregando}
+                className="shrink-0 rounded-lg bg-red-500/25 px-3 py-1.5 text-xs font-bold text-red-200 hover:bg-red-500/40 disabled:opacity-50 transition-colors"
+              >
+                Tentar novamente
+              </button>
+            </div>
+          )}
+
           {/* Ações */}
           <div className="flex items-center gap-3 flex-wrap">
-            {cartasReveladas && !rolando ? (
+            {cartasReveladas && !rolando && !carregando ? (
               <span className="min-h-[48px] inline-flex items-center gap-2 rounded-xl px-5 py-2.5 bg-[var(--accent)]/15 ring-1 ring-[var(--accent)]/40 text-white font-bold">
                 <span>✨</span> Toque numa carta para capturar
               </span>
             ) : (
               <button
                 onClick={handleRevelar}
-                disabled={rolando}
+                disabled={bloqueado}
                 className="
                   min-h-[48px] inline-flex items-center gap-2 rounded-xl px-5 py-2.5 cursor-pointer
                   bg-gradient-to-r from-blue-500 to-violet-500
@@ -190,13 +280,13 @@ export function DraftSlots() {
                   transition-all duration-200 active:scale-95
                 "
               >
-                <span>🔴</span> {rolando ? 'Capturando…' : 'Capture seu Pokémon'}
+                <span>🔴</span> {carregando ? 'Carregando…' : rolando ? 'Capturando…' : 'Capture seu Pokémon'}
               </button>
             )}
 
             <button
               onClick={handleReroll}
-              disabled={rolando || !cartasReveladas || (rerollsDisponíveis === 0 && pokémoedas < 30)}
+              disabled={bloqueado || !cartasReveladas || (rerollsDisponíveis === 0 && pokémoedas < 30)}
               title={cartasReveladas ? 'Sortear novas cartas' : 'Revele as cartas antes de rerolar'}
               className="
                 min-h-[48px] inline-flex items-center gap-2 rounded-xl px-4 py-2.5 cursor-pointer
@@ -218,7 +308,7 @@ export function DraftSlots() {
           {/* Sorteio desta rodada — grid centralizado, cards compactos */}
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-2">
-              {rolando ? 'Girando a roleta…' : cartasReveladas ? 'Escolha uma carta para capturar' : 'Sorteio desta rodada'}
+              {carregando ? 'Buscando cartas…' : rolando ? 'Girando a roleta…' : cartasReveladas ? 'Escolha uma carta para capturar' : 'Sorteio desta rodada'}
             </h3>
             <div className="mx-auto grid max-w-[520px] grid-cols-3 gap-3 sm:gap-4">
               {draftCards.map((card, i) => (
@@ -311,6 +401,17 @@ function TeamSlot({ pokemon, numero }: { pokemon: Pokemon | null; numero: number
       <span className="text-[10px] sm:text-xs font-medium text-white/70 capitalize truncate w-full text-center">
         {pokemon.name}
       </span>
+      {/* Tipos */}
+      <div className="flex flex-wrap justify-center gap-0.5">
+        {pokemon.types.map(t => (
+          <TypePill key={t} tipo={t} size="xs" />
+        ))}
+      </div>
+      {/* Poder (BST) + HP de batalha */}
+      <div className="flex items-center justify-center gap-1 text-[9px] sm:text-[10px] font-extrabold leading-none">
+        <span title="Poder (soma dos stats)" className="text-emerald-300">⚡{pokemon.bst}</span>
+        <span title="HP em batalha" className="text-rose-300">❤{hpDeBatalha(pokemon.stats.hp)}</span>
+      </div>
     </div>
   )
 }

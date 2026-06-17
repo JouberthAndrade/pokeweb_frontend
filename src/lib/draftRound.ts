@@ -1,3 +1,7 @@
+// LEGACY: resolverCaptura e buildCardPool são usados APENAS em testes unitários.
+// Em produção, o sorteio de cartas é feito pelo servidor via gameStore.proximaRodada
+// → api/draft (criarSeed + construirRodada). Não remova as funções — os testes dependem delas.
+// As constantes TEAM_SIZE, RODADAS_TOTAL e MAX_LOCKS continuam em uso em produção.
 import { buildCardPool } from './buildCardPool'
 import type { DraftCard } from '@/store/types'
 
