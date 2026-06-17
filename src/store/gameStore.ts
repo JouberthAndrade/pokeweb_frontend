@@ -161,6 +161,11 @@ export const useGameStore = create<GameState>()(
                   trocaGratisUsada: false,
                   status: 'posicionando',
                 },
+                // Cada fase tem sua própria sessão server-side; limpa a anterior
+                // para nunca posicionar com uma sessionId de fase passada.
+                battleSessionId: null,
+                battleOutcome: null,
+                trainerThemeTypes: [],
               }
             : state
         ),

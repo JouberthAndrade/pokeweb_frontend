@@ -7,10 +7,13 @@ import type { LeaderboardEntry } from '@/lib/api/types'
 export default function LeaderboardView() {
   const [linhas, setLinhas] = useState<LeaderboardEntry[]>([])
   const [erro, setErro] = useState<string | null>(null)
-  const eu = getUserId()
+  // getUserId() toca localStorage (só existe no cliente); ler no efeito evita
+  // mismatch de hidratação SSR ('ssr-anon') vs cliente (UUID real).
+  const [eu, setEu] = useState('')
 
   useEffect(() => {
-    topSemanal().then(setLinhas).catch((e) => setErro(e.message))
+    setEu(getUserId())
+    topSemanal().then(setLinhas).catch((e) => setErro(e instanceof Error ? e.message : 'erro desconhecido'))
   }, [])
 
   if (erro) return <p className="text-red-300 text-sm">Não foi possível carregar o ranking: {erro}</p>

@@ -92,6 +92,10 @@ export default function BattlePage() {
       const leagueId = Math.min(liga.jornada, 4)
       const stage = Math.min(torneio.faseAtual, 3)
       await iniciarSessaoBatalha(leagueId, stage, torneio.ordem)
+    } catch {
+      // Falha ao criar sessão (erro já gravado em batalhaErro pelo store). Libera a
+      // chave para que o botão "Tentar novamente" (ou nova fase) possa recriar a sessão.
+      sessaoKeyRef.current = null
     } finally {
       setIniciandoSessao(false)
     }
@@ -179,6 +183,15 @@ export default function BattlePage() {
       {batalhaErro && (
         <div className="mb-4 rounded-xl bg-rose-500/20 ring-1 ring-rose-400/40 px-4 py-3 text-sm text-rose-200 text-center">
           ⚠️ {batalhaErro}
+          {modo === 'posicionar' && !battleSessionId && (
+            <button
+              onClick={() => { limparBatalhaErro(); criarSessaoAtual() }}
+              disabled={iniciandoSessao}
+              className="ml-3 underline text-rose-100 font-semibold hover:text-white cursor-pointer disabled:opacity-50"
+            >
+              Tentar novamente
+            </button>
+          )}
           <button
             onClick={limparBatalhaErro}
             className="ml-3 underline text-rose-300 hover:text-rose-100 cursor-pointer"
