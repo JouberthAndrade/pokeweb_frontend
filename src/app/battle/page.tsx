@@ -1,6 +1,6 @@
 'use client'
 import { useRouter } from 'next/navigation'
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useGameStore } from '@/store/gameStore'
 import { getLiga } from '@/lib/ligas'
 import { rotuloFase, FASES } from '@/lib/battle/torneioFases'
@@ -38,6 +38,9 @@ export default function BattlePage() {
   const [modo, setModo] = useState<Modo>('posicionar')
   // outcomeArena is now server-derived (via confirmarPosicao), adapted to client shape
   const [outcomeArena, setOutcomeArena] = useState<BattleOutcome | null>(null)
+  // Evita criar sessão duplicada (re-render / React Strict Mode em dev): guarda a
+  // chave fase+modo para a qual a sessão já foi (ou está sendo) criada.
+  const sessaoKeyRef = useRef<string | null>(null)
   // Loading states
   const [iniciandoSessao, setIniciandoSessao] = useState(false)
   const [confirmando, setConfirmando] = useState(false)
@@ -87,6 +90,9 @@ export default function BattlePage() {
 
   useEffect(() => {
     if (modo === 'posicionar' && torneio) {
+      const key = `${torneio.faseAtual}-${modo}`
+      if (sessaoKeyRef.current === key) return // já criada para esta fase/modo
+      sessaoKeyRef.current = key
       criarSessaoAtual()
     }
   // We only want to re-run when the phase actually changes, not on every torneio ref update.

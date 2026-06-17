@@ -263,7 +263,11 @@ export const useGameStore = create<GameState>()(
       // Step 2: posicionar time ao confirmar → guarda battleOutcome
       confirmarPosicao: async (playerSlots) => {
         const { battleSessionId } = get()
-        if (!battleSessionId) throw new Error('Sessão de batalha não iniciada')
+        if (!battleSessionId) {
+          const msg = 'Sessão de batalha não iniciada'
+          set({ batalhaErro: msg })
+          throw new Error(msg)
+        }
         try {
           const outcome = await posicionar({ sessionId: battleSessionId, playerSlots })
           set({ battleOutcome: outcome, batalhaErro: null })
