@@ -5,13 +5,9 @@
  * client-side BattleOutcome shape (@/lib/battle/types) consumed by BattleArena,
  * PhaseResult and registrarResultado.
  *
- * Key difference: the server DTO does not include round-by-round RoundEvent[]
- * data. We synthesise slots with empty events arrays so BattleArena cycles
- * through all slots instantly (the animation timer immediately falls to the
- * "call onFim()" branch). The scoreboard and result are still shown correctly.
- *
- * Full per-round animation is deferred to a future PRD that adds
- * GET /battle/replay/:sessionId → RoundEvent[] support.
+ * /battle/position retorna o log golpe-a-golpe (slots[].events). Repassamos esse
+ * log intacto para que a BattleArena anime cada rodada (dano, barras de HP,
+ * status) em vez de pular direto para o placar final.
  */
 import type { BattleOutcomeDto } from '@/lib/api/types'
 import type { BattleOutcome } from './types'
@@ -24,14 +20,12 @@ export function dtoToBattleOutcome(dto: BattleOutcomeDto): BattleOutcome {
     slots: dto.slots.map(s => ({
       slot: s.slot,
       winner: s.winner,
+      rounds: s.rounds,
       playerPokemonId: s.playerPokemonId,
       trainerPokemonId: s.trainerPokemonId,
-      // Fields not provided by the server — synthesised defaults so BattleArena
-      // compiles and runs; animation is effectively instantaneous.
-      rounds: 0,
-      playerHpEnd: 0,
-      trainerHpEnd: 0,
-      events: [],
+      playerHpEnd: s.playerHpEnd,
+      trainerHpEnd: s.trainerHpEnd,
+      events: s.events.map(e => ({ ...e })),
     })),
   }
 }

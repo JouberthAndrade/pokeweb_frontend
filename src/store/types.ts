@@ -48,6 +48,7 @@ export interface GameState {
   bannedType: string | null      // tipo vetado no início da jornada
   seedId: string | null          // seed atual do draft (criada 1x pelo servidor)
   rodadaAtual: number            // 1..5 (espelha o estado do servidor)
+  rerollNonce: number            // contador de rerolls da rodada atual (reseta a cada rodada)
   draftErro: string | null       // mensagem de erro da última operação de draft
 
   // Economia
@@ -70,6 +71,7 @@ export interface GameState {
   battleSessionId: string | null
   battleOutcome: BattleOutcomeDto | null
   trainerThemeTypes: string[]
+  trainerTeamIds: number[] | null   // time real do oponente (ligas 1–2); null nas ligas 3+
   batalhaErro: string | null
 
   // Torneio

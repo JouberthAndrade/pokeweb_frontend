@@ -20,6 +20,7 @@ export const useGameStore = create<GameState>()(
       bannedType: null,
       seedId: null,
       rodadaAtual: 1,
+      rerollNonce: 0,
       draftErro: null,
 
       pokémoedas: 100,
@@ -36,6 +37,7 @@ export const useGameStore = create<GameState>()(
       battleSessionId: null,
       battleOutcome: null,
       trainerThemeTypes: [],
+      trainerTeamIds: null,
       batalhaErro: null,
 
       lockCard: (índice) =>
@@ -166,6 +168,7 @@ export const useGameStore = create<GameState>()(
                 battleSessionId: null,
                 battleOutcome: null,
                 trainerThemeTypes: [],
+                trainerTeamIds: null,
               }
             : state
         ),
@@ -185,10 +188,12 @@ export const useGameStore = create<GameState>()(
           torneio: null,
           seedId: null,
           rodadaAtual: 1,
+          rerollNonce: 0,
           draftErro: null,
           battleSessionId: null,
           battleOutcome: null,
           trainerThemeTypes: [],
+          trainerTeamIds: null,
           batalhaErro: null,
         }),
 
@@ -203,6 +208,7 @@ export const useGameStore = create<GameState>()(
           set({
             seedId,
             rodadaAtual: 1,
+            rerollNonce: 0,
             draftCards: cards.map((p) => ({ pokemon: p, locked: false })),
             lockedCards: [],
             cartasReveladas: false,
@@ -234,6 +240,7 @@ export const useGameStore = create<GameState>()(
           // aplicado posicionalmente com base nesse contrato.
           set({
             rodadaAtual: proxima,
+            rerollNonce: 0,
             lockedCards: novosTravados,
             draftCards: cards.map((p, i) => ({ pokemon: p, locked: novosTravados.includes(i) })),
             cartasReveladas: false,
@@ -256,6 +263,7 @@ export const useGameStore = create<GameState>()(
           set({
             battleSessionId: sessao.sessionId,
             trainerThemeTypes: sessao.trainerThemeTypes,
+            trainerTeamIds: sessao.trainerTeamIds,
             batalhaErro: null,
           })
         } catch (err) {

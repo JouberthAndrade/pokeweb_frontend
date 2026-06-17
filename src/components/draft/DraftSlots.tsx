@@ -8,9 +8,11 @@ import { getLiga } from '@/lib/ligas'
 import { ligaPermitida } from '@/lib/access'
 import { calcularSinergias } from '@/lib/synergies'
 import { spritePrincipal, POKEBALL_PLACEHOLDER } from '@/lib/pokemonSprites'
+import { hpDeBatalha } from '@/lib/pokemonStats'
+import { TypePill } from '@/components/ui/TypePill'
 import { PokemonCard } from './PokemonCard'
 import { SynergyBadge } from './SynergyBadge'
-import type { Pokemon } from '@/store/types'
+import type { Pokemon, DraftCard } from '@/store/types'
 
 const CAPTURE_MS = 430
 const SPIN_STAGGER = 350   // atraso entre o início do giro de cada carta
@@ -90,17 +92,14 @@ export function DraftSlots() {
     }
   }
 
-  function handleRevelar() {
-    if (cartasReveladas || rolando || carregando) return
-    const cartas = draftCards
-    if (cartas.length === 0) return  // ainda carregando do servidor
-
+  // Dispara o giro da roleta para um conjunto de cartas. Usado tanto pelo botão
+  // "Capture seu Pokémon" quanto pelo Reroll (que assim revela sem clique extra).
+  function girarRoleta(cartas: DraftCard[]) {
     // Acessibilidade: sem roleta quando o usuário pede menos movimento.
     if (prefereMenosMovimento()) {
       revelarCartas()
       return
     }
-
     // Só giram as cartas não-travadas; se todas estão travadas, revela direto.
     settledRef.current = 0
     targetRef.current = cartas.filter(c => !c.locked).length
@@ -111,21 +110,30 @@ export function DraftSlots() {
     setRolando(true)
   }
 
+  function handleRevelar() {
+    if (cartasReveladas || rolando || carregando) return
+    if (draftCards.length === 0) return  // ainda carregando do servidor
+    girarRoleta(draftCards)
+  }
+
   async function handleReroll() {
     if (rolando || carregando || !seedId) return
     const grátis = rerollsDisponíveis > 0
     // Verifica acessibilidade sem debitar — a moeda só é gasta em caso de sucesso.
     if (!grátis && pokémoedas < 30) return
 
-    // Re-busca a mesma rodada atual do servidor (sem avançar),
-    // passando as travas atuais para preservar as cartas travadas.
+    // Re-busca a mesma rodada atual do servidor (sem avançar), passando as travas
+    // atuais para preservar as cartas travadas. O nonce de reroll varia a mão:
+    // sem ele, o backend (determinístico por seed+rodada) devolveria cartas idênticas.
     ultimaOpRef.current = { tipo: 'reroll' }
+    const proximoNonce = useGameStore.getState().rerollNonce + 1
     setCarregando(true)
     try {
       const { cards } = await construirRodada({
         seedId,
         jornadaId: jornadaAtual,
         rodada: rodadaAtual,
+        reroll: proximoNonce,
         indicesTravados: lockedCards,
         playerLockedIds: lockedCards.map((i) => draftCards[i].pokemon.id),
       })
@@ -135,11 +143,16 @@ export function DraftSlots() {
       } else {
         gastarPokémoedas(30)
       }
+      const novasCartas: DraftCard[] = cards.map((p, i) => ({ pokemon: p, locked: lockedCards.includes(i) }))
       useGameStore.setState({
-        draftCards: cards.map((p, i) => ({ pokemon: p, locked: lockedCards.includes(i) })),
+        rerollNonce: proximoNonce,
+        draftCards: novasCartas,
         cartasReveladas: false,
         draftErro: null,
       })
+      // Reroll = mesma experiência do "Capture seu Pokémon": gira a roleta
+      // automaticamente, revelando as cartas novas sem um clique extra.
+      girarRoleta(novasCartas)
     } catch (err) {
       const msg = err instanceof Error ? err.message : 'Falha ao buscar cartas'
       useGameStore.setState({ draftErro: msg })
@@ -388,6 +401,17 @@ function TeamSlot({ pokemon, numero }: { pokemon: Pokemon | null; numero: number
       <span className="text-[10px] sm:text-xs font-medium text-white/70 capitalize truncate w-full text-center">
         {pokemon.name}
       </span>
+      {/* Tipos */}
+      <div className="flex flex-wrap justify-center gap-0.5">
+        {pokemon.types.map(t => (
+          <TypePill key={t} tipo={t} size="xs" />
+        ))}
+      </div>
+      {/* Poder (BST) + HP de batalha */}
+      <div className="flex items-center justify-center gap-1 text-[9px] sm:text-[10px] font-extrabold leading-none">
+        <span title="Poder (soma dos stats)" className="text-emerald-300">⚡{pokemon.bst}</span>
+        <span title="HP em batalha" className="text-rose-300">❤{hpDeBatalha(pokemon.stats.hp)}</span>
+      </div>
     </div>
   )
 }

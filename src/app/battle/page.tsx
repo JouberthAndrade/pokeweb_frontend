@@ -34,6 +34,7 @@ export default function BattlePage() {
   const iniciarSessaoBatalha = useGameStore(s => s.iniciarSessaoBatalha)
   const confirmarPosicao = useGameStore(s => s.confirmarPosicao)
   const trainerThemeTypes = useGameStore(s => s.trainerThemeTypes)
+  const trainerTeamIds = useGameStore(s => s.trainerTeamIds)
   const batalhaErro = useGameStore(s => s.batalhaErro)
   const limparBatalhaErro = useGameStore(s => s.limparBatalhaErro)
   const battleSessionId = useGameStore(s => s.battleSessionId)
@@ -117,9 +118,24 @@ export default function BattlePage() {
   const liga = getLiga(torneio.jornada)
   const adversario = torneio.adversarios[torneio.faseAtual - 1]
   const playerTeam = torneio.ordem.map(id => pokePorId.get(id)).filter((p): p is Pokemon => !!p)
-  const opponentTeam = adversario.time
   const ehFinal = torneio.faseAtual >= FASES.length
   const ultimoResultado = torneio.resultados[torneio.resultados.length - 1]
+
+  // Times da arena derivados do resultado do servidor: garante que sprites e HP
+  // correspondam ao time realmente lutado (slots[].playerPokemonId/trainerPokemonId),
+  // não ao adversário gerado no cliente. Index alinhado com outcome.slots.
+  const arenaPlayerTeam = outcomeArena
+    ? outcomeArena.slots.map(s => pokePorId.get(s.playerPokemonId)).filter((p): p is Pokemon => !!p)
+    : []
+  const arenaOpponentTeam = outcomeArena
+    ? outcomeArena.slots.map(s => pokePorId.get(s.trainerPokemonId)).filter((p): p is Pokemon => !!p)
+    : []
+
+  // Ligas 1–2: o servidor revela o time do oponente (ids) para exibição no
+  // posicionamento. Resolvemos contra o dataset local. Ligas 3+: undefined → pílulas.
+  const oponenteTimeReal = trainerTeamIds
+    ? trainerTeamIds.map(id => pokePorId.get(id)).filter((p): p is Pokemon => !!p)
+    : undefined
 
   // Step 2: confirmar posicionamento — chama /battle/position e recebe o outcome
   async function iniciarConfronto() {
@@ -209,6 +225,7 @@ export default function BattlePage() {
           rotuloFase={rotuloFase(torneio.faseAtual)}
           onConfirmar={iniciarConfronto}
           trainerThemeTypes={trainerThemeTypes.length > 0 ? trainerThemeTypes : undefined}
+          oponenteTimeReal={oponenteTimeReal}
           confirmandoDisabled={iniciandoSessao || confirmando}
         />
       )}
@@ -216,8 +233,8 @@ export default function BattlePage() {
       {modo === 'arena' && outcomeArena && (
         <BattleArena
           outcome={outcomeArena}
-          playerTeam={playerTeam}
-          opponentTeam={opponentTeam}
+          playerTeam={arenaPlayerTeam}
+          opponentTeam={arenaOpponentTeam}
           onFim={aoFimDaArena}
         />
       )}
