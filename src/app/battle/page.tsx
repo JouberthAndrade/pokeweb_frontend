@@ -86,10 +86,11 @@ export default function BattlePage() {
     setIniciandoSessao(true)
     try {
       const liga = getLiga(torneio.jornada)
-      const leagueId = liga.jornada               // jornada 1..4 maps to leagueId
-      const stage = Math.min(torneio.faseAtual, 3) // clamp: backend accepts 1..3 only
-      // NOTE: stage clamping is a temporary measure. Full multi-phase/líder mapping
-      // (FASES.length > 3) is deferred to a future PRD.
+      // Backend aceita leagueId 1..4 e stage 1..3 nesta fase. Há 6 ligas no front
+      // (ligas.ts), então clampamos para não estourar 400 nas ligas 5-6. O suporte
+      // real a ligas 5-6 + líder/fase>3 é PRD futuro (mesma razão do clamp de stage).
+      const leagueId = Math.min(liga.jornada, 4)
+      const stage = Math.min(torneio.faseAtual, 3)
       await iniciarSessaoBatalha(leagueId, stage, torneio.ordem)
     } finally {
       setIniciandoSessao(false)
