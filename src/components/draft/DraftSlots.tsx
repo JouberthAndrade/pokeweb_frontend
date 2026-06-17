@@ -5,6 +5,7 @@ import { useGameStore } from '@/store/gameStore'
 import { construirRodada } from '@/lib/api/draft'
 import { TEAM_SIZE, RODADAS_TOTAL, MAX_LOCKS } from '@/lib/draftRound'
 import { getLiga } from '@/lib/ligas'
+import { ligaPermitida } from '@/lib/access'
 import { calcularSinergias } from '@/lib/synergies'
 import { spritePrincipal, POKEBALL_PLACEHOLDER } from '@/lib/pokemonSprites'
 import { PokemonCard } from './PokemonCard'
@@ -61,6 +62,11 @@ export function DraftSlots() {
   // Garante um pool inicial (face-down) ao entrar no draft.
   // Se não houver seedId/cartas, chama o servidor para criar seed e rodada 1.
   useEffect(() => {
+    // Guarda de acesso: convidado só joga ligas 1–2. URL direta sem permissão → home.
+    if (!ligaPermitida(jornadaAtual, false)) {
+      router.replace('/')
+      return
+    }
     if (!completo && draftCards.length === 0 && !carregando) {
       ultimaOpRef.current = { tipo: 'inicio' }
       setCarregando(true)

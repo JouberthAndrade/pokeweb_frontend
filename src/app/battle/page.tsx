@@ -13,6 +13,8 @@ import PositioningBoard from '@/components/battle/PositioningBoard'
 import BattleArena from '@/components/battle/BattleArena'
 import PhaseResult from '@/components/battle/PhaseResult'
 import { DefeatModal } from '@/components/battle/DefeatModal'
+import { ligaPermitida } from '@/lib/access'
+import { registrarVitoria } from '@/lib/api/leaderboard'
 
 type Modo = 'posicionar' | 'arena' | 'resultado'
 
@@ -34,6 +36,7 @@ export default function BattlePage() {
   const trainerThemeTypes = useGameStore(s => s.trainerThemeTypes)
   const batalhaErro = useGameStore(s => s.batalhaErro)
   const limparBatalhaErro = useGameStore(s => s.limparBatalhaErro)
+  const battleSessionId = useGameStore(s => s.battleSessionId)
 
   const [modo, setModo] = useState<Modo>('posicionar')
   // outcomeArena is now server-derived (via confirmarPosicao), adapted to client shape
@@ -46,6 +49,11 @@ export default function BattlePage() {
   const [confirmando, setConfirmando] = useState(false)
 
   useEffect(() => {
+    // Guarda de acesso: convidado só joga ligas 1–2. URL direta sem permissão → home.
+    if (!ligaPermitida(jornadaAtual, false)) {
+      router.replace('/')
+      return
+    }
     if (torneio) return
     const ids = teamSlots.filter((p): p is Pokemon => p !== null).map(p => p.id)
     if (ids.length < 5) {
@@ -138,6 +146,11 @@ export default function BattlePage() {
   function continuar() {
     const t = useGameStore.getState().torneio!
     if (t.status === 'concluido') {
+      // Registra vitória na liga (fire-and-forget — falha de rede não bloqueia o fluxo).
+      const sid = useGameStore.getState().battleSessionId
+      if (sid) {
+        registrarVitoria(sid).catch((e) => console.error('[leaderboard] registrarVitoria falhou:', e))
+      }
       completarLiga(t.jornada)
       abandonarTorneio()
       router.push('/')

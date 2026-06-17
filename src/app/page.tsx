@@ -5,6 +5,8 @@ import { useGameStore } from '@/store/gameStore'
 import { LIGAS, ligaDesbloqueada, ligaConcluida, type Liga } from '@/lib/ligas'
 import { TEAM_SIZE } from '@/lib/draftRound'
 import { GymLeaderAvatar } from '@/components/ligas/GymLeaderAvatar'
+import { ligaPermitida } from '@/lib/access'
+import LeaderboardView from '@/components/leaderboard/LeaderboardView'
 
 export default function LigasPage() {
   const router = useRouter()
@@ -49,9 +51,20 @@ export default function LigasPage() {
             liga={liga}
             desbloqueada={ligaDesbloqueada(liga.jornada, completas)}
             concluida={ligaConcluida(liga.jornada, completas)}
+            permitida={ligaPermitida(liga.jornada, false)}
             onSelecionar={() => selecionarLiga(liga.jornada)}
           />
         ))}
+      </div>
+
+      {/* Ranking semanal */}
+      <div className="mt-10 max-w-sm mx-auto">
+        <h3 className="text-center text-sm font-extrabold uppercase tracking-widest text-white/60 mb-3">
+          🏆 Ranking Semanal
+        </h3>
+        <div className="rounded-2xl bg-white/5 ring-1 ring-white/10 px-4 py-4">
+          <LeaderboardView />
+        </div>
       </div>
     </div>
   )
@@ -61,10 +74,11 @@ interface LigaCardProps {
   liga: Liga
   desbloqueada: boolean
   concluida: boolean
+  permitida: boolean
   onSelecionar: () => void
 }
 
-function LigaCard({ liga, desbloqueada, concluida, onSelecionar }: LigaCardProps) {
+function LigaCard({ liga, desbloqueada, concluida, permitida, onSelecionar }: LigaCardProps) {
   return (
     <div
       className="relative group pt-2"
@@ -72,7 +86,7 @@ function LigaCard({ liga, desbloqueada, concluida, onSelecionar }: LigaCardProps
     >
       <button
         type="button"
-        disabled={!desbloqueada}
+        disabled={!desbloqueada || !permitida}
         onClick={onSelecionar}
         className={`
           relative w-full overflow-hidden rounded-2xl p-5 text-left
@@ -80,7 +94,7 @@ function LigaCard({ liga, desbloqueada, concluida, onSelecionar }: LigaCardProps
           bg-gradient-to-br ${liga.cor}
           ring-1 ring-white/10 shadow-lg
           transition-all duration-200 ease-out
-          ${desbloqueada
+          ${desbloqueada && permitida
             ? 'cursor-pointer group-hover:scale-[1.02] group-hover:ring-2 group-hover:ring-[var(--accent)] group-hover:shadow-[0_12px_40px_-8px_var(--accent)] active:scale-[0.98]'
             : 'cursor-not-allowed grayscale-[0.65] brightness-75'}
           ${concluida ? 'opacity-85' : ''}
@@ -129,8 +143,20 @@ function LigaCard({ liga, desbloqueada, concluida, onSelecionar }: LigaCardProps
         </span>
       )}
 
-      {/* Overlay de bloqueio */}
-      {!desbloqueada && (
+      {/* Overlay de bloqueio — convidado sem acesso (jornada > LIGA_MAX_CONVIDADO) */}
+      {!permitida && (
+        <div className="pointer-events-none absolute inset-0 top-2 z-10 grid place-items-center rounded-2xl bg-black/70 px-6 text-center backdrop-blur-[1px]">
+          <div>
+            <div className="text-4xl drop-shadow-lg">🔒</div>
+            <p className="mt-2 text-xs font-semibold text-white/85">
+              Entre com Google para desbloquear
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* Overlay de bloqueio — progressão sequencial */}
+      {permitida && !desbloqueada && (
         <div className="pointer-events-none absolute inset-0 top-2 z-10 grid place-items-center rounded-2xl bg-black/60 px-6 text-center backdrop-blur-[1px]">
           <div>
             <div className="text-4xl drop-shadow-lg">🔒</div>
